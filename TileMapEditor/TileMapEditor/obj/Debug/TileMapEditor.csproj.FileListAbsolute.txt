@@ -1,0 +1,30 @@
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe.config
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csprojResolveAssemblyReference.cache
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.TileMapEditor.resources
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.Properties.Resources.resources
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csproj.GenerateResource.Cache
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.pdb
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.exe
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.pdb
+E:\Hoc Tap\NMPTG\DOAN\TileMapEditor\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.frmAddNewObject.resources
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe.config
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.exe
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.pdb
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.pdb
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csprojResolveAssemblyReference.cache
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.frmAddNewObject.resources
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.TileMapEditor.resources
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.Properties.Resources.resources
+C:\Users\VO DINH CAO MINH TRI\Desktop\Game\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csproj.GenerateResource.Cache
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe.config
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.exe
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.pdb
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.pdb
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csprojResolveAssemblyReference.cache
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.frmAddNewObject.resources
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.TileMapEditor.resources
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.Properties.Resources.resources
+F:\HK7\NMPTGame\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csproj.GenerateResource.Cache
