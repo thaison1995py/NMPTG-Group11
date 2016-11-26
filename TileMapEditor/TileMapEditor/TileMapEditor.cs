@@ -251,7 +251,7 @@ namespace TileMapEditor
 
                 DrawDashGrid();
 
-                MatrixTile = new int[tileWidthCount, tileHeightCount];
+                MatrixTile = new int[tileWidthCount, tileHeightCount];              
 
                 viewPort = new Rectangle(16, bm.Width - viewPortHeight - 17*16, viewPortWidth, viewPortHeight);
 
@@ -330,8 +330,8 @@ namespace TileMapEditor
 
                 // lưu ma trận tile map
                 StreamWriter writer1 = new StreamWriter(dir + "\\MatrixTile.txt");     
-                writer1.Write(TileWidth + "  ");
-                writer1.WriteLine(TileHeight);
+                //writer1.Write(TileWidth + "  ");
+                //writer1.WriteLine(TileHeight);
                 writer1.Write(tileWidthCount + "  ");
                 writer1.WriteLine(tileHeightCount);
 
