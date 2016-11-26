@@ -1,0 +1,7 @@
+﻿  SceneMain.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenemain.h(5): fatal error C1083: Cannot open include file: 'SceneMenu.h': No such file or directory
+  SceneGame.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(5): error C2512: 'Scene' : no appropriate default constructor available
+  Generating Code...
