@@ -23,7 +23,11 @@ QBackground::QBackground(int level)
 		fileName = "Resources\\Maps\\Level3.txt";
 		break;
 	}*/
-	fileName = "Resources\\Maps\\MatrixTile.txt";
+	if (level == 1)
+	{
+		fileName = "Resources\\Maps\\MatrixTile.txt";
+	}
+	
 
 	ifstream map(fileName);
 
@@ -34,7 +38,11 @@ QBackground::QBackground(int level)
 		float posX, posY; int value;
 		int count;
 		map >> count;
-		bgSprite = new CSprite(new CTexture("Resources\\Maps\\TileInMap.png, count, 1, count"), 1000);
+		if (level == 1)
+		{
+			bgSprite = new CSprite(new CTexture("Resources\\Maps\\TileInMap.png, count, 1, count"), 1000);
+		}
+		
 		/*switch (level)
 		{
 		case 1:

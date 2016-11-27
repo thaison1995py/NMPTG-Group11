@@ -1,80 +1,176 @@
-#include "CTexture.h"
+#include "CSprite.h"
+#include "Global.h"
 
-CTexture::CTexture(char* _fileName, int cols, int rows, int count)
+CSprite::CSprite()
 {
-	Cols = cols;
-	Rows = rows;
-	Count = count;
-	FileName = _fileName;
-	this->Load();
+	_texture = NULL;
+	_start = 0;
+	_end = 0;
+	_timeAni = 0;
+	_index = 0;
+	_timeLocal = 0;
 }
 
-CTexture::CTexture(const CTexture &ctexture)
+CSprite::CSprite(const CSprite &sprite)
 {
-	this->FileName = ctexture.FileName;
-	this->Size = ctexture.Size;
-	this->Cols = ctexture.Cols;
-	this->Rows = ctexture.Rows;
-	this->Count = ctexture.Count;
-	this->FrameHeight = ctexture.FrameHeight;
-	this->FrameWidth = ctexture.FrameWidth;
-	this->Load();
+	_texture = sprite._texture;
+	_start = sprite._start;
+	_end = sprite._end;
+	_timeAni = sprite._timeAni;
+	_index = sprite._start;
+	_timeLocal = sprite._timeLocal;
 }
 
-CTexture::~CTexture()
+CSprite::CSprite(CTexture* texture, int start, int end, int timeAnimation)
+	: _texture(texture)
 {
-	if (this->Texture != NULL)
-		this->Texture->Release();
+	_start = start;
+	_end = end;
+	_timeAni = timeAnimation;
+	_index = start;
+	_timeLocal = 0;
 }
 
-void CTexture::Draw(int x, int y)
+CSprite::CSprite(CTexture* texture, int timeAnimation)
+	: _texture(texture)
 {
-	D3DXVECTOR3 position((float)x, (float)y, 0);
-	G_SpriteHandler->Draw(Texture, &Size, NULL, &position, 0xFFFFFFFF);
+	_start = 0;
+	_end = _texture->Count - 1;
+	_timeAni = timeAnimation;
+	_index = 0;
+	_timeLocal = 0;
 }
 
-void CTexture::Load()
+CSprite::~CSprite()
 {
-	D3DXIMAGE_INFO info;
-	HRESULT result;
+	//if(_texture != NULL)
+	//delete _texture;
+}
 
-	result = D3DXGetImageInfoFromFile(FileName, &info);
+void CSprite::Next()
+{
+	_index++;
+	if (_index > _end)
+		_index = _start;
+}
 
-	RECT s = { 0, 0, info.Width, info.Height };
-	this->Size = s;
+void CSprite::Reset()
+{
+	_index = _start;
+	_timeLocal = 0;
+}
 
-	FrameWidth = info.Width / Cols;
-	FrameHeight = info.Height / Rows;
+void CSprite::SelectIndex(int index)
+{
+	_index = index;
+}
 
-	if (result != D3D_OK)
+void CSprite::Update(int ellapseTime)
+{
+	_timeLocal += ellapseTime;
+
+	if (_timeLocal >= _timeAni)
 	{
-		GLMessage("Can not load texture");
-		GLTrace("[texture.h] Failed to get information from image file [%s]", FileName);
-		OutputDebugString(FileName);
-		return;
+		_timeLocal = 0;
+		this->Next();
 	}
+}
 
-	result = D3DXCreateTextureFromFileEx(
-		G_Device,
-		FileName,
-		info.Width,
-		info.Height,
-		1,
-		D3DUSAGE_DYNAMIC,
-		D3DFMT_UNKNOWN,
-		D3DPOOL_DEFAULT,
-		D3DX_DEFAULT,
-		D3DX_DEFAULT,
-		D3DCOLOR_XRGB(255, 0, 255), //color
-		&info,
-		NULL,
-		&Texture
+void CSprite::Draw(int X, int Y)
+{
+	RECT srect;
+
+	srect.left = (_index % _texture->Cols)*(_texture->FrameWidth);// + 1;
+	srect.top = (_index / _texture->Cols)*(_texture->FrameHeight);// + 1;
+	srect.right = srect.left + _texture->FrameWidth;
+	srect.bottom = srect.top + _texture->FrameHeight;// + 1;
+
+	//D3DXVECTOR3 position((float)X, (float)Y, 0);
+	D3DXVECTOR3 position(0, 0, 0);
+	D3DXVECTOR3 center(0, 0, 0);
+	position.x = X - _texture->FrameWidth / 2;
+	position.y = Y - _texture->FrameHeight / 2;
+	G_SpriteHandler->Draw(
+		_texture->Texture,
+		&srect,
+		&center,
+		&position,
+		0xFFFFFFFF //color
 		);
+}
 
-	if (result != D3D_OK)
-	{
-		GLMessage("Can not load texture");
-		GLTrace("[texture.h] Failed to create texture from file '%s'", FileName);
-		return;
-	}
+void CSprite::DrawFlipX(int x, int y)
+{
+	D3DXMATRIX oldMt;
+	G_SpriteHandler->GetTransform(&oldMt);
+
+	D3DXMATRIX newMt;
+	D3DXVECTOR2 center = D3DXVECTOR2(x + _texture->FrameWidth / 2, y + _texture->FrameHeight / 2);
+	D3DXVECTOR2 rotate = D3DXVECTOR2(-1, 1);
+
+	D3DXMatrixTransformation2D(&newMt, &center, 0.0f, &rotate, NULL, 0.0f, NULL);
+	D3DXMATRIX finalMt = newMt * oldMt;
+	G_SpriteHandler->SetTransform(&finalMt);
+
+	x += _texture->FrameWidth;
+	this->Draw(x, y);
+
+	G_SpriteHandler->SetTransform(&oldMt);
+}
+
+void CSprite::DrawFlipY(int x, int y)
+{
+	D3DXMATRIX oldMt;
+	G_SpriteHandler->GetTransform(&oldMt);
+
+	D3DXMATRIX newMt;
+	D3DXVECTOR2 center = D3DXVECTOR2(x + _texture->FrameWidth / 2, y + _texture->FrameHeight / 2);
+	D3DXVECTOR2 rotate = D3DXVECTOR2(1, -1);
+
+	D3DXMatrixTransformation2D(&newMt, &center, 0.0f, &rotate, NULL, 0.0f, NULL);
+	D3DXMATRIX finalMt = newMt * oldMt;
+	G_SpriteHandler->SetTransform(&finalMt);
+
+	this->Draw(x, y);
+
+	G_SpriteHandler->SetTransform(&oldMt);
+}
+
+void CSprite::DrawRect(int X, int Y, RECT SrcRect)
+{
+	D3DXVECTOR3 position((float)X, (float)Y, 0);
+	G_SpriteHandler->Draw(
+		_texture->Texture,
+		&SrcRect,
+		NULL,
+		&position,
+		D3DCOLOR_XRGB(255, 255, 255)
+		);
+}
+
+void CSprite::DrawIndex(int index, int X, int Y)
+{
+	RECT srect;
+
+	srect.left = (index % _texture->Cols)*(_texture->FrameWidth);// + 1;
+	srect.top = (index / _texture->Cols)*(_texture->FrameHeight);// + 1;
+	srect.right = srect.left + _texture->FrameWidth;
+	srect.bottom = srect.top + _texture->FrameHeight;// + 1;
+
+	D3DXVECTOR3 position(0, 0, 0);
+	D3DXVECTOR3 center(0, 0, 0);
+	position.x = X - _texture->FrameWidth / 2;
+	position.y = Y - _texture->FrameHeight / 2;
+	G_SpriteHandler->Draw(
+		_texture->Texture,
+		&srect,
+		&center,
+		&position,
+		0xFFFFFFFF //color
+		);
+}
+
+int CSprite::GetIndex()
+{
+	return _index;
 }

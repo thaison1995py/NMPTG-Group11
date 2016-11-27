@@ -3,7 +3,7 @@
 
 #include <list>
 #include <map>
-//#include "Singleton.h"
+#include "Singleton.h"
 #include "CCamera.h"
 #include <fstream>
 #include <iostream>

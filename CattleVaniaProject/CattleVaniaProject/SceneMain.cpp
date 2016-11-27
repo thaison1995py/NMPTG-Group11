@@ -21,10 +21,10 @@ void SceneMain::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t)
 			sceneNow = new SceneMenu();
 			sceneNow->LoadResources(d3ddv);
 			break;
-		case ESceneState::EndGame_Scene:
+		/*case ESceneState::EndGame_Scene:
 			sceneNow = new EndGameScene();
 			sceneNow->LoadResources(d3ddv);
-			break;
+			break;*/
 		}
 		currentStateScene = sceneNow->sceneState;
 	}

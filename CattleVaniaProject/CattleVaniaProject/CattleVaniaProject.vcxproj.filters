@@ -88,6 +88,15 @@
     <ClInclude Include="QBackground.h">
       <Filter>Background</Filter>
     </ClInclude>
+    <ClInclude Include="SceneMenu.h">
+      <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="EndGameScene.h">
+      <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Manage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -137,6 +146,15 @@
     </ClCompile>
     <ClCompile Include="QBackground.cpp">
       <Filter>Background</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMenu.cpp">
+      <Filter>Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="EndGameScene.cpp">
+      <Filter>Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Manage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
