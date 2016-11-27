@@ -35,6 +35,12 @@
     <Filter Include="Background">
       <UniqueIdentifier>{98986f30-85c5-432a-afaa-49b2fadbf889}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{6a856ae3-fb01-43d3-bb6b-3ae046c23d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\QGameObject">
+      <UniqueIdentifier>{11028605-dfa3-4fc8-92e0-94876c2f89b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utils.h">
@@ -97,6 +103,21 @@
     <ClInclude Include="Singleton.h">
       <Filter>Manage</Filter>
     </ClInclude>
+    <ClInclude Include="HeaderObj.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SweptAABB.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="QGameObject.h">
+      <Filter>GameObject\QGameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -155,6 +176,15 @@
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
       <Filter>Manage</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="QGameObject.cpp">
+      <Filter>GameObject\QGameObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
