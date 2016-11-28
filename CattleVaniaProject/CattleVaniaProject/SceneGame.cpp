@@ -23,7 +23,7 @@ SceneGame::SceneGame(void): Scene(ESceneState::Game_Scene)
 	stateGame = EState::None_State;*/
 	bg = NULL;
 	camera = new CCamera();
-	_levelNow = 0;
+	_levelNow = 1;
 	_stageNow = 0;
 	stateGame = EState::None_State;
 }
@@ -399,6 +399,9 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 //		_gameScore->drawScore();
 //	}
 //#pragma endregion Camera Update Binh thuong
+	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+	bg->Draw(camera);
+	G_SpriteHandler->End();
 }
 
 void SceneGame::ProcessInput(int keyCode)
@@ -575,8 +578,8 @@ void SceneGame::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 
 	HRESULT res = D3DXCreateSprite(d3ddv,&G_SpriteHandler);
 
-	if(_levelNow != 0 && _stageNow != 0)
-	{
+	if(_levelNow != 0/* && _stageNow != 0*/)
+	{		
 		LoadLevel(_levelNow);
 		//LoadStage(_stageNow);
 	}

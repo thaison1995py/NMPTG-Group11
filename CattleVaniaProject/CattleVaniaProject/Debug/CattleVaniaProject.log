@@ -1,47 +1,7 @@
-﻿Build started 11/28/2016 2:19:30 AM.
-     1>Project "E:\New folder\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DynamicObject.cpp GameObject.cpp QGameObject.cpp
-         QGameObject.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-         GameObject.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(112): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(113): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(155): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         DynamicObject.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(34): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(36): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(38): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>e:\new folder\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(127): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\New folder\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\New folder\trunk\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\New folder\trunk\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\CAudio.obj
-         Debug\CCamera.obj
-         Debug\DynamicObject.obj
-         Debug\EndGameScene.obj
-         Debug\Game.obj
-         Debug\dsutil.obj
-         Debug\GameObject.obj
-         Debug\Global.obj
-         Debug\CSprite.obj
-         Debug\CTexture.obj
-         Debug\CText.obj
-         Debug\main.obj
-         Debug\QBackground.obj
-         Debug\QGameObject.obj
-         Debug\Scene.obj
-         Debug\SceneGame.obj
-         Debug\SceneMain.obj
-         Debug\SceneMenu.obj
-         Debug\Singleton.obj
-         Debug\SoundManager.obj
-         Debug\Tile.obj
-         Debug\Utils.obj
-         CattleVaniaProject.vcxproj -> E:\New folder\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
-     1>Done Building Project "E:\New folder\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:03.78
+﻿  QBackground.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(38): warning C4101: 'posY' : unreferenced local variable
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(38): warning C4101: 'posX' : unreferenced local variable
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(61): warning C4101: '_obj' : unreferenced local variable
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(151): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  CattleVaniaProject.vcxproj -> E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
