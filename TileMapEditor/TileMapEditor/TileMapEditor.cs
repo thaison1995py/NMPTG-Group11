@@ -332,10 +332,12 @@ namespace TileMapEditor
                 StreamWriter writer1 = new StreamWriter(dir + "\\MatrixTile.txt");     
                 //writer1.Write(TileWidth + "  ");
                 //writer1.WriteLine(TileHeight);
-                writer1.Write(tileWidthCount + "  ");
-                writer1.WriteLine(tileHeightCount);
+                //writer1.Write(tileWidthCount + "  ");
+                writer1.WriteLine(ListTile.Count + "  ");
+                writer1.Write((tileHeightCount - IndexHeight + 1) + "  ");
+                writer1.WriteLine(tileWidthCount);
 
-                for (int i = 0; i < tileHeightCount; i++)
+                for (int i = IndexHeight; i < tileHeightCount; i++)
                 {
                     string str = "";
                     for (int j = 0; j < tileWidthCount; j++)
@@ -350,7 +352,7 @@ namespace TileMapEditor
                 picTile.BackgroundImage.Save(dir + "\\TileInMap.png");
 
                 // lưu ảnh object
-                Directory.CreateDirectory(dir);
+                Directory.CreateDirectory("Obj");
                 foreach (ObjectGame obj in ListObj)
                 {
                     obj.bm.Save(dir + "\\" + obj.objName + ".png");
