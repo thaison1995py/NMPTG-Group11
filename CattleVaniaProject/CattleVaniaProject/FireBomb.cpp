@@ -89,14 +89,6 @@ void FireBomb::Collision(list<GameObject*> &obj, int dt)
 						else
 							qm->getUp();
 					}
-					else if (other->id == EnumID::PhantomBat_ID)
-					{
-						other->ReceiveDamage(damage);
-						if (other->hp <= 0)
-						{
-							point += other->point;
-						}
-					}
 					else
 					{
 						other->ReceiveDamage(damage);
