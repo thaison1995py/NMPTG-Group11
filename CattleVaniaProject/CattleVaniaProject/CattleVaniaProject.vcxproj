@@ -68,13 +68,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BlackKnight.h" />
     <ClInclude Include="Boomerang.h" />
+    <ClInclude Include="Brick.h" />
+    <ClInclude Include="Candle.h" />
+    <ClInclude Include="CastleGate.h" />
     <ClInclude Include="CAudio.h" />
     <ClInclude Include="CCamera.h" />
     <ClInclude Include="CEnum.h" />
     <ClInclude Include="Dagger.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="DragonSkullCannon.h" />
     <ClInclude Include="DynamicObject.h" />
     <ClInclude Include="EndGameScene.h" />
+    <ClInclude Include="FireBall.h" />
     <ClInclude Include="FireBomb.h" />
     <ClInclude Include="FireDie.h" />
     <ClInclude Include="Game.h" />
@@ -86,8 +93,11 @@
     <ClInclude Include="CTexture.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="HeaderObj.h" />
+    <ClInclude Include="Lake.h" />
+    <ClInclude Include="LargeCandle.h" />
     <ClInclude Include="LittleSnake.h" />
     <ClInclude Include="LKRect.h" />
+    <ClInclude Include="Medusa.h" />
     <ClInclude Include="MorningStar.h" />
     <ClInclude Include="MorningStarSprite.h" />
     <ClInclude Include="QBackground.h" />
@@ -100,18 +110,28 @@
     <ClInclude Include="Simon.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Stair.h" />
     <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utils.h" />
+    <ClInclude Include="VampireBat.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlackKnight.cpp" />
     <ClCompile Include="Boomerang.cpp" />
+    <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="Candle.cpp" />
+    <ClCompile Include="CastleGate.cpp" />
     <ClCompile Include="CAudio.cpp" />
     <ClCompile Include="CCamera.cpp" />
     <ClCompile Include="Dagger.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="DragonSkullCannon.cpp" />
     <ClCompile Include="DynamicObject.cpp" />
     <ClCompile Include="EndGameScene.cpp" />
+    <ClCompile Include="FireBall.cpp" />
     <ClCompile Include="FireBomb.cpp" />
     <ClCompile Include="FireDie.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -121,9 +141,12 @@
     <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CText.cpp" />
+    <ClCompile Include="Lake.cpp" />
+    <ClCompile Include="LargeCandle.cpp" />
     <ClCompile Include="LittleSnake.cpp" />
     <ClCompile Include="LKRect.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Medusa.cpp" />
     <ClCompile Include="MorningStar.cpp" />
     <ClCompile Include="MorningStarSprite.cpp" />
     <ClCompile Include="QBackground.cpp" />
@@ -136,9 +159,12 @@
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Stair.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="VampireBat.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
