@@ -68,11 +68,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Boomerang.h" />
     <ClInclude Include="CAudio.h" />
     <ClInclude Include="CCamera.h" />
     <ClInclude Include="CEnum.h" />
+    <ClInclude Include="Dagger.h" />
     <ClInclude Include="DynamicObject.h" />
     <ClInclude Include="EndGameScene.h" />
+    <ClInclude Include="FireBomb.h" />
+    <ClInclude Include="FireDie.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="dsutil.h" />
     <ClInclude Include="dxutil.h" />
@@ -82,23 +86,34 @@
     <ClInclude Include="CTexture.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="HeaderObj.h" />
+    <ClInclude Include="LittleSnake.h" />
+    <ClInclude Include="LKRect.h" />
+    <ClInclude Include="MorningStar.h" />
+    <ClInclude Include="MorningStarSprite.h" />
     <ClInclude Include="QBackground.h" />
     <ClInclude Include="QGameObject.h" />
+    <ClInclude Include="QueenMedusa.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneGame.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneMenu.h" />
+    <ClInclude Include="Simon.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utils.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="CAudio.cpp" />
     <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="Dagger.cpp" />
     <ClCompile Include="DynamicObject.cpp" />
     <ClCompile Include="EndGameScene.cpp" />
+    <ClCompile Include="FireBomb.cpp" />
+    <ClCompile Include="FireDie.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="dsutil.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -106,17 +121,24 @@
     <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CText.cpp" />
+    <ClCompile Include="LittleSnake.cpp" />
+    <ClCompile Include="LKRect.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MorningStar.cpp" />
+    <ClCompile Include="MorningStarSprite.cpp" />
     <ClCompile Include="QBackground.cpp" />
     <ClCompile Include="QGameObject.cpp" />
+    <ClCompile Include="QueenMedusa.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneGame.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneMenu.cpp" />
+    <ClCompile Include="Simon.cpp" />
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

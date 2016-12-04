@@ -1,7 +1,9 @@
-﻿  QBackground.cpp
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(38): warning C4101: 'posY' : unreferenced local variable
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(38): warning C4101: 'posX' : unreferenced local variable
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(61): warning C4101: '_obj' : unreferenced local variable
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(151): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-  CattleVaniaProject.vcxproj -> E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
+﻿Build started 12/1/2016 1:30:50 AM.
+     1>Project "E:\NMPTG - Copy\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         CattleVaniaProject.vcxproj -> E:\NMPTG - Copy\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
+     1>Done Building Project "E:\NMPTG - Copy\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.16

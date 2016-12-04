@@ -246,14 +246,14 @@ void QGameObject::Collision(int dt)
 		}
 	}
 
-	//for (list<GameObject*>::iterator i = _dynamicObject->begin(); i != _dynamicObject->end(); i++)
-	//{
-	//	if((*i)->active && (*i)->id != EnumID::PhantomBat_ID && (*i)->id != EnumID::QueenMedusa_ID)
-	//	{
-	//		if(!IsHurt() || (IsHurt() && (*i)->type != ObjectType::Enemy_Type))
-	//			(*i)->Collision((*_staticObject), dt);
-	//	}
-	//}
+	for (list<GameObject*>::iterator i = _dynamicObject->begin(); i != _dynamicObject->end(); i++)
+	{
+		if((*i)->active && (*i)->id != EnumID::PhantomBat_ID && (*i)->id != EnumID::QueenMedusa_ID)
+		{
+			if(!IsHurt() || (IsHurt() && (*i)->type != ObjectType::Enemy_Type))
+				(*i)->Collision((*_staticObject), dt);
+		}
+	}
 
 	for (list<GameObject*>::iterator i = _dynamicObject->begin(); i != _dynamicObject->end(); i++)
 	{
@@ -264,11 +264,11 @@ void QGameObject::Collision(int dt)
 	}
 }
 
-//QueenMedusa* QGameObject::getQueenMedusa()
-//{
-//	return _queenMedusa;
-//}
-//
+QueenMedusa* QGameObject::getQueenMedusa()
+{
+	return _queenMedusa;
+}
+
 //PhantomBat* QGameObject::getPhantomBat()
 //{
 //	return _phantomBat;

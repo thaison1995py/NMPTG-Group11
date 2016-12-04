@@ -46,7 +46,6 @@ static bool AABBCheck(Box b1, Box b2)
 
 // trả về true nếu các box đang va chạm 
 // moveX và move Y trả về hướng di chuyển mà  box b1 phải đi để tránh va chạm
-
 static bool AABB(Box b1, Box b2, float& moveX, float& moveY)
 {
 	moveX = moveY = 0.0f;
@@ -88,7 +87,7 @@ static Box GetSweptBroadphaseBox(Box b, int dt)
 
 // kiểm tra va chạm  với box b1 di chuyển và box b2 tĩnh
 // trả về thời gian va chạm xảy ra (0 nếu băt đầu di chuyển, 1 nếu kết thúc di chuyển
-// lấy vị trí mới bằng bằng box.x = box.x + box.vx * collisiontime
+// lấy vị trí mới bằng  box.x = box.x + box.vx * collisiontime
 // normal x và normal y sẽ thể hiện phản ứng của đối tượng với va chạm
 static float SweptAABB(Box b1, Box b2, float& normalx, float& normaly, int dt)
 {

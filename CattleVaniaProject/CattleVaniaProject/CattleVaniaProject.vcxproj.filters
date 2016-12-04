@@ -41,6 +41,24 @@
     <Filter Include="GameObject\QGameObject">
       <UniqueIdentifier>{11028605-dfa3-4fc8-92e0-94876c2f89b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LKLibrary">
+      <UniqueIdentifier>{7b93a518-8282-43fa-9a1c-586be8b8bc6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Item">
+      <UniqueIdentifier>{debc36dd-2b9f-4941-9af0-daac588c9a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{e18cd83e-bcc2-4019-a7bb-78560f24117c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Weapon">
+      <UniqueIdentifier>{e79ef259-b60b-4817-92ae-d003bf843a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Bosses">
+      <UniqueIdentifier>{cf72f96b-e7e6-4e28-bac8-3143cd447dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Simon">
+      <UniqueIdentifier>{98bbf03d-4bf7-46a3-96f8-58d97dfaa800}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utils.h">
@@ -118,6 +136,39 @@
     <ClInclude Include="QGameObject.h">
       <Filter>GameObject\QGameObject</Filter>
     </ClInclude>
+    <ClInclude Include="LKRect.h">
+      <Filter>LKLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="FireDie.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="MorningStarSprite.h">
+      <Filter>Others</Filter>
+    </ClInclude>
+    <ClInclude Include="QueenMedusa.h">
+      <Filter>GameObject\Bosses</Filter>
+    </ClInclude>
+    <ClInclude Include="LittleSnake.h">
+      <Filter>GameObject\Bosses</Filter>
+    </ClInclude>
+    <ClInclude Include="MorningStar.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Simon.h">
+      <Filter>GameObject\Simon</Filter>
+    </ClInclude>
+    <ClInclude Include="Dagger.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Boomerang.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="FireBomb.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -185,6 +236,39 @@
     </ClCompile>
     <ClCompile Include="QGameObject.cpp">
       <Filter>GameObject\QGameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="LKRect.cpp">
+      <Filter>LKLibrary</Filter>
+    </ClCompile>
+    <ClCompile Include="FireDie.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="MorningStarSprite.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="QueenMedusa.cpp">
+      <Filter>GameObject\Bosses</Filter>
+    </ClCompile>
+    <ClCompile Include="LittleSnake.cpp">
+      <Filter>GameObject\Bosses</Filter>
+    </ClCompile>
+    <ClCompile Include="MorningStar.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Simon.cpp">
+      <Filter>GameObject\Simon</Filter>
+    </ClCompile>
+    <ClCompile Include="Dagger.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Boomerang.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="FireBomb.cpp">
+      <Filter>GameObject\Weapon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

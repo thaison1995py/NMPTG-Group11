@@ -13,7 +13,7 @@
 #include <sstream>
 #include <time.h>
 #include <random>
-
+#include "QueenMedusa.h"
 #include "GameObject.h"
 
 //using namespace std;
@@ -21,8 +21,8 @@
 class QGameObject
 {
 protected:
-	/*PhantomBat* _phantomBat;
-	QueenMedusa* _queenMedusa;*/
+	/*PhantomBat* _phantomBat;*/
+	QueenMedusa* _queenMedusa;
 
 	D3DXVECTOR2 posDoor;
 public:
@@ -45,7 +45,7 @@ public:
 	void Collision(int dt);
 	int RemoveAllObjectInCamera(D3DXVECTOR2);
 	void RemoveAllObject();
-	//QueenMedusa* getQueenMedusa();
+	QueenMedusa* getQueenMedusa();
 	//PhantomBat* getPhantomBat();
 	void PauseUpdate();
 };
