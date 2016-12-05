@@ -22,15 +22,12 @@ Singleton::Singleton()
 	simonDeath = new CTexture("Resources/simondeath.png", 1, 1, 1);
 
 	vampireBat = new CTexture("Resources/enemy/0.png", 4, 1, 4);
-	zombie = new CTexture("Resources/enemy/1.png", 2, 1, 2);
-	blackLeopard = new CTexture("Resources/enemy/2.png", 4, 1, 4);
-	fishMan = new CTexture("Resources/enemy/3.png", 3, 1, 3);
+	flyingblock = new CTexture("Resources/enemy/9.png", 2, 1, 2);
 	blackKnight = new CTexture("Resources/enemy/5.png", 4, 1, 4);
 	medusa = new CTexture("Resources/enemy/6.png", 2, 1, 2);
 	dragonSkullCannon = new CTexture("Resources/enemy/8.png", 1, 1, 1);
 
 	candle = new CTexture("Resources/ground/1.png", 2, 1, 2);
-	largeCandle = new CTexture("Resources/ground/0.png", 2, 1, 2);
 	movingPlatform = new CTexture("Resources/ground/9.png", 1, 1, 1);
 	openDoor = new CTexture("Resources/ground/Gate1.png", 4, 1, 4);
 	stupidDoor = new CTexture("Resources/ground/7_3.png", 2, 1, 2);
@@ -59,7 +56,6 @@ Singleton::Singleton()
 	littleSnake = new CTexture("Resources/boss/2.png", 2, 1, 2);
 
 	fireDie = new CTexture("Resources/other/1.png", 3, 1, 3);
-	water = new CTexture("Resources/other/2.png", 1, 1, 1);
 	fireBall = new CTexture("Resources/fireball.png", 1, 1, 1);
 
 	bgMenu = new CTexture("Resources/mainmenu.png", 1, 1, 1);
@@ -89,23 +85,17 @@ CTexture* Singleton::getTexture(EnumID id)
 
 	case EnumID::VampireBat_ID:
 		return vampireBat;
-	case EnumID::Zombie_ID:
-		return zombie;
-	case EnumID::FishMan_ID:
-		return fishMan;
-	case EnumID::BlackLeopard_ID:
-		return blackLeopard;
 	case EnumID::BlackKnight_ID:
 		return blackKnight;
 	case EnumID::Medusa_ID:
 		return medusa;
 	case EnumID::DragonSkullCannon_ID:
 		return dragonSkullCannon;
+	case EnumID::FlyingBlock_ID:
+		return flyingblock;
 
 	case EnumID::Candle_ID:
 		return candle;
-	case EnumID::LargeCandle_ID:
-		return largeCandle;
 	case EnumID::MovingPlatform_ID:
 		return movingPlatform;
 	case EnumID::StupidDoor_ID:
@@ -155,8 +145,6 @@ CTexture* Singleton::getTexture(EnumID id)
 
 	case EnumID::Fire_ID:
 		return fireDie;
-	case EnumID::Water_ID:
-		return water;
 	case EnumID::FireBall_ID:
 		return fireBall;
 

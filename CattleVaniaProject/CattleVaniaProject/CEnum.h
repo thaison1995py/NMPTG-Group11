@@ -41,13 +41,14 @@ enum EKindStair
 
 enum EnumID
 {
+	//Weapon
 	None_ID,
 	Watch_ID,
 	Dagger_ID,
 	FireBomb_ID,
 	Boomerang_ID,
 	Axe_ID,
-
+	//Item
 	LargeHeartItem_ID,
 	SmallHeartItem_ID,
 	MoneyBagRedItem_ID,
@@ -83,25 +84,27 @@ enum EnumID
 	DoorDown_ID,
 	OpenDoor_ID,
 	Lake_ID,
-
-	Zombie_ID,
+	//Enemy
 	BlackKnight_ID,
-	BlackLeopard_ID,
-	FishMan_ID,
 	DragonSkullCannon_ID,
 	VampireBat_ID,
 	Medusa_ID,
-
+	FlyingBlock_ID,
+	Skeleton_ID,
+	BlackRaven_ID,
+	MonkeyEvil_ID,
+	//Boss
 	PhantomBat_ID,
 	QueenMedusa_ID,
 	LittleSnake_ID,
 
 	MovingPlatform_ID,
+	SpikeTrap_ID,
 	StupidDoor_ID,
 
 	Fire_ID,
-	Water_ID,
 	FireBall_ID,
+	Skeletal_ID,
 
 	BGMenu_ID,
 

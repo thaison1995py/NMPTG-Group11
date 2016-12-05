@@ -64,14 +64,11 @@ void GameObject::CreateSprite()
 	case EnumID::VampireBat_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 100);
 		break;
-	case EnumID::BlackLeopard_ID:
-		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 0, 1000);
+	case EnumID::FlyingBlock_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);
 		break;
 	case EnumID::FireBomb_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);
-		break;
-	case EnumID::FishMan_ID:
-		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 150);
 		break;
 	case EnumID::Boomerang_ID:
 	case EnumID::Axe_ID:

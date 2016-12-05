@@ -69,10 +69,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BlackKnight.h" />
+    <ClInclude Include="BlackRaven.h" />
     <ClInclude Include="Boomerang.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="Candle.h" />
-    <ClInclude Include="CastleGate.h" />
     <ClInclude Include="CAudio.h" />
     <ClInclude Include="CCamera.h" />
     <ClInclude Include="CEnum.h" />
@@ -94,12 +94,14 @@
     <ClInclude Include="CText.h" />
     <ClInclude Include="HeaderObj.h" />
     <ClInclude Include="Lake.h" />
-    <ClInclude Include="LargeCandle.h" />
     <ClInclude Include="LittleSnake.h" />
     <ClInclude Include="LKRect.h" />
     <ClInclude Include="Medusa.h" />
     <ClInclude Include="MorningStar.h" />
     <ClInclude Include="MorningStarSprite.h" />
+    <ClInclude Include="MovingPlatform.h" />
+    <ClInclude Include="OpenDoor.h" />
+    <ClInclude Include="PhantomBat.h" />
     <ClInclude Include="QBackground.h" />
     <ClInclude Include="QGameObject.h" />
     <ClInclude Include="QueenMedusa.h" />
@@ -109,21 +111,23 @@
     <ClInclude Include="SceneMenu.h" />
     <ClInclude Include="Simon.h" />
     <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Skeletal.h" />
+    <ClInclude Include="Skeleton.h" />
     <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="SpikeTrap.h" />
     <ClInclude Include="Stair.h" />
     <ClInclude Include="SweptAABB.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="VampireBat.h" />
     <ClInclude Include="Weapon.h" />
-    <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlackKnight.cpp" />
+    <ClCompile Include="BlackRaven.cpp" />
     <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Candle.cpp" />
-    <ClCompile Include="CastleGate.cpp" />
     <ClCompile Include="CAudio.cpp" />
     <ClCompile Include="CCamera.cpp" />
     <ClCompile Include="Dagger.cpp" />
@@ -142,13 +146,15 @@
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="Lake.cpp" />
-    <ClCompile Include="LargeCandle.cpp" />
     <ClCompile Include="LittleSnake.cpp" />
     <ClCompile Include="LKRect.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Medusa.cpp" />
     <ClCompile Include="MorningStar.cpp" />
     <ClCompile Include="MorningStarSprite.cpp" />
+    <ClCompile Include="MovingPlatform.cpp" />
+    <ClCompile Include="OpenDoor.cpp" />
+    <ClCompile Include="PhantomBat.cpp" />
     <ClCompile Include="QBackground.cpp" />
     <ClCompile Include="QGameObject.cpp" />
     <ClCompile Include="QueenMedusa.cpp" />
@@ -158,13 +164,15 @@
     <ClCompile Include="SceneMenu.cpp" />
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="Singleton.cpp" />
+    <ClCompile Include="Skeletal.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="SpikeTrap.cpp" />
     <ClCompile Include="Stair.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="VampireBat.cpp" />
     <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

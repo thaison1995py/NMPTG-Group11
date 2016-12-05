@@ -178,9 +178,6 @@
     <ClInclude Include="FireBomb.h">
       <Filter>GameObject\Weapon</Filter>
     </ClInclude>
-    <ClInclude Include="Zombie.h">
-      <Filter>GameObject\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="BlackKnight.h">
       <Filter>GameObject\Enemy</Filter>
     </ClInclude>
@@ -202,20 +199,35 @@
     <ClInclude Include="Candle.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="CastleGate.h">
-      <Filter>GameObject\Ground</Filter>
-    </ClInclude>
     <ClInclude Include="Door.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
     <ClInclude Include="Lake.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="LargeCandle.h">
-      <Filter>GameObject\Ground</Filter>
-    </ClInclude>
     <ClInclude Include="Stair.h">
       <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackRaven.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeletal.h">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClInclude>
+    <ClInclude Include="PhantomBat.h">
+      <Filter>GameObject\Bosses</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingPlatform.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenDoor.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="SpikeTrap.h">
+      <Filter>GameObject\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -318,9 +330,6 @@
     <ClCompile Include="FireBomb.cpp">
       <Filter>GameObject\Weapon</Filter>
     </ClCompile>
-    <ClCompile Include="Zombie.cpp">
-      <Filter>GameObject\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="BlackKnight.cpp">
       <Filter>GameObject\Enemy</Filter>
     </ClCompile>
@@ -342,20 +351,35 @@
     <ClCompile Include="Candle.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="CastleGate.cpp">
-      <Filter>GameObject\Ground</Filter>
-    </ClCompile>
     <ClCompile Include="Door.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
     <ClCompile Include="Lake.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="LargeCandle.cpp">
-      <Filter>GameObject\Ground</Filter>
-    </ClCompile>
     <ClCompile Include="Stair.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackRaven.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton.cpp">
+      <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeletal.cpp">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClCompile>
+    <ClCompile Include="PhantomBat.cpp">
+      <Filter>GameObject\Bosses</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingPlatform.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenDoor.cpp">
+      <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="SpikeTrap.cpp">
+      <Filter>GameObject\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

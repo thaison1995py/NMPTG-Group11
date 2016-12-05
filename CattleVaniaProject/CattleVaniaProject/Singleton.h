@@ -11,19 +11,20 @@ private:
 	CTexture* simonDeath;
 
 	//enemy
-	CTexture* zombie;
 	CTexture* blackKnight;
-	CTexture* blackLeopard;
-	CTexture* fishMan;
 	CTexture* dragonSkullCannon;
 	CTexture* vampireBat;
 	CTexture* medusa;
+	CTexture* flyingblock;
+	CTexture* skeleton;
+	CTexture* monkeyevil;
+	CTexture* blackraven;
 	//ground
 	CTexture* candle;
-	CTexture* largeCandle;
 	CTexture* movingPlatform;
 	CTexture* openDoor;
 	CTexture* stupidDoor;
+	CTexture* spiketrap;
 	//weapon
 	CTexture* morningStar;
 	CTexture* fireBomb;
@@ -49,9 +50,8 @@ private:
 	CTexture* littleSnake;
 	//other
 	CTexture* fireDie;
-	CTexture* water;
 	CTexture* fireBall;
-
+	CTexture* skeletal;
 	CTexture* bgMenu;
 	//IntroScene
 	CTexture* helicopter;
