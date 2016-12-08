@@ -10,21 +10,21 @@
 #include <conio.h>
 #include <string>
 #include <sstream>
-//#include "QNode.h"
+#include "QNode.h"
 #include "Tile.h"
 
 using namespace std;
 
 class QBackground
 {
-	//void Load(int, QNode*&);
-	//void GetNodeObject(int, int, QNode*);
+	void Load(int, QNode*&);
+	void GetNodeObject(int, int, QNode*);
 public:
-	//QNode *tree;
+	QNode *tree;
 	CSprite* bgSprite;
-	map<int, Tile*> *_myObject;
-	//map<int, QNode*> *_nodeOfTree;
-	list<int> *_listTile;
+	map<int, Tile*> *listTile;
+	map<int, QNode*> *nodeOfTree;
+	list<int> *myObject;
 
 	QBackground(void);
 	QBackground(int);

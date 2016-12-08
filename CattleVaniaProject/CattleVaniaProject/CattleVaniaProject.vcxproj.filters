@@ -229,6 +229,9 @@
     <ClInclude Include="SpikeTrap.h">
       <Filter>GameObject\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="QNode.h">
+      <Filter>Background</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -380,6 +383,9 @@
     </ClCompile>
     <ClCompile Include="SpikeTrap.cpp">
       <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="QNode.cpp">
+      <Filter>Background</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
