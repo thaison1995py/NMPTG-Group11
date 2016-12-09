@@ -232,6 +232,21 @@
     <ClInclude Include="QNode.h">
       <Filter>Background</Filter>
     </ClInclude>
+    <ClInclude Include="ThreeWater.h">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicalCrystal.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Axe.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackLeopard.h">
+      <Filter>GameObject\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -386,6 +401,21 @@
     </ClCompile>
     <ClCompile Include="QNode.cpp">
       <Filter>Background</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeWater.cpp">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicalCrystal.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Axe.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>GameObject\OtherObj</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackLeopard.cpp">
+      <Filter>GameObject\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

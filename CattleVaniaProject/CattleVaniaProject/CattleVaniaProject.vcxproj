@@ -68,7 +68,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Axe.h" />
     <ClInclude Include="BlackKnight.h" />
+    <ClInclude Include="BlackLeopard.h" />
     <ClInclude Include="BlackRaven.h" />
     <ClInclude Include="Boomerang.h" />
     <ClInclude Include="Brick.h" />
@@ -96,6 +98,7 @@
     <ClInclude Include="Lake.h" />
     <ClInclude Include="LittleSnake.h" />
     <ClInclude Include="LKRect.h" />
+    <ClInclude Include="MagicalCrystal.h" />
     <ClInclude Include="Medusa.h" />
     <ClInclude Include="MorningStar.h" />
     <ClInclude Include="MorningStarSprite.h" />
@@ -118,13 +121,17 @@
     <ClInclude Include="SpikeTrap.h" />
     <ClInclude Include="Stair.h" />
     <ClInclude Include="SweptAABB.h" />
+    <ClInclude Include="ThreeWater.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="VampireBat.h" />
+    <ClInclude Include="Water.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Axe.cpp" />
     <ClCompile Include="BlackKnight.cpp" />
+    <ClCompile Include="BlackLeopard.cpp" />
     <ClCompile Include="BlackRaven.cpp" />
     <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="Brick.cpp" />
@@ -149,6 +156,7 @@
     <ClCompile Include="Lake.cpp" />
     <ClCompile Include="LittleSnake.cpp" />
     <ClCompile Include="LKRect.cpp" />
+    <ClCompile Include="MagicalCrystal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Medusa.cpp" />
     <ClCompile Include="MorningStar.cpp" />
@@ -171,9 +179,11 @@
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="SpikeTrap.cpp" />
     <ClCompile Include="Stair.cpp" />
+    <ClCompile Include="ThreeWater.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="VampireBat.cpp" />
+    <ClCompile Include="Water.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

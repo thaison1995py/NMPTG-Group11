@@ -86,6 +86,7 @@ enum EnumID
 	Lake_ID,
 	//Enemy
 	BlackKnight_ID,
+	BlackLeopard_ID,
 	DragonSkullCannon_ID,
 	VampireBat_ID,
 	Medusa_ID,
@@ -105,6 +106,7 @@ enum EnumID
 	Fire_ID,
 	FireBall_ID,
 	Skeletal_ID,
+	Water_ID,
 
 	BGMenu_ID,
 
