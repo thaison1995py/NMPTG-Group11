@@ -1,28 +1,4 @@
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.pdb
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.pdb
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.idb
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dynamicobject.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\endgamescene.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\game.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dsutil.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\gameobject.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\global.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\csprite.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctexture.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctext.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\main.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\qbackground.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\qgameobject.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scene.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenegame.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemain.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemenu.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\singleton.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\soundmanager.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\tile.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\utils.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\caudio.obj
-e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ccamera.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.idb
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\qgameobject.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\qnode.obj
@@ -31,112 +7,122 @@ e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\scen
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenegame.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemain.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemenu.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\simon.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\singleton.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeletal.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeleton.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\soundmanager.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\spiketrap.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\stair.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\threewater.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\tile.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\utils.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\vampirebat.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\water.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\weapon.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\firedie.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\game.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\dsutil.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\gameobject.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\global.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\csprite.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctexture.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctext.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\lake.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\littlesnake.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\lkrect.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\magicalcrystal.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\main.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\medusa.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstar.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstarsprite.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\movingplatform.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\opendoor.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\phantombat.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\qbackground.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\axe.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackknight.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackleopard.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackraven.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\boomerang.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\brick.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\candle.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\caudio.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\ccamera.obj
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\dagger.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\door.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\dragonskullcannon.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\dynamicobject.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\endgamescene.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\fireball.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\firebomb.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\firedie.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\game.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\gameobject.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\global.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\lkrect.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\lake.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\littlesnake.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\medusa.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstar.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstarsprite.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\movingplatform.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\opendoor.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\qbackground.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackknight.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackraven.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\boomerang.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\brick.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\candle.obj
-e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\debug\dagger.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.pdb
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.idb
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\qbackground.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\qgameobject.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\qnode.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\queenmedusa.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\scene.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenegame.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemain.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemenu.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\singleton.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeletal.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeleton.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\soundmanager.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\spiketrap.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\stair.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\tile.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\utils.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\vampirebat.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\weapon.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\endgamescene.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\fireball.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\firebomb.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\firedie.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\game.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\dsutil.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\gameobject.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\global.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\csprite.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctexture.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctext.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\lake.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\littlesnake.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\lkrect.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\main.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\medusa.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstar.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstarsprite.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\movingplatform.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\opendoor.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackknight.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackraven.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\boomerang.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\brick.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\candle.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\caudio.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\ccamera.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\dagger.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\door.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\dragonskullcannon.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\dynamicobject.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\simon.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\magicalcrystal.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\phantombat.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\threewater.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\axe.obj
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\water.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.pdb
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\vc120.idb
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\qgameobject.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\qnode.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\queenmedusa.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scene.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenegame.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemain.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\scenemenu.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\simon.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\singleton.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeletal.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\skeleton.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\soundmanager.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\spiketrap.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\stair.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\threewater.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\tile.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\utils.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\vampirebat.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\water.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\weapon.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\firedie.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\game.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dsutil.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\gameobject.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\global.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\csprite.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctexture.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ctext.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\lake.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\littlesnake.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\lkrect.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\magicalcrystal.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\main.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\medusa.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstar.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\morningstarsprite.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\movingplatform.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\opendoor.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\phantombat.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\qbackground.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\axe.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackknight.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackleopard.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\blackraven.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\boomerang.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\brick.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\candle.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\caudio.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\ccamera.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dagger.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\door.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dragonskullcannon.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\dynamicobject.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\endgamescene.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\fireball.obj
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\firebomb.obj
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\debug\cattlevaniaproject.ilk
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\debug\cattlevaniaproject.exe
 e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\debug\cattlevaniaproject.pdb
 e:\nmptg - copy\trunk\cattlevaniaproject\debug\cattlevaniaproject.ilk
 e:\nmptg - copy\trunk\cattlevaniaproject\debug\cattlevaniaproject.exe
 e:\nmptg - copy\trunk\cattlevaniaproject\debug\cattlevaniaproject.pdb
-e:\nmptg\trunk\cattlevaniaproject\debug\cattlevaniaproject.ilk
-e:\nmptg\trunk\cattlevaniaproject\debug\cattlevaniaproject.exe
-e:\nmptg\trunk\cattlevaniaproject\debug\cattlevaniaproject.pdb
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.command.1.tlog
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.read.1.tlog
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.write.1.tlog
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.command.1.tlog
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.read.1.tlog
-e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.write.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.command.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.read.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\cl.write.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.command.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.read.1.tlog
+e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\debug\cattleva.1d85ee11.tlog\link.write.1.tlog

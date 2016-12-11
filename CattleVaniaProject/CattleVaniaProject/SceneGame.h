@@ -3,7 +3,7 @@
 
 //#include "HeaderObj.h"
 #include "QBackground.h"
-//#include "QGameObject.h"
+#include "QGameObject.h"
 #include "Scene.h"
 //#include "GameScore.h"
 using namespace std;
@@ -45,7 +45,7 @@ protected:
 	QBackground *bg_2;
 	//Simon* simon;
 	//Simon* simonTemp;	//Luu thong tin cua simon cu
-	//QGameObject* qGameObject;
+	QGameObject* qGameObject;
 	//OpenDoor* openDoor;
 	//IntroGame* introScene;
 	//GameObject* intro;
