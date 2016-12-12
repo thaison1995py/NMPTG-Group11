@@ -68,7 +68,7 @@ namespace TileMapEditor
         }
         public Point GetLocation(int height)
         {
-            return new Point(location.X - Width / 2, height - location.Y - Height / 2-1);
+            return new Point(location.X - Width / 2, height - location.Y - Height / 2);
         }
         
         public Point GetLocation()

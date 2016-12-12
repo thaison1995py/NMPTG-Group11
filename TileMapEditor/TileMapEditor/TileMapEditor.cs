@@ -89,7 +89,7 @@ namespace TileMapEditor
                     if (MatrixTile[i, j] == tile.ID)
                     {
                         ObjectGame o = new ObjectGame(obj.bm, obj.objName, obj.objectType.ToString());
-                        o.SetLocation(j*tilewidth + 1, i*tileheight + 1, picMap.Height);
+                        o.SetLocation(j*tilewidth, i*tileheight , picMap.Height);
                         AddObjectToListObjOnMap(o);
                         DrawImage(bmObjOnMap, o.bm, o.GetLocation(picMap.Height),
                             new Rectangle(0, 0, tile.bm.Width, tile.bm.Height));
@@ -352,6 +352,7 @@ namespace TileMapEditor
                 picTile.BackgroundImage.Save(dir + "\\TileInMap.png");
 
                 // lưu ảnh object
+                //Stream writer = new StreamWriter("")
                 Directory.CreateDirectory("Obj");
                 foreach (ObjectGame obj in ListObj)
                 {
@@ -364,11 +365,28 @@ namespace TileMapEditor
 
                 foreach (ObjectGame obj in ListObjectOnMap)
                 {
-                    writer2.Write(obj.ID + "\t");
-                    writer2.Write(obj.GetLocation(ScrHeight).X + "\t");
-                    writer2.Write(obj.GetLocation(ScrHeight).Y + "\t");
-                    writer2.Write(obj.Width + "\t");
-                    writer2.WriteLine(obj.Height);
+                    //foreach (ObjectGame _obj in ListObj)
+                    //{
+                    //    if (_obj.objName.Equals(obj.objName))
+                    //    {
+
+                            writer2.Write(obj.ID + "\t");
+                            writer2.Write(obj.objName + "\t");
+                            writer2.Write((obj.GetLocation(ScrHeight).X + obj.Width/2) + "\t");
+                            writer2.Write(ScrHeight - (obj.GetLocation(ScrHeight).Y + obj.Height/2)+ "\t");
+                            writer2.Write(obj.Width + "\t");
+                            writer2.WriteLine(obj.Height);
+                    //    }
+                    //    else
+                    //    {
+                    //        writer2.Write(obj.ID + "\t");
+                    //        writer2.Write("-1" + "\t" );
+                    //        writer2.Write(obj.GetLocation(ScrHeight).X + "\t");
+                    //        writer2.Write(obj.GetLocation(ScrHeight).Y + "\t");
+                    //        writer2.Write(obj.Width + "\t");
+                    //        writer2.WriteLine(obj.Height);
+                    //    }
+                    //}                   
                 }
                 writer2.Close();
 
@@ -481,7 +499,7 @@ namespace TileMapEditor
 
                 e.Graphics.DrawRectangle(Pens.Red, new Rectangle(x, y, w, h));
 
-                e.Graphics.DrawString(String.Format("({0};{1})", x + curObj.bm.Width / 2, picMap.Height - y - curObj.bm.Height / 2), Font, Brushes.Chocolate, new Point(x + curObj.bm.Width + 10, y));
+                e.Graphics.DrawString(String.Format("({0};{1})", x + curObj.bm.Width / 2, picMap.Height - y - curObj.bm.Height / 2), Font, Brushes.Yellow, new Point(x + curObj.bm.Width + 10, y));
 
             }
 

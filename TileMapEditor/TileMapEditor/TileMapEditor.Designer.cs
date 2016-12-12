@@ -158,7 +158,7 @@
             // 
             this.picTile.Location = new System.Drawing.Point(0, 0);
             this.picTile.Name = "picTile";
-            this.picTile.Size = new System.Drawing.Size(19, 14);
+            this.picTile.Size = new System.Drawing.Size(19, 16);
             this.picTile.TabIndex = 0;
             this.picTile.TabStop = false;
             this.picTile.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picTile_MouseDown);
