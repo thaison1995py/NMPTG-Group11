@@ -19,7 +19,7 @@ D3DXVECTOR2 CCamera::Transform(int x, int y)
 	matrix._41 = -viewport.x;
 	matrix._42 = viewport.y;
 
-	D3DXVECTOR3 pos3(x, y, 1);	//tao ma tran 3 gan tao do mario vao
+	D3DXVECTOR3 pos3(x, y, 1);	//tao ma tran 3 gan toa do vao
 	D3DXVECTOR4 MatrixResult;
 	D3DXVec3Transform(&MatrixResult, &pos3, &matrix);
 	//Kết thúc transform

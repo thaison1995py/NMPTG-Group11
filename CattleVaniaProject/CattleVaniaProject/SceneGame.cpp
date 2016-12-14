@@ -6,7 +6,7 @@
 
 SceneGame::SceneGame(void) : Scene(ESceneState::Game_Scene)
 {
-	/*_loadLevel = false;
+	_loadLevel = false;
 	_playedDie = false;
 	_moveCameraDone = false;
 	_beginMoveCamera = false;
@@ -15,30 +15,28 @@ SceneGame::SceneGame(void) : Scene(ESceneState::Game_Scene)
 	camera = new CCamera();
 	bg = NULL;
 	_gameScore = NULL;
-	_levelNow = 0;
-	_stageNow = 0;
+	_levelNow = 1;
+	_stageNow = 4;
 	_score = 0;
 	_lifes = 5;
 	_stateCamera = EStateCamera::Update_Camera;
-	stateGame = EState::None_State;*/
-	bg = NULL;
-	camera = new CCamera();
-	_levelNow = 1;
-	_stageNow = 4;
 	stateGame = EState::None_State;
+
 }
 
 void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 	bg->LoadTree();
-	camera->viewport.y = 182 - 16;
-	camera->viewport.x = 1792 - 16;
-	//ResetLevel();
+	camera->viewport.y = 200*2;
+	camera->viewport.x = 1780*2;
+	simon = new Simon(3700, 360);
+
+	////ResetLevel();
 
 	//switch (level)
 	//{
-	//case 1:
+	//case 3:
 	//	{
 	//		camera->viewport.y = 450;
 	//		bg = new QBackground(level);
@@ -61,28 +59,29 @@ void SceneGame::LoadLevel(int level)
 	//		_stageReset = 2;
 	//	}
 	//	break;
-	//case 3:
+	//case 1:
 	//	{
 	//		_gameScore->initTimer(300);
-	//		camera->viewport.y = 482;
+	//		camera->viewport.y = 242;
 	//		bg = new QBackground(level);
 	//		bg->LoadTree();
-	//		simon->posX = 3776;
-	//		simon->posY = 96;
+	//		simon = new Simon(50, 64);
+	//		simon->posX = 1792;
+	//		simon->posY = 48;
 
 	//		//simon = new Simon(521 , 942);
 	//		//simon = new Simon(3776 , 112);
 	//		SoundManager::GetInst()->RemoveAllBGM();
 	//		SoundManager::GetInst()->PlayBGSound(EBGSound::EStage2Sound);
-	//		_stageReset = 5;
+	//		_stageReset = 4;
 	//	}
 	//	break;
 	//default:
 	//	break;
 	//}
-	//posStageToReset.x = simon->posX;
-	//posStageToReset.y = simon->posY;
-	//posCamera = camera->viewport;
+	posStageToReset.x = simon->posX;
+	posStageToReset.y = simon->posY;
+	posCamera = camera->viewport;
 }
 
 void SceneGame::LoadStage(int stage)
@@ -169,6 +168,7 @@ void SceneGame::LoadStage(int stage)
 	}
 	camera->SetSizeMap(G_MaxSize, G_MinSize);
 	openDoor = new OpenDoor(posDoor.x, posDoor.y);*/
+	camera->SetSizeMap(G_MaxSize, G_MinSize);
 }
 
 void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
@@ -177,7 +177,10 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//
 	//	if(_levelNow == 0)
 	//	{
-	//		if(introScene->_loadOK)
+	//		_levelNow++;
+	//		_stageNow++;
+	//		LoadResources(G_Device);
+	//		/*if(introScene->_loadOK)
 	//		{
 	//			_levelNow++;
 	//			_stageNow++;
@@ -189,21 +192,27 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//			G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 	//			introScene->Draw(camera);
 	//			G_SpriteHandler->End();
-	//		}
+	//		}*/
 	//	}
 	//	else if(_levelNow > 0)
 	//	{
-	//		//--------Xu ly di vao cong thanh----------
-	//		if(simon->_colCastleGate && simon->_action == Action::IntoCastle && !_loadLevel)
-	//		{
 	//			_levelNow++;
 	//			_stageNow ++;
 	//			LoadResources(G_Device);
 	//			//simon->_action = Action::Idle;
 	//			simon->_colCastleGate = false;
-	//			simon->sprite->SelectIndex(0);
 	//			_loadLevel = true;
-	//		}
+	//		////--------Xu ly di vao cong thanh----------
+	//		//if(simon->_colCastleGate && simon->_action == Action::IntoCastle && !_loadLevel)
+	//		//{
+	//		//	_levelNow++;
+	//		//	_stageNow ++;
+	//		//	LoadResources(G_Device);
+	//		//	//simon->_action = Action::Idle;
+	//		//	simon->_colCastleGate = false;
+	//		//	simon->sprite->SelectIndex(0);
+	//		//	_loadLevel = true;
+	//		//}
 	//
 	//		if(_stateCamera == EStateCamera::Update_Camera)
 	//		{
@@ -344,21 +353,21 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//			simon->point = 0;		
 	//			if(_stageNow == 4)
 	//			{
-	//				_phantomBat->Update(deltaTime,simon->getPos());
+	//				/*_phantomBat->Update(deltaTime,simon->getPos());
 	//				if(_phantomBat->type == ObjectType::Enemy_Type)
 	//				{
 	//					camera->SetSizeMap(G_MaxSize, G_MinSize);
-	//				}
-	//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _phantomBat->hp);		
+	//				}*/
+	//				/*_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _phantomBat->hp);	*/	
 	//			}
 	//			else if(_stageNow == 10)
 	//			{
 	//				_queenMedusa->Update(deltaTime,simon->getPos());		
 	//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);		
-	//				if(_phantomBat->type == ObjectType::Enemy_Type)
+	//				/*if(_phantomBat->type == ObjectType::Enemy_Type)
 	//				{
 	//					camera->SetSizeMap(G_MaxSize, G_MinSize);
-	//				}
+	//				}*/
 	//			}
 	//			else 
 	//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts);		
@@ -406,7 +415,7 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//		_gameScore->drawScore();
 	//	}
 	//#pragma endregion Camera Update Binh thuong
-	// Background
+	 //Background
 	d3ddv->StretchRect(
 		Background,			// from 
 		NULL,				// which portion?
@@ -414,14 +423,21 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 		NULL,				// which portion?
 		D3DTEXF_NONE);
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+	simon->Update(deltaTime);
+	qGameObject->Update(deltaTime);
+	bg->GetTreeObject(camera->viewport.x, camera->viewport.y);
+	
 	bg->Draw(camera);
+	
 	qGameObject->Draw(camera);
+	simon->Draw(camera);
 	G_SpriteHandler->End();
+	
 }
 
 void SceneGame::ProcessInput(int keyCode)
 {
-	/*switch(keyCode)
+	switch(keyCode)
 	{
 	case DIK_RIGHT:
 	case DIK_D:
@@ -450,135 +466,135 @@ void SceneGame::ProcessInput(int keyCode)
 	default:
 	simon->Stop();
 	break;
-	}*/
+	}
 }
 
 void SceneGame::ResetLevel()
 {
-	////if(simon != NULL)
-	////delete simon;
-	//if(bg != NULL)
-	//	delete bg;
-	//if(qGameObject != NULL)
-	//	delete qGameObject;
+	/*if(simon != NULL)
+		delete simon;*/
+	if(bg != NULL)
+		delete bg;
+	if(qGameObject != NULL)
+		delete qGameObject;
 }
 
 void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 {
-	//if(_directDoor != EDirectDoor::NoneDoor)
-	//{
-	//	switch (_directDoor)
-	//	{
-	//	case DoorDown:
-	//		{
-	//			camera->viewport.y  -= (32 *12); //do cao 1 stage = 32pixcel * 12 dong
-	//			simon->posY -= 64;
-	//			simon->SetDirectDoor(EDirectDoor::NoneDoor);
-	//			if(_stageNow >= 6)
-	//			{ 
-	//				_stageNow--;
-	//				LoadStage(_stageNow);
-	//			}
-	//		}
-	//		break;
-	//	case DoorUp:
-	//		{
-	//			camera->viewport.y += (32 *12); //do cao 1 stage = 32pixcel * 12 dong
-	//			simon->posY += 64;
-	//			simon->SetDirectDoor(EDirectDoor::NoneDoor);
-	//			if(_stageNow >= 5)
-	//			{ 
-	//				_stageNow++;
-	//				LoadStage(_stageNow);
-	//			}
+	if(_directDoor != EDirectDoor::NoneDoor)
+	{
+		switch (_directDoor)
+		{
+		case DoorDown:
+			{
+				camera->viewport.y  -= (16*12); //do cao 1 stage = 16pixcel * 12 dong
+				simon->posY -= 32;
+				simon->SetDirectDoor(EDirectDoor::NoneDoor);
+				if(_stageNow >= 6)
+				{ 
+					_stageNow--;
+					LoadStage(_stageNow);
+				}
+			}
+			break;
+		case DoorUp:
+			{
+				camera->viewport.y += (16*12); //do cao 1 stage = 32pixcel * 12 dong
+				simon->posY += 32;
+				simon->SetDirectDoor(EDirectDoor::NoneDoor);
+				if(_stageNow >= 5)
+				{ 
+					_stageNow++;
+					LoadStage(_stageNow);
+				}
 
-	//		}
-	//		break;
-	//	case DoorLeft:
-	//		{
-	//			_stateCamera = EStateCamera::NoUpdate_Camera;
-	//			_beginMoveCamera = true;
-	//			_moveCameraHaft = false;
-	//			_moveCameraDone = false;
-	//			_rangeMoveCamera = -264;
-	//			_rangeMoveCamera2 = -220;
-	//			_rangeMoveSimon = -120;
-	//			_doorDirect = -1;
-	//		}
-	//		break;
-	//	case DoorRight:
-	//		{
-	//			_stateCamera = EStateCamera::NoUpdate_Camera;
-	//			_beginMoveCamera = true;
-	//			_moveCameraHaft = false;
-	//			_moveCameraDone = false;
-	//			_rangeMoveCamera = 264;
-	//			_rangeMoveCamera2 = 252;
-	//			_rangeMoveSimon = 120;
-	//			_doorDirect = 1;
-	//		}
-	//		break;
-	//	default:
-	//		break;
-	//	}
-	//}
+			}
+			break;
+		case DoorLeft:
+			{
+				_stateCamera = EStateCamera::NoUpdate_Camera;
+				_beginMoveCamera = true;
+				_moveCameraHaft = false;
+				_moveCameraDone = false;
+				_rangeMoveCamera = -182;
+				_rangeMoveCamera2 = -110;
+				_rangeMoveSimon = -60;
+				_doorDirect = -1;
+			}
+			break;
+		case DoorRight:
+			{
+				_stateCamera = EStateCamera::NoUpdate_Camera;
+				_beginMoveCamera = true;
+				_moveCameraHaft = false;
+				_moveCameraDone = false;
+				_rangeMoveCamera = 182;
+				_rangeMoveCamera2 = 176;
+				_rangeMoveSimon = 60;
+				_doorDirect = 1;
+			}
+			break;
+		default:
+			break;
+		}
+	}
 
 }
 
 void SceneGame::MoveCamera(int &_moveRange)
 {
-	////if(_rangeMoveCamera == 0)
-	////	_rangeMoveCamera = _moveRange;
-	//if(_beginMoveCamera)
-	//{
-	//	if(_rangeMoveCamera == 0 && !_moveCameraHaft)
-	//	{
-	//		_moveCameraHaft = true;
-	//		_beginMoveCamera = false;
-	//		return;
-	//	}
-	//	if(_rangeMoveCamera > 0)
-	//	{
-	//		_rangeMoveCamera -= 4;
-	//		camera->viewport.x += 4;
-	//	}
-	//	else
-	//	{
-	//		_rangeMoveCamera += 4;
-	//		camera->viewport.x -=4;
-	//	}
-	//}
-	//else if(_moveCameraHaft)
-	//{
-	//	if(_rangeMoveCamera2 == 0 && !_moveCameraDone)
-	//	{
-	//		_moveCameraHaft = false;
-	//		_beginMoveCamera = false;
-	//		_moveCameraDone = true;
-	//		_stageNow++;
-	//		LoadStage(_stageNow);
-	//		_stateCamera = EStateCamera::Update_Camera;
-	//		simon->SetDirectDoor(EDirectDoor::NoneDoor);
-	//		openDoor->ResetDoor();
-	//		//---------Luu vi tri stage moi de hoi sinh -----------------
-	//		_stageReset = _stageNow;
-	//		posStageToReset.x = simon->posX;
-	//		posStageToReset.y = simon->posY;
-	//		posCamera = camera->viewport;
-	//		//-----------------------------
-	//		return;
-	//	}
-	//	if(_rangeMoveCamera2 > 0)
-	//	{
-	//		_rangeMoveCamera2 -= 4;
-	//		camera->viewport.x += 4;
-	//	}
-	//	else
-	//	{
-	//		_rangeMoveCamera2 += 4;
-	//		camera->viewport.x -=4;
-	//	}
-	//}
+	//if(_rangeMoveCamera == 0)
+	//	_rangeMoveCamera = _moveRange;
+	if(_beginMoveCamera)
+	{
+		if(_rangeMoveCamera == 0 && !_moveCameraHaft)
+		{
+			_moveCameraHaft = true;
+			_beginMoveCamera = false;
+			return;
+		}
+		if(_rangeMoveCamera > 0)
+		{
+			_rangeMoveCamera -= 2;
+			camera->viewport.x += 2;
+		}
+		else
+		{
+			_rangeMoveCamera += 2;
+			camera->viewport.x -=2;
+		}
+	}
+	else if(_moveCameraHaft)
+	{
+		if(_rangeMoveCamera2 == 0 && !_moveCameraDone)
+		{
+			_moveCameraHaft = false;
+			_beginMoveCamera = false;
+			_moveCameraDone = true;
+			_stageNow++;
+			LoadStage(_stageNow);
+			_stateCamera = EStateCamera::Update_Camera;
+			simon->SetDirectDoor(EDirectDoor::NoneDoor);
+			openDoor->ResetDoor();
+			//---------Luu vi tri stage moi de hoi sinh -----------------
+			_stageReset = _stageNow;
+			posStageToReset.x = simon->posX;
+			posStageToReset.y = simon->posY;
+			posCamera = camera->viewport;
+			//-----------------------------
+			return;
+		}
+		if(_rangeMoveCamera2 > 0)
+		{
+			_rangeMoveCamera2 -= 2;
+			camera->viewport.x += 2;
+		}
+		else
+		{
+			_rangeMoveCamera2 += 2;
+			camera->viewport.x -=2;
+		}
+	}
 
 }
 
@@ -598,16 +614,16 @@ void SceneGame::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 		LoadLevel(_levelNow);
 		LoadStage(_stageNow);
 	}
-	//else
-	//{
-	//simon = new Simon(50, 50);
+	else
+	{
+	simon = new Simon(50, 50);
 	///*introScene = new IntroGame();*/
-	//}
+	}
 }
 
 void SceneGame::OnKeyDown(int KeyCode)
 {
-	/*if(stateGame == EState::NoUpdate_State)
+	if(stateGame == EState::NoUpdate_State)
 	{
 	if(KeyCode == DIK_R)
 	stateGame = EState::None_State;
@@ -650,7 +666,7 @@ void SceneGame::OnKeyDown(int KeyCode)
 	simon->SetUsingCross(true);
 	break;
 	}
-	}*/
+	}
 }
 
 SceneGame::~SceneGame(void)

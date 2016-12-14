@@ -45,7 +45,7 @@ QBackground::QBackground(int level)
 		map >> count;
 		if (level == 1)
 		{
-			bgSprite = new CSprite(new CTexture("Resources\\Maps\\TileInMap.png", count, 1, count), 1000);
+			bgSprite = new CSprite(new CTexture("Resources\\Maps\\TileInMap2.png", count, 1, count), 1000);
 		}
 
 		/*switch (level)
@@ -65,13 +65,13 @@ QBackground::QBackground(int level)
 		listTile = new std::map<int, Tile*>();
 
 		Tile* _obj;
-		for (int i = countHeight; i > 0; i--)
+		for (int i = countHeight-1; i > 0; i--)
 		{
 			for (int j = 0; j < countWidth; j++)
 			{
 				map >> value;
-				posX = j * 16;
-				posY = i * 16;
+				posX = j * 32;
+				posY = i * 32;
 				id = i*count + j;
 				listTile->insert(pair<int, Tile*>(id, new Tile(value, posX, posY)));
 			}

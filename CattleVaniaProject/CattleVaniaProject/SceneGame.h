@@ -1,11 +1,11 @@
 #ifndef _SCENE1_H_
 #define _SCENE1_H_
 
-//#include "HeaderObj.h"
+#include "HeaderObj.h"
 #include "QBackground.h"
 #include "QGameObject.h"
 #include "Scene.h"
-//#include "GameScore.h"
+#include "GameScore.h"
 using namespace std;
 
 class SceneGame : public Scene
@@ -43,18 +43,18 @@ protected:
 
 	QBackground *bg;
 	QBackground *bg_2;
-	//Simon* simon;
-	//Simon* simonTemp;	//Luu thong tin cua simon cu
+	Simon* simon;
+	Simon* simonTemp;	//Luu thong tin cua simon cu
 	QGameObject* qGameObject;
-	//OpenDoor* openDoor;
+	OpenDoor* openDoor;
 	//IntroGame* introScene;
 	//GameObject* intro;
-	//CCamera *camera;
+	CCamera *camera;
 
 	//PhantomBat* _phantomBat;
-	//QueenMedusa* _queenMedusa;
+	QueenMedusa* _queenMedusa;
 
-	//GameScore* _gameScore;
+	GameScore* _gameScore;
 
 	void ChangeCamera(EDirectDoor _directDoor);
 	void MoveCamera(int &_range);
