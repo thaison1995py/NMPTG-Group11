@@ -23,8 +23,8 @@ namespace TileMapEditor
             ListObj = new List<ObjectGame>();
             ListObjectOnMap = new List<ObjectGame>();
             ObjWidth = 100;
-            TileWidth = 16;
-            TileHeight = 16;
+            TileWidth = 32;
+            TileHeight = 32;
             isSetSpaceMove = false;
             isAllowRemoveObjectFromMap = false;
             isMouseDownToSetSpaceMove = false;
@@ -53,8 +53,8 @@ namespace TileMapEditor
         private QuadNode rootNode;
 
         public static Rectangle viewPort;
-        public static int viewPortWidth = 272;
-        public static int viewPortHeight = 192;
+        public static int viewPortWidth = 272*2;
+        public static int viewPortHeight = 192*2;
         public static int ScrHeight;
 
         private int CalculateValue(Point p)
@@ -253,7 +253,7 @@ namespace TileMapEditor
 
                 MatrixTile = new int[tileWidthCount, tileHeightCount];              
 
-                viewPort = new Rectangle(16, bm.Width - viewPortHeight - 17*16, viewPortWidth, viewPortHeight);
+                viewPort = new Rectangle(32, bm.Width - viewPortHeight - 17*32, viewPortWidth, viewPortHeight);
 
                 Graphics.FromImage(bmObjOnMap).DrawRectangle(new Pen(Color.DarkOrange, 2), viewPort);               
                 CreateTileFromMap();
@@ -649,7 +649,7 @@ namespace TileMapEditor
 
         private void picTile_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Y > 16)
+            if (e.Y > 32)
                 return;
             Graphics.FromImage(picTile.Image).Clear(Color.Transparent);
             int tilewidth = TileWidth;
