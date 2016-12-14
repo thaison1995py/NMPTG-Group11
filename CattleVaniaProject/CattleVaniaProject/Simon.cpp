@@ -5,7 +5,7 @@
 #define HURT_STATE 25
 
 #define SPEED_X 0.3f
-#define SPEED_Y 0.4f
+#define SPEED_Y 0.5f
 #define MAX_HEIGHT 70.0f
 
 Simon::Simon(void) : DynamicObject()
@@ -372,7 +372,7 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 		}
 		else
 			if (other->id == EnumID::Candle_ID || other->id == EnumID::LargeCandle_ID
-				/*|| other->id == EnumID::MovingPlatform_ID*/)
+				|| other->id == EnumID::MovingPlatform_ID)
 			{
 			}
 			else

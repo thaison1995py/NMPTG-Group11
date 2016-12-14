@@ -52,19 +52,19 @@ QGameObject::QGameObject(string fileName)
 	{
 		float posX, posY; int width, height, value;
 		int count;
-		map >> count >> width >> height;
+		map >> count;
 		int id;
 		for (int i = 0; i < count; i++)
 		{
 			//so thu tu dong - idObj -...
 			map >> id >> value >> posX >> posY >> width >> height;
 
-			/*switch (value)
+			switch (value)
 			{
 			case 0:
 				_staticObject->push_back(new Brick(posX, posY, width, height));
 				break;
-			case 1:
+			/*case 1:
 				_staticObject->push_back(new Stair(posX, posY, width + 32, height, EnumID::StairUpLeft_ID));
 				break;
 			case 2:
@@ -146,6 +146,9 @@ QGameObject::QGameObject(string fileName)
 			default:
 				break;
 			}*/
+			default:
+				break;
+			}
 		}
 	}
 	Initialize();

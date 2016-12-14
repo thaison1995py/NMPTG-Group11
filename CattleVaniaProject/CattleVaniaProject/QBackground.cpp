@@ -26,7 +26,7 @@ QBackground::QBackground(int level)
 	}*/
 	if (level == 1)
 	{
-		fileName = "Resources\\Maps\\MatrixTile.txt";
+		fileName = "Resources\\Maps\\lv2_1.txt";
 		_fileName = "Resources\\Maps\\QuadTree.txt";
 	}
 
@@ -45,7 +45,7 @@ QBackground::QBackground(int level)
 		map >> count;
 		if (level == 1)
 		{
-			bgSprite = new CSprite(new CTexture("Resources\\Maps\\TileInMap2.png", count, 1, count), 1000);
+			bgSprite = new CSprite(new CTexture("Resources\\Maps\\lv2_1.png", count, 1, count), 1000);
 		}
 
 		/*switch (level)
@@ -70,9 +70,9 @@ QBackground::QBackground(int level)
 			for (int j = 0; j < countWidth; j++)
 			{
 				map >> value;
-				posX = j * 32;
-				posY = i * 32;
-				id = i*count + j;
+				posX = (j * 32)+16;
+				posY = i * 32 - 16;
+				id = i*countWidth + j;
 				listTile->insert(pair<int, Tile*>(id, new Tile(value, posX, posY)));
 			}
 		}

@@ -30,8 +30,9 @@ void SceneGame::LoadLevel(int level)
 	bg->LoadTree();
 	camera->viewport.y = 200*2;
 	camera->viewport.x = 1780*2;
-	simon = new Simon(3700, 360);
-
+	simon = new Simon(3800, 124);
+	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
+	//_gameScore->initTimer(100);
 	////ResetLevel();
 
 	//switch (level)
@@ -90,7 +91,7 @@ void SceneGame::LoadStage(int stage)
 	{
 		qGameObject = new QGameObject("Resources/Maps/ObjectInMap.txt");
 	}
-	camera->SetSizeMap(2048, 1792);
+	camera->SetSizeMap(4096, 3840);
 	/*switch (stage)
 	{
 	case 1:
@@ -424,14 +425,19 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 		D3DTEXF_NONE);
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 	simon->Update(deltaTime);
+	
+				
 	qGameObject->Update(deltaTime);
 	bg->GetTreeObject(camera->viewport.x, camera->viewport.y);
-	
+	simon->Collision(*(qGameObject->_staticObject), deltaTime);
+	qGameObject->Collision(deltaTime);
 	bg->Draw(camera);
 	
 	qGameObject->Draw(camera);
 	simon->Draw(camera);
+	_gameScore->drawTable();
 	G_SpriteHandler->End();
+	_gameScore->drawScore();
 	
 }
 
