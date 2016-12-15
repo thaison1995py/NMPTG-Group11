@@ -91,7 +91,7 @@ void SceneGame::LoadStage(int stage)
 	{
 		qGameObject = new QGameObject("Resources/Maps/ObjectInMap.txt");
 	}
-	camera->SetSizeMap(4096, 3840);
+	camera->SetSizeMap(G_MaxSize, G_MinSize);
 	/*switch (stage)
 	{
 	case 1:

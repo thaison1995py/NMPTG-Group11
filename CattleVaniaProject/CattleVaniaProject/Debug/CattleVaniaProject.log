@@ -1,75 +1,250 @@
-﻿Build started 12/14/2016 10:46:57 PM.
-     1>Project "E:\NMPTG - Copy\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt QBackground.cpp
-         QBackground.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(67): warning C4101: '_obj' : unreferenced local variable
-     1>e:\nmptg - copy\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(176): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\NMPTG - Copy\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\NMPTG - Copy\trunk\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\NMPTG - Copy\trunk\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
-         Debug\BlackKnight.obj
-         Debug\BlackLeopard.obj
-         Debug\BlackRaven.obj
-         Debug\Boomerang.obj
-         Debug\Brick.obj
-         Debug\Candle.obj
-         Debug\CAudio.obj
-         Debug\CCamera.obj
-         Debug\Dagger.obj
-         Debug\Door.obj
-         Debug\DragonSkullCannon.obj
-         Debug\DynamicObject.obj
-         Debug\EndGameScene.obj
-         Debug\FallingCastle.obj
-         Debug\FireBall.obj
-         Debug\FireBomb.obj
-         Debug\FireDie.obj
-         Debug\Game.obj
-         Debug\dsutil.obj
-         Debug\GameObject.obj
-         Debug\GameScore.obj
-         Debug\Global.obj
-         Debug\CSprite.obj
-         Debug\CTexture.obj
-         Debug\CText.obj
-         Debug\Lake.obj
-         Debug\LargeCandle.obj
-         Debug\LittleSnake.obj
-         Debug\LKRect.obj
-         Debug\MagicalCrystal.obj
-         Debug\main.obj
-         Debug\Medusa.obj
-         Debug\MorningStar.obj
-         Debug\MorningStarSprite.obj
-         Debug\MovingPlatform.obj
-         Debug\OpenDoor.obj
-         Debug\PhantomBat.obj
-         Debug\QBackground.obj
-         Debug\QGameObject.obj
-         Debug\QNode.obj
-         Debug\QueenMedusa.obj
-         Debug\Scene.obj
-         Debug\SceneGame.obj
-         Debug\SceneMain.obj
-         Debug\SceneMenu.obj
-         Debug\Simon.obj
-         Debug\Singleton.obj
-         Debug\Skeletal.obj
-         Debug\Skeleton.obj
-         Debug\SoundManager.obj
-         Debug\SpikeTrap.obj
-         Debug\Stair.obj
-         Debug\StupidDoor.obj
-         Debug\ThreeWater.obj
-         Debug\Tile.obj
-         Debug\Utils.obj
-         Debug\VampireBat.obj
-         Debug\Water.obj
-         Debug\Weapon.obj
-         CattleVaniaProject.vcxproj -> E:\NMPTG - Copy\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
-     1>Done Building Project "E:\NMPTG - Copy\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.91
+﻿  main.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenemain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Weapon.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\weapon.cpp(29): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\weapon.cpp(31): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\weapon.cpp(33): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  Water.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  VampireBat.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\vampirebat.cpp(38): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\vampirebat.cpp(40): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\vampirebat.cpp(42): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  Utils.cpp
+  ThreeWater.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\threewater.cpp(11): warning C4305: 'argument' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\threewater.cpp(12): warning C4305: 'argument' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\threewater.cpp(13): warning C4305: 'argument' : truncation from 'double' to 'float'
+  StupidDoor.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(23): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(65): warning C4018: '>=' : signed/unsigned mismatch
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(89): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(93): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(104): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\stupiddoor.cpp(105): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  SoundManager.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\soundmanager.cpp(169): warning C4018: '<' : signed/unsigned mismatch
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\soundmanager.cpp(182): warning C4018: '<' : signed/unsigned mismatch
+  Skeleton.cpp
+  Skeletal.cpp
+  Singleton.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Simon.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(136): warning C4305: '+=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(137): warning C4305: '+=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(159): warning C4305: '-=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(160): warning C4305: '+=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(184): warning C4305: '-=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(185): warning C4305: '-=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(206): warning C4305: '+=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(207): warning C4305: '-=' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(332): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(334): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(345): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(353): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(552): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(572): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(592): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(613): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(634): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(711): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(720): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(721): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(723): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(767): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(770): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(793): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(796): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(801): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(804): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(810): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(815): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(821): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(824): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(835): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(838): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(843): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(846): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(852): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(857): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(863): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(866): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\simon.cpp(1314): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+  SceneMenu.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenemain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SceneMain.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenemain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SceneGame.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(431): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(432): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+  Scene.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  QueenMedusa.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(274): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(278): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(282): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(287): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(288): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(289): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(291): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(292): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\queenmedusa.cpp(293): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  QNode.cpp
+  QGameObject.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  QBackground.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(67): warning C4101: '_obj' : unreferenced local variable
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\qbackground.cpp(176): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  Generating Code...
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\singleton.cpp(175): warning C4715: 'Singleton::getTexture' : not all control paths return a value
+  Compiling...
+  PhantomBat.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(301): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(307): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(308): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(309): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(311): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(312): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(313): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(316): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\phantombat.cpp(320): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  OpenDoor.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\opendoor.cpp(99): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\opendoor.cpp(102): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\opendoor.cpp(106): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  MorningStar.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(26): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(29): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(34): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(53): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\morningstar.cpp(54): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+  Medusa.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\medusa.cpp(34): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\medusa.cpp(36): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\medusa.cpp(38): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  MagicalCrystal.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\magicalcrystal.cpp(26): warning C4101: 'normalx' : unreferenced local variable
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\magicalcrystal.cpp(27): warning C4101: 'normaly' : unreferenced local variable
+  LittleSnake.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\littlesnake.cpp(23): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\littlesnake.cpp(25): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\littlesnake.cpp(27): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  LargeCandle.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Lake.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Global.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GameScore.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GameObject.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(109): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(110): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\gameobject.cpp(152): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  FireDie.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\firedie.cpp(30): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+  FireBomb.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\firebomb.cpp(47): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\firebomb.cpp(130): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  FireBall.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  FallingCastle.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(21): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(22): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(25): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(26): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(29): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(30): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(33): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(34): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  EndGameScene.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  DynamicObject.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(34): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(36): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(38): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dynamicobject.cpp(127): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+  DragonSkullCannon.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dragonskullcannon.cpp(46): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dragonskullcannon.cpp(48): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\dragonskullcannon.cpp(50): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  Dagger.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Generating Code...
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\game.cpp(59): warning C4715: 'CGame::InitWindow' : not all control paths return a value
+  Compiling...
+  Candle.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  CTexture.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  CText.cpp
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ctext.cpp(58): warning C4018: '>=' : signed/unsigned mismatch
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ctext.cpp(70): warning C4018: '>=' : signed/unsigned mismatch
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ctext.cpp(85): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ctext.cpp(86): warning C4244: '=' : conversion from 'float' to 'LONG', possible loss of data
+  CSprite.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(91): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(92): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(108): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(127): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(162): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\csprite.cpp(163): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+  CCamera.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(6): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(22): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(33): warning C4244: 'argument' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(47): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(51): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(53): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\ccamera.cpp(55): warning C4244: '=' : conversion from 'int' to 'FLOAT', possible loss of data
+  Brick.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  BlackRaven.cpp
+  BlackLeopard.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\blackleopard.cpp(12): warning C4305: 'argument' : truncation from 'double' to 'float'
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\blackleopard.cpp(30): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\blackleopard.cpp(32): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\blackleopard.cpp(34): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+  BlackKnight.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Axe.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\axe.cpp(26): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\axe.cpp(27): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\axe.cpp(30): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+e:\hoc tap\nmptg\doan_cat\trunk\cattlevaniaproject\cattlevaniaproject\axe.cpp(49): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  LINK : E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe not found or not built by the last incremental link; performing full link
+  CattleVaniaProject.vcxproj -> E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
