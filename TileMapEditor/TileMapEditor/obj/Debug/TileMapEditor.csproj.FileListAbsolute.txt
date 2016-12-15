@@ -9,3 +9,14 @@ E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEdi
 E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csproj.GenerateResource.Cache
 E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.exe
 E:\Hoc Tap\NMPTG\DOAN_CAT\trunk\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.pdb
+I:\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe.config
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.exe
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.pdb
+I:\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.exe
+I:\TileMapEditor\TileMapEditor\bin\Debug\TileMapEditor.pdb
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csprojResolveAssemblyReference.cache
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.frmAddNewObject.resources
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.frmGroupObject.resources
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.TileMapEditor.resources
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.Properties.Resources.resources
+I:\TileMapEditor\TileMapEditor\obj\Debug\TileMapEditor.csproj.GenerateResource.Cache
