@@ -90,7 +90,7 @@ enum EnumID
 	DragonSkullCannon_ID,
 	VampireBat_ID,
 	Medusa_ID,
-	FlyingBlock_ID,
+	Flyingblock_ID,
 	Skeleton_ID,
 	BlackRaven_ID,
 	MonkeyEvil_ID,

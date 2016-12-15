@@ -64,7 +64,7 @@ void GameObject::CreateSprite()
 	case EnumID::VampireBat_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 100);
 		break;
-	case EnumID::FlyingBlock_ID:
+	case EnumID::Flyingblock_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);
 		break;
 	case EnumID::FireBomb_ID:

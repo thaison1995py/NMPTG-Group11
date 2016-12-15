@@ -91,7 +91,7 @@ CTexture* Singleton::getTexture(EnumID id)
 		return medusa;
 	case EnumID::DragonSkullCannon_ID:
 		return dragonSkullCannon;
-	case EnumID::FlyingBlock_ID:
+	case EnumID::Flyingblock_ID:
 		return flyingblock;
 
 	case EnumID::Candle_ID:
