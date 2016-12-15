@@ -64,6 +64,34 @@ QGameObject::QGameObject(string fileName)
 			case 0:
 				_staticObject->push_back(new Brick(posX, posY, width, height));
 				break;
+			case 1:
+				_staticObject->push_back(new Stair(posX, posY, width+32, height, EnumID::StairUpLeft_ID));
+				break;
+			case 2:
+				_staticObject->push_back(new Stair(posX, posY, width + 32, height, EnumID::StairUpRight_ID));
+				break;
+			case 3:
+				_staticObject->push_back(new Stair(posX, posY, width + 32, height, EnumID::StairDownRight_ID));
+				break;
+			case 4:
+				_staticObject->push_back(new Stair(posX, posY, width + 32, height, EnumID::StairDownLeft_ID));
+				break;
+			case 10:
+				_dynamicObject->push_back(new VampireBat(posX, posY));
+				break;
+			case 12:
+				_dynamicObject->push_back(new Medusa(posX, posY));
+				break;
+			case 11:
+				_dynamicObject->push_back(new BlackKnight(posX, posY));
+				break;
+			case 13:
+				_dynamicObject->push_back(new DragonSkullCannon(posX, posY));
+				break;
+			case 15:
+				_queenMedusa = new QueenMedusa(posX, posY, EnumID::QueenMedusa_ID);
+				_dynamicObject->push_back(_queenMedusa);
+				break;
 			/*case 1:
 				_staticObject->push_back(new Stair(posX, posY, width + 32, height, EnumID::StairUpLeft_ID));
 				break;

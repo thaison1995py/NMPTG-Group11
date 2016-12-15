@@ -176,6 +176,7 @@ void QBackground::Draw(CCamera *camera)
 		bgSprite->DrawIndex(obj->ID, t.x, t.y);
 		//bgSprite->DrawIndex(obj->ID, obj->posX, obj->posY);
 	}
+
 }
 
 QBackground::~QBackground(void)
