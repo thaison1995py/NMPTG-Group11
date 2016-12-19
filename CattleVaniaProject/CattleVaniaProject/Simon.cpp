@@ -4,7 +4,7 @@
 #define SIMON_RATE 10
 #define HURT_STATE 25
 
-#define SPEED_X 0.3f
+#define SPEED_X 0.4f
 #define SPEED_Y 0.5f
 #define MAX_HEIGHT 70.0f
 
@@ -366,7 +366,9 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 				other->SetActive(posX, posY);
 		}
 		else if ((other->id == EnumID::BlackLeopard_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::VampireBat_ID && other->sprite->GetIndex() == 0))
+			|| (other->id == EnumID::VampireBat_ID && other->sprite->GetIndex() == 0)
+			|| (other->id == EnumID::Medusa_ID && other->sprite->GetIndex() == 0)
+			|| (other->id == EnumID::BlackKnight_ID && other->sprite->GetIndex() == 0))
 		{
 			other->SetActive(posX, posY);
 		}
@@ -490,9 +492,17 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 								vY = -(SPEED_Y + 0.4f);
 							}
 							//--------------------
-							if (_onLand && moveX != 0 && vX != 0 && !_onStair && !_hasJump && !_onMovingPlatform)
+							/*if (_onLand && moveX != 0 && vX != 0 && !_onStair && !_hasJump && !_onMovingPlatform)
 							{
 								posX += moveX;
+							}*/
+							if (moveX != 0 && !_onStair && vX != 0 && !_onLand)
+							{
+								if (_hasJump &&((moveX < 0 && vX < 0) || (moveX>0 && vX>0)))
+								{
+								}
+								else
+									posX += moveX;
 							}
 							break;
 #pragma endregion Va cham Gach
@@ -555,7 +565,7 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 							{
 								_kindStair = EKindStair::UpRight;
 							}
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+							float _compareHeigh = abs((other->posY - other->height / 2 )  - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
 							if (_compareHeigh < 2 && _kindStair == EKindStair::DownLeft)
 							{
 								_outStair = true;

@@ -17,19 +17,12 @@ using namespace std;
 
 class QBackground
 {
-	void Load(int, QNode*&);
-	void GetNodeObject(int, int, QNode*);
 public:
-	QNode *tree;
 	CSprite* bgSprite;
 	map<int, Tile*> *listTile;
-	map<int, QNode*> *nodeOfTree;
-	list<int> *myObject;
 
 	QBackground(void);
-	QBackground(int);
-	void LoadTree();
-	void GetTreeObject(int, int);
+	QBackground(int);	
 	void Draw(CCamera *camera);
 	~QBackground(void);
 };

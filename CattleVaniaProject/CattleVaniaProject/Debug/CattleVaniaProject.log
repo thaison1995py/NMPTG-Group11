@@ -1,15 +1,53 @@
-﻿Build started 15/12/2016 9:57:33 CH.
+﻿Build started 18/12/2016 3:45:13 CH.
      1>Project "C:\Users\VO DINH CAO MINH TRI\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SceneGame.cpp
-         SceneGame.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(433): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(434): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(136): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(137): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(159): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(160): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(184): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(185): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(206): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(207): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(332): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(334): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(345): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(353): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(562): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(582): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(602): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(623): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(644): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(721): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(730): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(731): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(733): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(777): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(780): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(803): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(806): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(811): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(814): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(820): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(825): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(831): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(834): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(845): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(848): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(853): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(856): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(862): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(867): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(873): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(876): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\vo dinh cao minh tri\desktop\cattlevaniaproject\cattlevaniaproject\simon.cpp(1324): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\VO DINH CAO MINH TRI\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\VO DINH CAO MINH TRI\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\VO DINH CAO MINH TRI\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\BlackKnight.obj
-         Debug\BlackLeopard.obj
          Debug\BlackRaven.obj
          Debug\Boomerang.obj
          Debug\Brick.obj
@@ -72,4 +110,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.45
+Time Elapsed 00:00:01.56

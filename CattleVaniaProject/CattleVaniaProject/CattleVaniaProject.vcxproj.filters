@@ -244,9 +244,6 @@
     <ClInclude Include="Water.h">
       <Filter>GameObject\OtherObj</Filter>
     </ClInclude>
-    <ClInclude Include="BlackLeopard.h">
-      <Filter>GameObject\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="FallingCastle.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
@@ -425,9 +422,6 @@
     </ClCompile>
     <ClCompile Include="Water.cpp">
       <Filter>GameObject\OtherObj</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackLeopard.cpp">
-      <Filter>GameObject\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="FallingCastle.cpp">
       <Filter>Game\Scene</Filter>

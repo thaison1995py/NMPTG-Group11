@@ -15,6 +15,9 @@
 #include <random>
 #include "QueenMedusa.h"
 #include "GameObject.h"
+#include "QNode.h"
+#include <string>
+#include <sstream>
 
 //using namespace std;
 
@@ -23,6 +26,11 @@ class QGameObject
 protected:
 	/*PhantomBat* _phantomBat;*/
 	QueenMedusa* _queenMedusa;
+	QNode *tree;
+	map<int, QNode*> *nodeOfTree;
+	list<int> *myObject;
+	void Load(int, QNode*&);
+	void GetNodeObject(int, int, QNode*);
 
 	D3DXVECTOR2 posDoor;
 public:
@@ -38,8 +46,10 @@ public:
 	QGameObject(void);
 	~QGameObject(void);
 
-	QGameObject(string);
+	QGameObject(string, string);
 	D3DXVECTOR2 GetPosDoor();	//Lay vi tri de ve canh cua qua stage
+	void LoadTree();
+	void GetTreeObject(int, int);
 	void Draw(CCamera *camera);
 	void Update(int deltaTime);
 	void Collision(int dt);

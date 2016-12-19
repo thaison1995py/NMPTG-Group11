@@ -70,7 +70,6 @@
   <ItemGroup>
     <ClInclude Include="Axe.h" />
     <ClInclude Include="BlackKnight.h" />
-    <ClInclude Include="BlackLeopard.h" />
     <ClInclude Include="BlackRaven.h" />
     <ClInclude Include="Boomerang.h" />
     <ClInclude Include="Brick.h" />
@@ -135,7 +134,6 @@
   <ItemGroup>
     <ClCompile Include="Axe.cpp" />
     <ClCompile Include="BlackKnight.cpp" />
-    <ClCompile Include="BlackLeopard.cpp" />
     <ClCompile Include="BlackRaven.cpp" />
     <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="Brick.cpp" />

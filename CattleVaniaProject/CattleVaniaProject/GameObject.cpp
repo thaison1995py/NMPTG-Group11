@@ -86,6 +86,9 @@ void GameObject::CreateSprite()
 	case EnumID::Bat_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
 		break;
+	case EnumID::QueenMedusa_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 4, 50);
+		break;
 	default:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
 		break;

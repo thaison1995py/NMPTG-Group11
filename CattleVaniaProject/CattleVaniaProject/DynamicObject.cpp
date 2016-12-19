@@ -21,7 +21,7 @@ void DynamicObject::Update(int deltaTime)
 	if (sprite == NULL || !active)
 		return;
 	posX += vX*deltaTime;
-	if (posX <= width / 2 + 2 || posX >= G_MapWidth - (width / 2 - 2))
+	if (posX <= width / 2 + 2 || posX >= 2048 - (width / 2 - 2))
 		vX = -vX;
 	posY += vY*deltaTime;
 	sprite->Update(deltaTime);
