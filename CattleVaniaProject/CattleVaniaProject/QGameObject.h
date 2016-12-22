@@ -33,6 +33,7 @@ protected:
 	void GetNodeObject(int, int, QNode*);
 
 	D3DXVECTOR2 posDoor;
+	D3DXVECTOR2 posBlackKnight;
 public:
 	DWORD _localHurtTime;
 	DWORD _deltaHurtTime;

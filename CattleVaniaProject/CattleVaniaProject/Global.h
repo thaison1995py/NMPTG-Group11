@@ -37,7 +37,6 @@
 // form hien tai, va tuong lai cua Mario
 extern int G_CurForm;
 extern int G_NextForm;
-
 extern bool			G_IsInitedDX;		//check if dx is inited
 extern int			G_GameDepth;		//depth in game class (i dont know
 extern char*		G_GameName;		//name of game, view in caption

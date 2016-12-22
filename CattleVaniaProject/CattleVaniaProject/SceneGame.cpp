@@ -28,12 +28,10 @@ void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 
-	simon = new Simon(3850, 100);
-
+	//simon = new Simon(600, 1200);
+	simon = new Simon(3880, 100);
 	camera->viewport.y = 482;
-	//camera->viewport.x = 1780 * 2;
-	///*camera->viewport.y = 1200;
-	//camera->viewport.x = 250;*/
+	//camera->viewport.y = 1200;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	//_gameScore->initTimer(100);
 	////ResetLevel();
@@ -173,6 +171,9 @@ void SceneGame::LoadStage(int stage)
 	}
 	camera->SetSizeMap(G_MaxSize, G_MinSize);
 	openDoor = new OpenDoor(posDoor.x, posDoor.y);*/
+	posDoor.x = 3088;
+	posDoor.y = 688;
+	openDoor = new OpenDoor(posDoor.x, posDoor.y);
 	camera->SetSizeMap(G_MaxSize, G_MinSize);
 }
 
@@ -226,37 +227,44 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//		}
 	//		else
 	//			//-------------Di chuyen camera, chuyen canh ------------
-	#pragma region
+	if (_stateCamera == EStateCamera::Update_Camera)
+	{
+		camera->UpdateCamera(simon->posX);
+		ChangeCamera(simon->GetDirectDoor());
+	}
+	else
+		//-------------Di chuyen camera, chuyen canh ------------
+#pragma region
+	{
+		if (_beginMoveCamera)
+		{
+			//qGameObject->RemoveAllObject();
+			MoveCamera(_rangeMoveCamera);
+		}
+		if (_moveCameraHaft)
+		{
+			if (openDoor->GetOpenDoor())
+				openDoor->RenderOpen();
+			if (openDoor->GetOpenDoor() == false)
 			{
-				if(_beginMoveCamera)
+				simon->AutoMove(_rangeMoveSimon, deltaTime);
+				if (_rangeMoveSimon == 0)
 				{
-					qGameObject->RemoveAllObject();
-					MoveCamera(_rangeMoveCamera);
-				}
-				if(_moveCameraHaft)
-				{
-					if(openDoor->GetOpenDoor())
-						openDoor->RenderOpen();
-					if(openDoor->GetOpenDoor() == false)
+					simon->SetDirectDoor(EDirectDoor::NoneDoor);
+					openDoor->RenderClose();
+					if (openDoor->GetCloseDoor() == false)
 					{
-						simon->AutoMove(_rangeMoveSimon, deltaTime);
-						if(_rangeMoveSimon ==0)
-						{
-							simon->SetDirectDoor(EDirectDoor::NoneDoor);
-							openDoor->RenderClose();
-							if(openDoor->GetCloseDoor() == false)
-							{
-								MoveCamera(_rangeMoveCamera2);
-							}
-							else 
-							{
-								simon->_allowPress = true;
-	
-							}
-						}
+						MoveCamera(_rangeMoveCamera2);
+					}
+					else
+					{
+						simon->_allowPress = true;
+
 					}
 				}
 			}
+		}
+	}
 	//#pragma endregion Chuyen canh, dich chuyen camera
 	//		//------Thao tac khi simon chet-------
 	//#pragma region 
@@ -429,52 +437,24 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 		D3DTEXF_NONE);
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 						
+
 	qGameObject->Update(deltaTime);
 	simon->Update(deltaTime);
-	camera->UpdateCamera(simon->posX);
-	ChangeCamera(simon->GetDirectDoor());
+
 	simon->Collision(*(qGameObject->_staticObject), deltaTime);
 	simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
 	qGameObject->Collision(deltaTime);
 	bg->Draw(camera);
-	
+
 	qGameObject->Draw(camera);
+	openDoor->Draw(camera, _doorDirect);
+	_gameScore->drawTable();
 	simon->Draw(camera);
-	 /*#pragma region
-				{
-					if(_beginMoveCamera)
-					{
-						qGameObject->RemoveAllObject();
-						MoveCamera(_rangeMoveCamera);
-					}
-					if(_moveCameraHaft)
-					{
-						if(openDoor->GetOpenDoor())
-							openDoor->RenderOpen();
-						if(openDoor->GetOpenDoor() == false)
-						{
-							simon->AutoMove(_rangeMoveSimon, deltaTime);
-							if(_rangeMoveSimon ==0)
-							{
-								simon->SetDirectDoor(EDirectDoor::NoneDoor);
-								openDoor->RenderClose();
-								if(openDoor->GetCloseDoor() == false)
-								{
-									MoveCamera(_rangeMoveCamera2);
-								}
-								else 
-								{
-									simon->_allowPress = true;
-		
-								}
-							}
-						}
-					}
-				}
-		#pragma endregion Chuyen canh, dich chuyen camera*/
+
 	_gameScore->drawTable();
 	G_SpriteHandler->End();
 	_gameScore->drawScore();
+
 	
 }
 

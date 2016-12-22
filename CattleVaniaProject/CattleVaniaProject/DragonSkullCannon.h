@@ -6,8 +6,11 @@
 
 class DragonSkullCannon : public DynamicObject
 {
+	list<DynamicObject*> *_vFireBall;
 	list<FireBall*> *fireBall;
 public:
+	int vfb;
+	int smx, smy;
 	DragonSkullCannon(void);
 	DragonSkullCannon(float x, float y);
 	void Update(int dt);

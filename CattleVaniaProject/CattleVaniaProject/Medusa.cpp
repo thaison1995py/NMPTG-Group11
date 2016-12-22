@@ -3,7 +3,7 @@ Medusa::Medusa(void) : DynamicObject()
 {
 }
 
-Medusa::Medusa(float _x, float _y) : DynamicObject(_x, _y, 0.08f, 0, EnumID::Medusa_ID)
+Medusa::Medusa(float _x, float _y) : DynamicObject(_x, _y, 0.2f, 0, EnumID::Medusa_ID)
 {
 	type = ObjectType::Enemy_Type;
 	point = 300;

@@ -130,9 +130,14 @@ QGameObject::QGameObject(string fileName, string _fileName)
 				break;
 			case 11:
 				_dynamicObject->push_back(new BlackKnight(posX, posY));
+				posBlackKnight.x = posX;
+				posBlackKnight.y = posY;
 				break;
 			case 13:
 				_dynamicObject->push_back(new DragonSkullCannon(posX, posY));
+				break;
+			case 14:
+				_dynamicObject->push_back(new Flyingblock(posX, posY));
 				break;
 			case 15:
 				_queenMedusa = new QueenMedusa(posX, posY, EnumID::QueenMedusa_ID);
@@ -144,13 +149,11 @@ QGameObject::QGameObject(string fileName, string _fileName)
 				break;
 			case 20:
 				_staticObject->push_back(new Door(posX, posY, width, height, EnumID::DoorLeft_ID));
-				posDoor.x = posX;
-				posDoor.y = posY;
+		
 				break;
 			case 21:
 				_staticObject->push_back(new Door(posX, posY, width, height, EnumID::DoorRight_ID));
-				posDoor.x = posX;
-				posDoor.y = posY;
+				
 				break;
 			case 23:
 				_staticObject->push_back(new Door(posX, posY, width, height, EnumID::DoorUp_ID));

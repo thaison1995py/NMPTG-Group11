@@ -8,10 +8,10 @@ class VampireBat :public DynamicObject
 {
 public:
 	bool getUp;
-
+	int smx, smy;
 	VampireBat(void);
 	VampireBat(float x, float y);
-	void MoveSinPath(int deltaTime);
+	void Move(int deltaTime);
 	void Update(int deltaTime);
 	void Draw(CCamera* camera);
 	void SetActive(float x, float y);

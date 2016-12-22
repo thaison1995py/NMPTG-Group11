@@ -11,7 +11,7 @@ using namespace std;
 #define QUEEN_MEDUSA_SLEEP_STATE 10
 #define QUEEN_MEDUSA_STOP_STATE 2
 #define QUEEN_MEDUSA_SPEED_X 0.3f
-#define LITTLE_SNAKE_SPEED_X 0.3f
+#define LITTLE_SNAKE_SPEED_X 0.5f
 #define QUEEN_MEDUSA_DIE_RATE 10
 #define DEAD_TIME 1500
 #define PI 3.14f

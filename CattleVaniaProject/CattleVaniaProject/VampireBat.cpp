@@ -5,7 +5,7 @@ VampireBat::VampireBat(void) : DynamicObject()
 {
 }
 
-VampireBat::VampireBat(float x, float y) : DynamicObject(x, y, 0.2f, 0, EnumID::VampireBat_ID)
+VampireBat::VampireBat(float x, float y) : DynamicObject(x, y, 0.4f, 0.4f, EnumID::VampireBat_ID)
 {
 	type = ObjectType::Enemy_Type;
 	point = 200;
@@ -17,13 +17,16 @@ VampireBat::~VampireBat(void)
 {
 }
 
-void VampireBat::MoveSinPath(int deltaTime)
+void VampireBat::Move(int deltaTime)
 {
-	float nextX = vX * deltaTime + posX;
-	float nextY = 4 * sin(nextX / 10);
-	vY = nextY;
-	posX += vX * deltaTime;
-	posY += vY;
+	if (posY>smy)
+	{
+		posX += vX * deltaTime;
+		posY += vY*deltaTime;
+	}
+	else
+		posX += vX * deltaTime;
+	
 }
 
 void VampireBat::Draw(CCamera* camera)
@@ -46,7 +49,7 @@ void VampireBat::Update(int deltaTime)
 {
 	if (getUp)
 	{
-		MoveSinPath(deltaTime);
+		Move(deltaTime);
 		sprite->Update(deltaTime);
 	}
 }
@@ -55,13 +58,19 @@ void VampireBat::Collision(list<GameObject*> obj, int dt) {}
 
 void VampireBat::SetActive(float x, float y)
 {
-	if (abs(posX - x) <= 300 && abs(posY - y) <= 300)
+	smx = x;
+	smy = y;
+	vY = -vY;
+	if (abs(posX - x) <= 150 && abs(posY - y) <= 150)
 	{
 		if (posX - x > 0)
 		{
-			vX = -0.2f;
+			vX = -0.4f;	
 		}
-		else vX = 0.2f;
+		else
+		{
+			vX = 0.4f;
+		}
 		getUp = true;
 		sprite->_start = 1;
 	}

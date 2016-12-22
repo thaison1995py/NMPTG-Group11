@@ -13,19 +13,15 @@ DragonSkullCannon::DragonSkullCannon(float x, float y) : DynamicObject(x, y, 0, 
 	point = 400;
 	hp = 4;
 }
-
 void DragonSkullCannon::Update(int dt)
 {
 	list<FireBall*>::iterator i = fireBall->begin();
 	while (i != fireBall->end())
-	{
+	{ 
 		if (!(*i)->active)
 		{
-			if ((*i)->vX > 0)
-			{
-				fireBall->push_back(new FireBall(posX, posY - 16, 1, EnumID::FireBall_ID));
-			}
-			else fireBall->push_back(new FireBall(posX, posY + 16, -1, EnumID::FireBall_ID));
+			if ((*i)->vX>0)
+			fireBall->push_back(new FireBall(posX, posY + 16, vfb, EnumID::FireBall_ID));
 			fireBall->erase(i++);
 		}
 		else
@@ -52,10 +48,10 @@ void DragonSkullCannon::Draw(CCamera* camera)
 
 void DragonSkullCannon::SetActive(float x, float y)
 {
-	if (abs(posX - x) <= 260)
+	if (abs(posX - x) <= 190)
 	{
-		fireBall->push_back(new FireBall(posX, posY + 16, -1, EnumID::FireBall_ID));
-		fireBall->push_back(new FireBall(posX, posY - 16, 1, EnumID::FireBall_ID));
+		if (posX<x)
+		fireBall->push_back(new FireBall(posX, posY + 16, 1, EnumID::FireBall_ID));
 		active = true;
 	}
 }

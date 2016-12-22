@@ -6,6 +6,7 @@
 #include "Brick.h"
 #include "Candle.h"
 #include "VampireBat.h"
+#include "Flyingblock.h"
 #include "Medusa.h"
 #include "FireDie.h"
 #include "Stair.h"

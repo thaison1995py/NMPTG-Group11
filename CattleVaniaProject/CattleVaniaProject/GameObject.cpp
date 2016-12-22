@@ -67,6 +67,18 @@ void GameObject::CreateSprite()
 	case EnumID::Flyingblock_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);
 		break;
+	case EnumID::BlackKnight_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
+		break;
+	/*case EnumID::LittleSnake_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
+		break;*/
+	/*case EnumID::FireBall_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
+		break;*/
+	case EnumID::Medusa_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
+		break;
 	case EnumID::FireBomb_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);
 		break;

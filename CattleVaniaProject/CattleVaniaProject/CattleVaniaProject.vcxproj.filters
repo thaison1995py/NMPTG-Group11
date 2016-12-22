@@ -250,11 +250,11 @@
     <ClInclude Include="GameScore.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="LargeCandle.h">
-      <Filter>GameObject\Ground</Filter>
-    </ClInclude>
     <ClInclude Include="StupidDoor.h">
       <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Flyingblock.h">
+      <Filter>GameObject\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -429,11 +429,11 @@
     <ClCompile Include="GameScore.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="LargeCandle.cpp">
-      <Filter>GameObject\Ground</Filter>
-    </ClCompile>
     <ClCompile Include="StupidDoor.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Flyingblock.cpp">
+      <Filter>GameObject\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

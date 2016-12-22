@@ -128,13 +128,13 @@ void Simon::UpdateSimonStair(int dt)
 		{
 			if (_kindStair == EKindStair::UpRight)
 			{
-				_vLast = vX = 1;
-				_timeSpawn += 1;
+				_vLast = vX = 2;
+				_timeSpawn += 2;
 				if (_timeSpawn <= 10)
 				{
 
-					posX += 1.6;
-					posY += 1.6;
+					posX += 3.2;
+					posY += 3.2;
 					if (_timeSpawn > 1 && _timeSpawn < 7)
 						_simonStair->SelectIndex(13);
 					else
@@ -151,13 +151,13 @@ void Simon::UpdateSimonStair(int dt)
 			}
 			else if (_kindStair == EKindStair::UpLeft)
 			{
-				_vLast = vX = -1;
-				_timeSpawn += 1;
+				_vLast = vX = -2;
+				_timeSpawn += 2;
 				if (_timeSpawn <= 10)
 				{
 
-					posX -= 1.6;
-					posY += 1.6;
+					posX -= 3.2;
+					posY += 3.2;
 					if (_timeSpawn > 1 && _timeSpawn < 7)
 						_simonStair->SelectIndex(13);
 					else
@@ -177,12 +177,12 @@ void Simon::UpdateSimonStair(int dt)
 		{
 			if (_kindStair == EKindStair::DownLeft)
 			{
-				_vLast = vX = -1;
-				_timeSpawn += 1;
+				_vLast = vX = -2;
+				_timeSpawn += 2;
 				if (_timeSpawn <= 10)
 				{
-					posX -= 1.6;
-					posY -= 1.6;
+					posX -= 3.2;
+					posY -= 3.2;
 					if (_timeSpawn > 1 && _timeSpawn < 7)
 						_simonStair->SelectIndex(11);
 					else
@@ -199,8 +199,8 @@ void Simon::UpdateSimonStair(int dt)
 			}
 			else if (_kindStair == EKindStair::DownRight)
 			{
-				_vLast = vX = 1;
-				_timeSpawn += 1;
+				_vLast = vX = 2;
+				_timeSpawn += 2;
 				if (_timeSpawn <= 10)
 				{
 					posX += 1.6;
@@ -368,13 +368,14 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 		else if ((other->id == EnumID::BlackLeopard_ID && other->sprite->GetIndex() == 0)
 			|| (other->id == EnumID::VampireBat_ID && other->sprite->GetIndex() == 0)
 			|| (other->id == EnumID::Medusa_ID && other->sprite->GetIndex() == 0)
+			|| (other->id == EnumID::Flyingblock_ID && other->sprite->GetIndex() == 0)
+			|| (other->id == EnumID::DragonSkullCannon_ID && other->sprite->GetIndex() == 0)
 			|| (other->id == EnumID::BlackKnight_ID && other->sprite->GetIndex() == 0))
 		{
 			other->SetActive(posX, posY);
 		}
 		else
-			if (other->id == EnumID::Candle_ID || other->id == EnumID::LargeCandle_ID
-				|| other->id == EnumID::MovingPlatform_ID)
+			if (other->id == EnumID::Candle_ID)
 			{
 			}
 			else
@@ -944,7 +945,7 @@ void Simon::Jump()
 			return;
 		if (!_hasJump)
 		{
-			vY = SPEED_Y;
+			vY = SPEED_Y+0.3;
 			_heightJump = 0;
 			sprite->SelectIndex(0);
 			_action = Action::Jump;

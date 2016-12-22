@@ -37,13 +37,14 @@ public:
 
 	SceneGame();
 	~SceneGame();
+	Simon* simon;
 protected:
 
 	LPDIRECT3DSURFACE9 BackgroundWhite;
 
 	QBackground *bg;
 	QBackground *bg_2;
-	Simon* simon;
+	
 	Simon* simonTemp;	//Luu thong tin cua simon cu
 	QGameObject* qGameObject;
 	OpenDoor* openDoor;
