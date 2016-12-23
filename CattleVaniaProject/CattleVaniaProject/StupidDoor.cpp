@@ -51,7 +51,6 @@ StupidDoor::StupidDoor(float posX_, float posY_, float yMax_, float yMin_, float
 	vX = 0;
 	vY = STUPID_DOOR_SPEED_UP;
 	_initialize();
-	this->active = true;
 	_vUp = vUp_;
 	_vDown = vDown_;
 	_yMax = yMax_ - height / 2;

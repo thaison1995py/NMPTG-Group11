@@ -18,13 +18,7 @@ DynamicObject::DynamicObject(float _posX, float _posY, float _vX, float _vY, Enu
 
 void DynamicObject::Update(int deltaTime)
 {
-	if (sprite == NULL || !active)
-		return;
-	posX += vX*deltaTime;
-	if (posX <= width / 2 + 2 || posX >= 4096 - (width / 2 - 2))
-		vX = -vX;
-	posY += vY*deltaTime;
-	sprite->Update(deltaTime);
+
 }
 
 void DynamicObject::Draw(CCamera* camera)
@@ -39,16 +33,8 @@ void DynamicObject::Draw(CCamera* camera)
 }
 
 void DynamicObject::SetActive(float x, float y)
-{
-	if (active) return;
-	if (abs(posX - x) <= 350 && abs(posY - y) <= 200)
-	{
-		if (posX - x > 0)
-		{
-			vX = -vX;
-		}
-		active = true;
-	}
+{	
+	active = true;
 }
 
 DynamicObject::~DynamicObject(void)

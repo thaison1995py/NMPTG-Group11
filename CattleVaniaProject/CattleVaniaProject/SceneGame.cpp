@@ -91,9 +91,10 @@ void SceneGame::LoadStage(int stage)
 	if (stage == 4)
 	{
 		qGameObject = new QGameObject("Resources/Maps/ObjectInMap.txt",
-										"Resources\\Maps\\QuadTree.txt");
+			"Resources\\Maps\\QuadTree.txt");
 	}
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
+	qGameObject->LoadTree();
+
 	/*switch (stage)
 	{
 	case 1:
@@ -428,67 +429,70 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//		_gameScore->drawScore();
 	//	}
 	//#pragma endregion Camera Update Binh thuong
-	 //Background
+	//Background
 	d3ddv->StretchRect(
 		Background,			// from 
 		NULL,				// which portion?
 		G_BackBuffer,		// to 
 		NULL,				// which portion?
 		D3DTEXF_NONE);
-	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
-						
+	simon->Update(deltaTime);
+	
+	qGameObject->GetTreeObject(camera->viewport.x, camera->viewport.y);
+	qGameObject->GetObjecttInVP();
+	qGameObject->SetObjectActiveInVP(simon->posX, simon->posY);
 
 	qGameObject->Update(deltaTime);
-	simon->Update(deltaTime);
 
-	simon->Collision(*(qGameObject->_staticObject), deltaTime);
-	simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
+	simon->Collision(*(qGameObject->_listObjectInVP), deltaTime);
+	//simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
 	qGameObject->Collision(deltaTime);
+
+	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 	bg->Draw(camera);
 
 	qGameObject->Draw(camera);
+
 	openDoor->Draw(camera, _doorDirect);
 	_gameScore->drawTable();
 	simon->Draw(camera);
-
-	_gameScore->drawTable();
 	G_SpriteHandler->End();
 	_gameScore->drawScore();
 
-	
+
 }
 
 void SceneGame::ProcessInput(int keyCode)
 {
-	switch(keyCode)
+	switch (keyCode)
 	{
 	case DIK_RIGHT:
 	case DIK_D:
-	simon->TurnRight();
-	break;
+		simon->TurnRight();
+		break;
 	case DIK_LEFT:
 	case DIK_A:
-	simon->TurnLeft();
-	break;
+		simon->TurnLeft();
+		break;
 	case DIK_DOWN:
 	case DIK_S:
-	if(simon->OnStair())
-	{
-	simon->DownStair();
-	}
-	else
-	simon->Sit();
-	break;
+		if (simon->OnStair())
+		{
+			simon->DownStair();
+		}
+		else
+			simon->Sit();
+		break;
 	case DIK_UP:
 	case DIK_W:
-	simon->UpStair();
-	break;
+		simon->UpStair();
+		break;
 	case DIK_Q:
-	simon->UseWeapon();
-	break;
+		simon->UseWeapon();
+		break;
 	default:
-	simon->Stop();
-	break;
+		simon->Stop();
+		break;
 	}
 }
 
@@ -496,67 +500,67 @@ void SceneGame::ResetLevel()
 {
 	/*if(simon != NULL)
 		delete simon;*/
-	if(bg != NULL)
+	if (bg != NULL)
 		delete bg;
-	if(qGameObject != NULL)
+	if (qGameObject != NULL)
 		delete qGameObject;
 }
 
 void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 {
-	if(_directDoor != EDirectDoor::NoneDoor)
+	if (_directDoor != EDirectDoor::NoneDoor)
 	{
 		switch (_directDoor)
 		{
 		case DoorDown:
+		{
+			camera->viewport.y -= (32 * 12); //do cao 1 stage = 32pixcel * 12 dong
+			simon->posY -= 64;
+			simon->SetDirectDoor(EDirectDoor::NoneDoor);
+			if (_stageNow >= 6)
 			{
-				camera->viewport.y  -= (32*12); //do cao 1 stage = 32pixcel * 12 dong
-				simon->posY -= 64;
-				simon->SetDirectDoor(EDirectDoor::NoneDoor);
-				if(_stageNow >= 6)
-				{ 
-					_stageNow--;
-					LoadStage(_stageNow);
-				}
+				_stageNow--;
+				LoadStage(_stageNow);
 			}
-			break;
+		}
+		break;
 		case DoorUp:
+		{
+			camera->viewport.y += (32 * 12); //do cao 1 stage = 32pixcel * 12 dong
+			simon->posY += 64;
+			simon->SetDirectDoor(EDirectDoor::NoneDoor);
+			if (_stageNow >= 5)
 			{
-				camera->viewport.y += (32*12); //do cao 1 stage = 32pixcel * 12 dong
-				simon->posY += 64;
-				simon->SetDirectDoor(EDirectDoor::NoneDoor);
-				if(_stageNow >= 5)
-				{ 
-					_stageNow++;
-					LoadStage(_stageNow);
-				}
+				_stageNow++;
+				LoadStage(_stageNow);
+			}
 
-			}
-			break;
+		}
+		break;
 		case DoorLeft:
-			{
-				_stateCamera = EStateCamera::NoUpdate_Camera;
-				_beginMoveCamera = true;
-				_moveCameraHaft = false;
-				_moveCameraDone = false;
-				_rangeMoveCamera = -182;
-				_rangeMoveCamera2 = -110;
-				_rangeMoveSimon = -60;
-				_doorDirect = -1;
-			}
-			break;
+		{
+			_stateCamera = EStateCamera::NoUpdate_Camera;
+			_beginMoveCamera = true;
+			_moveCameraHaft = false;
+			_moveCameraDone = false;
+			_rangeMoveCamera = -182;
+			_rangeMoveCamera2 = -110;
+			_rangeMoveSimon = -60;
+			_doorDirect = -1;
+		}
+		break;
 		case DoorRight:
-			{
-				_stateCamera = EStateCamera::NoUpdate_Camera;
-				_beginMoveCamera = true;
-				_moveCameraHaft = false;
-				_moveCameraDone = false;
-				_rangeMoveCamera = 182;
-				_rangeMoveCamera2 = 176;
-				_rangeMoveSimon = 60;
-				_doorDirect = 1;
-			}
-			break;
+		{
+			_stateCamera = EStateCamera::NoUpdate_Camera;
+			_beginMoveCamera = true;
+			_moveCameraHaft = false;
+			_moveCameraDone = false;
+			_rangeMoveCamera = 182;
+			_rangeMoveCamera2 = 176;
+			_rangeMoveSimon = 60;
+			_doorDirect = 1;
+		}
+		break;
 		default:
 			break;
 		}
@@ -568,15 +572,15 @@ void SceneGame::MoveCamera(int &_moveRange)
 {
 	//if(_rangeMoveCamera == 0)
 	//	_rangeMoveCamera = _moveRange;
-	if(_beginMoveCamera)
+	if (_beginMoveCamera)
 	{
-		if(_rangeMoveCamera == 0 && !_moveCameraHaft)
+		if (_rangeMoveCamera == 0 && !_moveCameraHaft)
 		{
 			_moveCameraHaft = true;
 			_beginMoveCamera = false;
 			return;
 		}
-		if(_rangeMoveCamera > 0)
+		if (_rangeMoveCamera > 0)
 		{
 			_rangeMoveCamera -= 2;
 			camera->viewport.x += 2;
@@ -584,18 +588,18 @@ void SceneGame::MoveCamera(int &_moveRange)
 		else
 		{
 			_rangeMoveCamera += 2;
-			camera->viewport.x -=2;
+			camera->viewport.x -= 2;
 		}
 	}
-	else if(_moveCameraHaft)
+	else if (_moveCameraHaft)
 	{
-		if(_rangeMoveCamera2 == 0 && !_moveCameraDone)
+		if (_rangeMoveCamera2 == 0 && !_moveCameraDone)
 		{
 			_moveCameraHaft = false;
 			_beginMoveCamera = false;
 			_moveCameraDone = true;
-			_stageNow++;
-			LoadStage(_stageNow);
+	
+		
 			_stateCamera = EStateCamera::Update_Camera;
 			simon->SetDirectDoor(EDirectDoor::NoneDoor);
 			openDoor->ResetDoor();
@@ -607,7 +611,7 @@ void SceneGame::MoveCamera(int &_moveRange)
 			//-----------------------------
 			return;
 		}
-		if(_rangeMoveCamera2 > 0)
+		if (_rangeMoveCamera2 > 0)
 		{
 			_rangeMoveCamera2 -= 2;
 			camera->viewport.x += 2;
@@ -615,7 +619,7 @@ void SceneGame::MoveCamera(int &_moveRange)
 		else
 		{
 			_rangeMoveCamera2 += 2;
-			camera->viewport.x -=2;
+			camera->viewport.x -= 2;
 		}
 	}
 
@@ -639,56 +643,56 @@ void SceneGame::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 	}
 	else
 	{
-	simon = new Simon(50, 50);
-	///*introScene = new IntroGame();*/
+		simon = new Simon(50, 50);
+		///*introScene = new IntroGame();*/
 	}
 }
 
 void SceneGame::OnKeyDown(int KeyCode)
 {
-	if(stateGame == EState::NoUpdate_State)
+	if (stateGame == EState::NoUpdate_State)
 	{
-	if(KeyCode == DIK_R)
-	stateGame = EState::None_State;
+		if (KeyCode == DIK_R)
+			stateGame = EState::None_State;
 	}
 	else
 	{
-	switch (KeyCode)
-	{
-	case DIK_SPACE:
-	simon->Jump();
-	break;
-	case DIK_RETURN:
-	simon->Fight();
-	break;
-	case DIK_U:
-	simon->UpgradeMorningStar();
-	break;
-	case DIK_X:
-	simon->ChangeWeapon(EnumID::None_ID);
-	break;
-	case DIK_C:
-	simon->ChangeWeapon(EnumID::Watch_ID);
-	break;
-	case DIK_V:
-	simon->ChangeWeapon(EnumID::Dagger_ID);
-	break;
-	case DIK_B:
-	simon->ChangeWeapon(EnumID::Boomerang_ID);
-	break;
-	case DIK_N:
-	simon->ChangeWeapon(EnumID::FireBomb_ID);
-	break;
-	case DIK_M:
-	simon->ChangeWeapon(EnumID::Axe_ID);
-	break;
-	case DIK_P:
-	stateGame = EState::NoUpdate_State;
-	break;
-	case DIK_F1:
-	simon->SetUsingCross(true);
-	break;
-	}
+		switch (KeyCode)
+		{
+		case DIK_SPACE:
+			simon->Jump();
+			break;
+		case DIK_RETURN:
+			simon->Fight();
+			break;
+		case DIK_U:
+			simon->UpgradeMorningStar();
+			break;
+		case DIK_X:
+			simon->ChangeWeapon(EnumID::None_ID);
+			break;
+		case DIK_C:
+			simon->ChangeWeapon(EnumID::Watch_ID);
+			break;
+		case DIK_V:
+			simon->ChangeWeapon(EnumID::Dagger_ID);
+			break;
+		case DIK_B:
+			simon->ChangeWeapon(EnumID::Boomerang_ID);
+			break;
+		case DIK_N:
+			simon->ChangeWeapon(EnumID::FireBomb_ID);
+			break;
+		case DIK_M:
+			simon->ChangeWeapon(EnumID::Axe_ID);
+			break;
+		case DIK_P:
+			stateGame = EState::NoUpdate_State;
+			break;
+		case DIK_F1:
+			simon->SetUsingCross(true);
+			break;
+		}
 	}
 }
 

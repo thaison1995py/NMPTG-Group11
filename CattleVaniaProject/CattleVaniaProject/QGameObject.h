@@ -19,6 +19,13 @@
 #include <string>
 #include <sstream>
 
+
+enum OBJECTTYPE
+{
+	GHOST = 3,
+	SPEARGUAD = 4
+};
+
 //using namespace std;
 
 class QGameObject
@@ -33,7 +40,6 @@ protected:
 	void GetNodeObject(int, int, QNode*);
 
 	D3DXVECTOR2 posDoor;
-	D3DXVECTOR2 posBlackKnight;
 public:
 	DWORD _localHurtTime;
 	DWORD _deltaHurtTime;
@@ -41,8 +47,8 @@ public:
 	bool IsHurt();
 	void Initialize();
 
-	list<GameObject*> *_staticObject;
-	list<GameObject*> *_dynamicObject;
+	list<GameObject*> *_listObjectInVP;
+	map<int, GameObject*> *_listObjectGame;
 
 	QGameObject(void);
 	~QGameObject(void);
@@ -51,7 +57,9 @@ public:
 	D3DXVECTOR2 GetPosDoor();	//Lay vi tri de ve canh cua qua stage
 	void LoadTree();
 	void GetTreeObject(int, int);
+	void GetObjecttInVP();
 	void Draw(CCamera *camera);
+	void SetObjectActiveInVP(float x, float y);
 	void Update(int deltaTime);
 	void Collision(int dt);
 	int RemoveAllObjectInCamera(D3DXVECTOR2);

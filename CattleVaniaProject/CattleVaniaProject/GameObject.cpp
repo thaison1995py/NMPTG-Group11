@@ -11,11 +11,13 @@ GameObject::GameObject(void)
 	canMove = false;
 }
 
-void GameObject::SetActive(float x, float y){}
-void GameObject::SetActive()
+void GameObject::SetActive(float x, float y)
 {
-	if (!active)
-		active = true;
+	active = true;
+}
+void GameObject::SetActive()
+{	
+	active = true;
 }
 
 GameObject::GameObject(float _posX, float _posY, EnumID _id)
@@ -31,7 +33,7 @@ GameObject::GameObject(float _posX, float _posY, EnumID _id)
 	point = 0;
 	type = ObjectType::None_Type;
 	canMove = false;
-	active = true;
+	active = false;
 	death = false;
 	CreateSprite();
 	if (sprite != NULL)
@@ -46,7 +48,7 @@ void GameObject::CreateSprite()
 	switch (id)
 	{
 	case EnumID::Simon_ID:
-		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 100);
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 70);
 		break;
 	case EnumID::Brick_ID:
 	case EnumID::StairUpRight_ID:
@@ -62,7 +64,7 @@ void GameObject::CreateSprite()
 		sprite = NULL;
 		break;
 	case EnumID::VampireBat_ID:
-		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 100);
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 3, 80);
 		break;
 	case EnumID::Flyingblock_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 50);

@@ -70,7 +70,6 @@
   <ItemGroup>
     <ClInclude Include="Axe.h" />
     <ClInclude Include="BlackKnight.h" />
-    <ClInclude Include="BlackRaven.h" />
     <ClInclude Include="Boomerang.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="Candle.h" />
@@ -117,24 +116,20 @@
     <ClInclude Include="SceneMenu.h" />
     <ClInclude Include="Simon.h" />
     <ClInclude Include="Singleton.h" />
-    <ClInclude Include="Skeletal.h" />
     <ClInclude Include="Skeleton.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="SpikeTrap.h" />
     <ClInclude Include="Stair.h" />
     <ClInclude Include="StupidDoor.h" />
     <ClInclude Include="SweptAABB.h" />
-    <ClInclude Include="ThreeWater.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="VampireBat.h" />
-    <ClInclude Include="Water.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Axe.cpp" />
     <ClCompile Include="BlackKnight.cpp" />
-    <ClCompile Include="BlackRaven.cpp" />
     <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Candle.cpp" />
@@ -179,17 +174,14 @@
     <ClCompile Include="SceneMenu.cpp" />
     <ClCompile Include="Simon.cpp" />
     <ClCompile Include="Singleton.cpp" />
-    <ClCompile Include="Skeletal.cpp" />
     <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="SpikeTrap.cpp" />
     <ClCompile Include="Stair.cpp" />
     <ClCompile Include="StupidDoor.cpp" />
-    <ClCompile Include="ThreeWater.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="VampireBat.cpp" />
-    <ClCompile Include="Water.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -23,7 +23,8 @@ public:
 	virtual Box GetBox();
 	virtual void Collision(list<GameObject*> obj, int dt);
 	virtual void SetActive(float x, float y);
-	virtual void ReceiveDamage(int damagePoint);
+
+	void ReceiveDamage(int damagePoint);
 	~DynamicObject(void);
 };
 

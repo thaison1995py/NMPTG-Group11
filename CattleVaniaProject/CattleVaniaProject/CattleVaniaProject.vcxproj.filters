@@ -208,14 +208,8 @@
     <ClInclude Include="Stair.h">
       <Filter>GameObject\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="BlackRaven.h">
-      <Filter>GameObject\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Skeleton.h">
       <Filter>GameObject\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Skeletal.h">
-      <Filter>GameObject\OtherObj</Filter>
     </ClInclude>
     <ClInclude Include="PhantomBat.h">
       <Filter>GameObject\Bosses</Filter>
@@ -232,17 +226,11 @@
     <ClInclude Include="QNode.h">
       <Filter>Background</Filter>
     </ClInclude>
-    <ClInclude Include="ThreeWater.h">
-      <Filter>GameObject\OtherObj</Filter>
-    </ClInclude>
     <ClInclude Include="MagicalCrystal.h">
       <Filter>GameObject\Item</Filter>
     </ClInclude>
     <ClInclude Include="Axe.h">
       <Filter>GameObject\Weapon</Filter>
-    </ClInclude>
-    <ClInclude Include="Water.h">
-      <Filter>GameObject\OtherObj</Filter>
     </ClInclude>
     <ClInclude Include="FallingCastle.h">
       <Filter>Game\Scene</Filter>
@@ -387,14 +375,8 @@
     <ClCompile Include="Stair.cpp">
       <Filter>GameObject\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="BlackRaven.cpp">
-      <Filter>GameObject\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Skeleton.cpp">
       <Filter>GameObject\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Skeletal.cpp">
-      <Filter>GameObject\OtherObj</Filter>
     </ClCompile>
     <ClCompile Include="PhantomBat.cpp">
       <Filter>GameObject\Bosses</Filter>
@@ -411,17 +393,11 @@
     <ClCompile Include="QNode.cpp">
       <Filter>Background</Filter>
     </ClCompile>
-    <ClCompile Include="ThreeWater.cpp">
-      <Filter>GameObject\OtherObj</Filter>
-    </ClCompile>
     <ClCompile Include="MagicalCrystal.cpp">
       <Filter>GameObject\Item</Filter>
     </ClCompile>
     <ClCompile Include="Axe.cpp">
       <Filter>GameObject\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="Water.cpp">
-      <Filter>GameObject\OtherObj</Filter>
     </ClCompile>
     <ClCompile Include="FallingCastle.cpp">
       <Filter>Game\Scene</Filter>

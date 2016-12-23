@@ -8,7 +8,7 @@
 #include "Boomerang.h"
 #include "FireBomb.h"
 #include "Axe.h"
-#include "ThreeWater.h"
+
 
 class Simon : public DynamicObject
 {
@@ -72,7 +72,6 @@ public:
 	//-----------Simon Death---
 	bool _simonDeath;			//Kiemer tra simon chet hay song
 	bool _isReset;				//cho phep reset nhan vat sau khi chet
-	ThreeWater * _threeWater;	//Giot nuoc ban len khi simon rot xuong ho
 	CSprite* _simonDeathSprite;	//sprite simon death
 	void SimonDeath(int &_timeCount);
 	int GetHPSimon();

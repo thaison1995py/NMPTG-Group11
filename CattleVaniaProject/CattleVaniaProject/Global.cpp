@@ -27,8 +27,8 @@ D3DFORMAT	G_BackBufferFormat;
 bool		G_HasBackgroundSound = true;
 bool		G_HasEffectSound = true;
 
-int			G_MapWidth;
-int			G_MapHeight;
+int			G_MapWidth = 4096;
+int			G_MapHeight = 1632;
 
 int			G_MaxSize = 4096;
 int			G_MinSize = 0;
