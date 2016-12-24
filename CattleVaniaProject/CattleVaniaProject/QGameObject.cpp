@@ -186,13 +186,17 @@ void QGameObject::GetObjecttInVP()
 {
 	for (list<int>::iterator i = myObject->begin(); i != myObject->end(); i++)
 	{
-		
+			
 		auto obj = _listObjectGame->find(*i);
 		if (obj != _listObjectGame->end())
 		{
-			auto obj1 = std::find(_listObjectInVP->begin(), _listObjectInVP->end(), obj->second);
+			/*auto obj1 = std::find(_listObjectInVP->begin(), _listObjectInVP->end(), obj->second);
 			if (obj1 == _listObjectInVP->end())
+			{*/
 				_listObjectInVP->push_back(obj->second);
+				/*_listObjectGame->erase(*i);
+				_listObjectGame->insert(pair<>);*/
+			//}
 		}
 	}
 }

@@ -36,7 +36,7 @@ void SceneGame::LoadLevel(int level)
 			bg->LoadTree();
 			simon = new Simon(50, 64);
 			_gameScore = new GameScore(G_Device,22,G_ScreenWidth,G_ScreenHeight);			
-			_gameScore->initTimer(2);
+			_gameScore->initTimer(100);
 			SoundManager::GetInst()->RemoveAllBGM();
 			SoundManager::GetInst()->PlayBGSound(EBGSound::EStage1Sound);
 		}

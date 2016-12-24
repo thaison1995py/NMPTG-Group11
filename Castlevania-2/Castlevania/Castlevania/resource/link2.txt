@@ -1,3 +1,0 @@
-resource/image/Toolbutton/exit.png
-resource/image/Toolbutton/save.png
-resource/image/Toolbutton/new.png

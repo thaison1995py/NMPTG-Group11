@@ -29,8 +29,8 @@ void SceneGame::LoadLevel(int level)
 	bg = new QBackground(level);
 
 	//simon = new Simon(600, 1200);
-	simon = new Simon(3880, 100);
-	camera->viewport.y = 482;
+	simon = new Simon(994, 1200);
+	camera->viewport.y = 482 +32 * 12 *2;
 	//camera->viewport.y = 1200;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	//_gameScore->initTimer(100);

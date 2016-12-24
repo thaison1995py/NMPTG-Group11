@@ -4,7 +4,7 @@
 #define SIMON_RATE 10
 #define HURT_STATE 25
 
-#define SPEED_X 0.4f
+#define SPEED_X 0.55f
 #define SPEED_Y 0.5f
 #define MAX_HEIGHT 70.0f
 

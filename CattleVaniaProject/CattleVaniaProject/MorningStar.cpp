@@ -153,6 +153,7 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						{
 							point += other->point;
 							(*_itBegin) = new FireDie(other->posX, other->posY);
+
 						}
 					}
 					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_HitByWeapon);

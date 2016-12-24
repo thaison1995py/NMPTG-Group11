@@ -1,4 +1,0 @@
-resource/image/Toolbutton/tab1.png
-resource/image/Toolbutton/tab2.png
-resource/image/Toolbutton/tab3.png
-resource/image/Toolbutton/tab4.png
