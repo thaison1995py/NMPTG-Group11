@@ -20,6 +20,7 @@ public:
 	bool GetOpenDoor();
 	bool GetCloseDoor();
 	void ResetDoor();
+	void SetPos(float x, float y);
 	void Draw(CCamera*, int vX);
 };
 

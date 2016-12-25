@@ -31,8 +31,8 @@ void SceneGame::LoadLevel(int level)
 	
 	/*simon = new Simon(1619, 736);
 	camera->viewport.y = 482+32*12;*/
-	simon = new Simon(1127, 950);
-	camera->viewport.y = 1250;// +32 * 12;
+	simon = new Simon(278, 1350);
+	camera->viewport.y = 482 +32 * 12*3;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(100);
 	////ResetLevel();
@@ -95,93 +95,96 @@ void SceneGame::LoadStage(int stage)
 										"Resources\\Maps\\QuadTree.txt");
 	}
 	_queenMedusa = qGameObject->getQueenMedusa();
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
-	/*switch (stage)
-	{
-	case 1:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage1.txt");
-	}
-	break;
-	case 2:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage2.txt");
-	posDoor = qGameObject->GetPosDoor();
+	
 
-	}
-	break;
-	case 3:
+	
+	
+	openDoor = new OpenDoor( 688,3088 );
+	if (simon->posX > 2820 && simon->posX<3460)
 	{
-	qGameObject = new QGameObject("Resources/Maps/Stage3.txt");
-	posDoor = qGameObject->GetPosDoor();
-	qGameObject->_staticObject->push_back(new Lake(3510, 48, 844, 32));
+		posDoor.x = 3088;
+		posDoor.y = 688;
+		openDoor->SetPos(posDoor.x, posDoor.y);
 	}
-	break;
-	case 4:
+	else 	if (simon->posX< 1995 && simon->posX > 1220)
 	{
-	qGameObject = new QGameObject("Resources/Maps/Stage4.txt");
-	posDoor = qGameObject->GetPosDoor();
-	_phantomBat = qGameObject->getPhantomBat();
+		posDoor.x = 1560;
+		posDoor.y = 1008;
+		openDoor->SetPos(posDoor.x, posDoor.y);
+	}
 
-	}
-	break;
-	case 5:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage5.txt");
-	posDoor = qGameObject->GetPosDoor();
+	if (simon->posX < 4096 && simon->posX>3105)
+		G_MaxSize = 4096;
+	else
+		if (simon->posX < 3074 && simon->posX>1585)
+			G_MaxSize = 3074;
+		else if (simon->posX < 1550)
+			G_MaxSize = 1536;
 
-	}
-	break;
-	case 6:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage6.txt");
-	posDoor = qGameObject->GetPosDoor();
+	if (simon->posY < 384)
+		G_MinSize = 3584;
+	else
+		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
+			G_MinSize = 3072;
+		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1536;
+		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1556;
+		else if (simon->posY < 1148 && simon->posX < 1550)
+			G_MinSize = 16;
 
-	}
-	break;
-	case 7:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage7.txt");
-	posDoor = qGameObject->GetPosDoor();
+		if (_queenMedusa->_hasGetUp)
+		{
+			G_MinSize = 16;
+			G_MaxSize = 512;
+		}
+		camera->SetSizeMap(G_MaxSize, G_MinSize);
 
-	}
-	break;
-	case 8:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage8.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 9:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage9.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 10:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage10.txt");
-	posDoor = qGameObject->GetPosDoor();
-	_queenMedusa = qGameObject->getQueenMedusa();
-
-	}
-	break;
-	default:
-	break;
-	}
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
-	openDoor = new OpenDoor(posDoor.x, posDoor.y);*/
-	posDoor.x = 3088;
-	posDoor.y = 688;
-	openDoor = new OpenDoor(posDoor.x, posDoor.y);
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
 }
 
 void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 {
+	if (simon->posX > 2820 && simon->posX<3460)
+	{
+		posDoor.x = 3088;
+		posDoor.y = 688;
+		openDoor->SetPos(posDoor.x,posDoor.y);
+	}
+	else 	if (simon->posX< 1995 && simon->posX > 1220)
+	{
+		posDoor.x = 1560;
+		posDoor.y = 1008;
+		openDoor->SetPos(posDoor.x, posDoor.y);
+	}
+
+	if (simon->posX < 4096 && simon->posX>3105)
+		G_MaxSize = 4096;
+	else
+		if (simon->posX < 3074 && simon->posX>1585)
+			G_MaxSize = 3074;
+		else if (simon->posX < 1550)
+			G_MaxSize = 1536;
+
+	if (simon->posY < 384)
+		G_MinSize = 3584;
+	else
+		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
+			G_MinSize = 3072;
+		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1536;
+		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1556;
+		else if (simon->posY < 1148 && simon->posX < 1550)
+			G_MinSize = 16;
+	
+		if (_queenMedusa->_hasGetUp)
+		{
+			G_MinSize = 16;
+			G_MaxSize = 512;
+		}
+		camera->SetSizeMap(G_MaxSize, G_MinSize);
 	//#pragma region
+
 	//
 	//	if(_levelNow == 0)
 	//	{
@@ -514,6 +517,7 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	_gameScore->drawScore();
 
 	
+	
 }
 
 void SceneGame::ProcessInput(int keyCode)
@@ -571,6 +575,7 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 				camera->viewport.y  -= (32*12); //do cao 1 stage = 32pixcel * 12 dong
 				simon->posY -= 64;
 				simon->SetDirectDoor(EDirectDoor::NoneDoor);
+				
 				break;
 			}
 			
@@ -579,6 +584,7 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 				camera->viewport.y += (32*12); //do cao 1 stage = 32pixcel * 12 dong
 				simon->posY += 64;
 				simon->SetDirectDoor(EDirectDoor::NoneDoor);
+				
 				break;
 
 			}
@@ -593,6 +599,7 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 				_rangeMoveCamera2 = -110;
 				_rangeMoveSimon = -60;
 				_doorDirect = -1;
+				
 				break;
 			}
 			
@@ -606,6 +613,7 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 				_rangeMoveCamera2 = 176;
 				_rangeMoveSimon = 60;
 				_doorDirect = 1;
+				
 				break;
 			}
 			
