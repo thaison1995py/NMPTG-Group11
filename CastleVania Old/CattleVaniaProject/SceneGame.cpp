@@ -21,7 +21,7 @@ SceneGame::SceneGame(void) : Scene(ESceneState::Game_Scene)
 	_lifes = 5;
 	_stateCamera = EStateCamera::Update_Camera;
 	stateGame = EState::None_State;
-
+	
 }
 
 void SceneGame::LoadLevel(int level)
@@ -31,8 +31,8 @@ void SceneGame::LoadLevel(int level)
 	
 	/*simon = new Simon(1619, 736);
 	camera->viewport.y = 482+32*12;*/
-	simon = new Simon(278, 1350);
-	camera->viewport.y = 482 +32 * 12*3;
+	simon = new Simon(250, 1350);
+	camera->viewport.y = 482 + 32 * 12 * 3;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(100);
 	////ResetLevel();
@@ -95,7 +95,7 @@ void SceneGame::LoadStage(int stage)
 										"Resources\\Maps\\QuadTree.txt");
 	}
 	_queenMedusa = qGameObject->getQueenMedusa();
-	
+	_listSnake = _queenMedusa->getlistSnake();
 
 	
 	
@@ -297,6 +297,8 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 			LoadStage(_stageReset);
 			camera->viewport = posCamera;
 			_stageNow = _stageReset;
+			if (_queenMedusa->_hasGetUp)
+				_queenMedusa->hp = 20;
 			_lifes--;
 			if (_lifes <= 0)
 			{
@@ -495,11 +497,15 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	simon->point = 0;
 	simon->Collision(*(qGameObject->_staticObject), deltaTime);
 	simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
+	
 	qGameObject->Update(deltaTime);
 	qGameObject->Collision(deltaTime);
 	if (_queenMedusa->_hasGetUp)
 	{
+		
 		_queenMedusa->Update(deltaTime, simon->getPos());
+		_listSnake = _queenMedusa->getlistSnake();
+		simon->Collision(_listSnake, deltaTime);
 		_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);
 	}
 	else

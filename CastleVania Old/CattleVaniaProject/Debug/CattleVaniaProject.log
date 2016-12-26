@@ -1,13 +1,50 @@
-﻿Build started 12/25/2016 2:22:37 PM.
+﻿Build started 12/26/2016 12:00:45 PM.
      1>Project "E:\NMPTG\trunk\CastleVania Old\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SceneGame.cpp
-         SceneGame.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Simon.cpp
+         Simon.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\scenegame.cpp(237): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\scenegame.cpp(296): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\scenegame.cpp(496): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\scenegame.cpp(497): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(136): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(137): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(159): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(160): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(184): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(185): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(206): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(207): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(332): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(334): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(345): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(353): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(563): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(583): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(603): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(624): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(716): warning C4805: '==' : unsafe mix of type 'float' and type 'bool' in operation
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(725): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(726): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(728): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(772): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(775): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(806): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(809): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(814): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(817): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(823): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(828): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(834): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(837): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(848): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(851): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(856): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(859): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(865): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(870): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(876): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(879): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(950): warning C4305: '=' : truncation from 'double' to 'float'
+     1>e:\nmptg\trunk\castlevania old\cattlevaniaproject\simon.cpp(1327): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\NMPTG\trunk\CastleVania Old\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\NMPTG\trunk\CastleVania Old\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\NMPTG\trunk\CastleVania Old\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\BlackKnight.obj
@@ -73,4 +110,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.45
+Time Elapsed 00:00:03.22

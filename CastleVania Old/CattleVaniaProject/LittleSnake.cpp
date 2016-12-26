@@ -8,6 +8,7 @@ LittleSnake::LittleSnake(void)
 LittleSnake::LittleSnake(float _posX, float _posY, float _vX, float _vY, EnumID _id)
 	: DynamicObject(_posX, _posY, _vX, _vY, _id)
 {
+	type = ObjectType::Enemy_Type;
 	active = true;
 }
 

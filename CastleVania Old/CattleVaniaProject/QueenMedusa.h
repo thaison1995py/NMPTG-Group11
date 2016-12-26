@@ -51,7 +51,7 @@ protected:
 	//ERouterType _eRouterType;
 	DWORD _localTime;
 
-	list<DynamicObject*> *_vLittleSnake;
+	list<GameObject*> *_vLittleSnake;
 
 	EQueenMedusaState _state;
 	D3DXVECTOR2* _simonPos;
@@ -78,6 +78,7 @@ public:
 	void Update(int deltaTime_, D3DXVECTOR2* simonPos_);
 	virtual void Draw(CCamera* camera_);
 	virtual void Collision(list<GameObject*> obj, int dt);
+	list<GameObject*> getlistSnake();
 	void getUp();
 	void setDead();
 	void ReceiveDamage(int damagePoint);

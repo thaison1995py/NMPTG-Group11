@@ -640,17 +640,6 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 #pragma endregion Va cham cau thang
 						//------------------------------------------------
 #pragma region 
-						case EnumID::CastleGate_ID:
-						{
-							rangeGate = posX - other->posX;
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2));
-							if (_compareHeigh < 4)
-							{
-								_colCastleGate = true;
-								OnGateCastle();
-							}
-						}
-						break;
 						case EnumID::DoorDown_ID:
 						{
 							float _compareHeigh = abs((other->posY -other->height/2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
@@ -708,6 +697,11 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 										}
 										else
 											hp -= other->damage;
+									}
+									if (other->id == EnumID::LittleSnake_ID)
+									{ 
+										other->Remove();
+										hp += 10;
 									}
 
 								}
@@ -784,6 +778,14 @@ void Simon::Draw(CCamera* camera)
 	{
 		if (IsHurt())
 		{
+			///*if (vX > 0)
+			//{
+			//	posX -= 1;
+			//}
+			//else
+			//{
+			//	*/posX += 1;
+			//}
 		}
 		else
 		{

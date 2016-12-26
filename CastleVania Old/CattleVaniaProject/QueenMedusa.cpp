@@ -17,7 +17,7 @@ void QueenMedusa::_initialize()
 	_routerInfo = new D3DXVECTOR2(0, 0);
 	_gold = new D3DXVECTOR2(0, 0);
 	_localTime = 0;
-	_vLittleSnake = new list<DynamicObject*>();
+	_vLittleSnake = new list<GameObject*>();
 	_deltaPhi = 0;
 	_posY0 = posY;
 	active = true;
@@ -27,6 +27,10 @@ void QueenMedusa::_initialize()
 	damage = 4;
 }
 
+list<GameObject*> QueenMedusa::getlistSnake()
+{
+	return *_vLittleSnake;
+}
 
 void QueenMedusa::_onStop(int deltaTime_)
 {
@@ -201,7 +205,7 @@ bool QueenMedusa::GetState()
 
 void QueenMedusa::_updateSnakes(int deltaTime_)
 {
-	list<DynamicObject*>::iterator it = _vLittleSnake->begin();
+	list<GameObject*>::iterator it = _vLittleSnake->begin();
 	while (it != _vLittleSnake->end())
 	{
 		if (!(*it)->active)
@@ -217,9 +221,9 @@ void QueenMedusa::_updateSnakes(int deltaTime_)
 
 void QueenMedusa::_drawSnakes(CCamera* camera_)
 {
-	for (list<DynamicObject*>::iterator iter = _vLittleSnake->begin(); iter != _vLittleSnake->end(); iter++)
+	for (list<GameObject*>::iterator iter = _vLittleSnake->begin(); iter != _vLittleSnake->end(); iter++)
 	{
-		DynamicObject* tempSnake = (*iter);
+		GameObject* tempSnake = (*iter);
 		tempSnake->Draw(camera_);
 	}
 }
@@ -301,9 +305,9 @@ void QueenMedusa::Draw(CCamera* camera_)
 
 void QueenMedusa::Collision(list<GameObject*> obj, int dt)
 {
-	for (list<DynamicObject*>::iterator iter = _vLittleSnake->begin(); iter != _vLittleSnake->end(); iter++)
+	for (list<GameObject*>::iterator iter = _vLittleSnake->begin(); iter != _vLittleSnake->end(); iter++)
 	{
-		DynamicObject* tempSnake = (*iter);
+		GameObject* tempSnake = (*iter);
 		tempSnake->Collision(obj, dt);
 	}
 }
