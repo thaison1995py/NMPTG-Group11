@@ -6,14 +6,14 @@
 
 class DragonSkullCannon : public DynamicObject
 {
-	list<DynamicObject*> *_vFireBall;
-	list<FireBall*> *fireBall;
+	list<GameObject*> *fireBall;
 public:
-	int vfb;
+	int _huong;
 	int smx, smy;
 	DragonSkullCannon(void);
 	DragonSkullCannon(float x, float y);
 	void Update(int dt);
+	list<GameObject*> getFireBall();
 	void Draw(CCamera* camera);
 	void SetActive(float x, float y);
 	~DragonSkullCannon(void);

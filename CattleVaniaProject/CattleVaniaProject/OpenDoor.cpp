@@ -14,6 +14,11 @@ OpenDoor::OpenDoor(float _x, float _y) : GameObject(_x, _y, EnumID::OpenDoor_ID)
 	_playedClose = false;
 	_playedOpen = false;
 }
+void OpenDoor::SetPos(float x, float y)
+{
+	posX = x;
+	posY = y;
+}
 
 OpenDoor::~OpenDoor(void)
 {

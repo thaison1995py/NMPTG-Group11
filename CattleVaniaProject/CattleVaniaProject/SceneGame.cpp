@@ -28,12 +28,11 @@ void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 
-	//simon = new Simon(600, 1200);
-	simon = new Simon(994, 1200);
-	camera->viewport.y = 482 +32 * 12 *2;
-	//camera->viewport.y = 1200;
+	simon = new Simon(3880, 100);//(1257, 1000);
+	camera->viewport.y = 482; //+32 * 12 * 2;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
-	//_gameScore->initTimer(100);
+	_gameScore->initTimer(100);
+
 	////ResetLevel();
 
 	//switch (level)
@@ -94,92 +93,98 @@ void SceneGame::LoadStage(int stage)
 			"Resources\\Maps\\QuadTree.txt");
 	}
 	qGameObject->LoadTree();
-
-	/*switch (stage)
-	{
-	case 1:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage1.txt");
-	}
-	break;
-	case 2:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage2.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 3:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage3.txt");
-	posDoor = qGameObject->GetPosDoor();
-	qGameObject->_staticObject->push_back(new Lake(3510, 48, 844, 32));
-	}
-	break;
-	case 4:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage4.txt");
-	posDoor = qGameObject->GetPosDoor();
-	_phantomBat = qGameObject->getPhantomBat();
-
-	}
-	break;
-	case 5:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage5.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 6:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage6.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 7:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage7.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 8:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage8.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 9:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage9.txt");
-	posDoor = qGameObject->GetPosDoor();
-
-	}
-	break;
-	case 10:
-	{
-	qGameObject = new QGameObject("Resources/Maps/Stage10.txt");
-	posDoor = qGameObject->GetPosDoor();
 	_queenMedusa = qGameObject->getQueenMedusa();
+	_listSnake = _queenMedusa->getlistSnake();
+	/*_listbullet = new list<GameObject*>();
+	getlistbullet();*/
 
+
+	openDoor = new OpenDoor(688, 3088);
+	if (simon->posX > 2820 && simon->posX<3460)
+	{
+		posDoor.x = 3088;
+		posDoor.y = 688;
+		openDoor->SetPos(posDoor.x, posDoor.y);
 	}
-	break;
-	default:
-	break;
+	else 	if (simon->posX< 1995 && simon->posX > 1220)
+	{
+		posDoor.x = 1560;
+		posDoor.y = 1008;
+		openDoor->SetPos(posDoor.x, posDoor.y);
 	}
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
-	openDoor = new OpenDoor(posDoor.x, posDoor.y);*/
-	posDoor.x = 3088;
-	posDoor.y = 688;
-	openDoor = new OpenDoor(posDoor.x, posDoor.y);
-	camera->SetSizeMap(G_MaxSize, G_MinSize);
+
+	if (simon->posX < 4096 && simon->posX>3105)
+		G_MaxSize = 4096;
+	else
+		if (simon->posX < 3074 && simon->posX>1585)
+			G_MaxSize = 3074;
+		else if (simon->posX < 1550)
+			G_MaxSize = 1536;
+
+	if (simon->posY < 384)
+		G_MinSize = 3584;
+	else
+		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
+			G_MinSize = 3072;
+		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1536;
+		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1556;
+		else if (simon->posY < 1148 && simon->posX < 1550)
+			G_MinSize = 16;
+
+		if (_queenMedusa->_hasGetUp)
+		{
+			G_MinSize = 16;
+			G_MaxSize = 512;
+		}
+		camera->SetSizeMap(G_MaxSize, G_MinSize);
+
+	qGameObject->LoadTree();
+
 }
 
 void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 {
+	if (simon->posX > 2820 && simon->posX<3460)
+	{
+		posDoor.x = 3088;
+		posDoor.y = 688;
+		openDoor->SetPos(posDoor.x, posDoor.y);
+	}
+	else 	if (simon->posX< 1995 && simon->posX > 1220)
+	{
+		posDoor.x = 1560;
+		posDoor.y = 1008;
+		openDoor->SetPos(posDoor.x, posDoor.y);
+	}
+
+	if (simon->posX < 4096 && simon->posX>3105)
+		G_MaxSize = 4096;
+	else
+		if (simon->posX < 3074 && simon->posX>1585)
+			G_MaxSize = 3074;
+		else if (simon->posX < 1550)
+			G_MaxSize = 1536;
+
+	if (simon->posY < 384)
+		G_MinSize = 3584;
+	else
+		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
+			G_MinSize = 3072;
+		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1536;
+		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
+			G_MinSize = 1556;
+		else if (simon->posY < 1148 && simon->posX < 1550)
+			G_MinSize = 16;
+
+		if (_queenMedusa->_hasGetUp)
+		{
+			G_MinSize = 16;
+			G_MaxSize = 512;
+		}
+		camera->SetSizeMap(G_MaxSize, G_MinSize);
 	//#pragma region
 	//
 	//	if(_levelNow == 0)
@@ -228,44 +233,86 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//		}
 	//		else
 	//			//-------------Di chuyen camera, chuyen canh ------------
-	if (_stateCamera == EStateCamera::Update_Camera)
-	{
-		camera->UpdateCamera(simon->posX);
-		ChangeCamera(simon->GetDirectDoor());
-	}
-	else
-		//-------------Di chuyen camera, chuyen canh ------------
-#pragma region
-	{
-		if (_beginMoveCamera)
+		if (_stateCamera == EStateCamera::Update_Camera)
 		{
-			//qGameObject->RemoveAllObject();
-			MoveCamera(_rangeMoveCamera);
+			camera->UpdateCamera(simon->posX);
+			ChangeCamera(simon->GetDirectDoor());
 		}
-		if (_moveCameraHaft)
+		else
+			//-------------Di chuyen camera, chuyen canh ------------
+#pragma region
 		{
-			if (openDoor->GetOpenDoor())
-				openDoor->RenderOpen();
-			if (openDoor->GetOpenDoor() == false)
+			if (_beginMoveCamera)
 			{
-				simon->AutoMove(_rangeMoveSimon, deltaTime);
-				if (_rangeMoveSimon == 0)
+				//qGameObject->RemoveAllObject();
+				MoveCamera(_rangeMoveCamera);
+			}
+			if (_moveCameraHaft)
+			{
+				if (openDoor->GetOpenDoor())
+					openDoor->RenderOpen();
+				if (openDoor->GetOpenDoor() == false)
 				{
-					simon->SetDirectDoor(EDirectDoor::NoneDoor);
-					openDoor->RenderClose();
-					if (openDoor->GetCloseDoor() == false)
+					simon->AutoMove(_rangeMoveSimon, deltaTime);
+					if (_rangeMoveSimon == 0)
 					{
-						MoveCamera(_rangeMoveCamera2);
-					}
-					else
-					{
-						simon->_allowPress = true;
+						simon->SetDirectDoor(EDirectDoor::NoneDoor);
+						openDoor->RenderClose();
+						if (openDoor->GetCloseDoor() == false)
+						{
+							MoveCamera(_rangeMoveCamera2);
+						}
+						else
+						{
+							simon->_allowPress = true;
 
+						}
 					}
 				}
 			}
 		}
-	}
+		//------Thao tac khi simon chet-------
+#pragma region 
+		if (simon->GetHPSimon() <= 0 && !simon->_simonDeath)
+		{
+			_timeToReset = 100;
+			simon->_simonDeath = true;
+		}
+		if (simon->_simonDeath)
+		{
+			if (_timeToReset > 0)
+			{
+				if (!_playedDie)
+				{
+					SoundManager::GetInst()->RemoveAllBGM();
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_LifeLost);
+					_playedDie = true;
+				}
+				simon->SimonDeath(_timeToReset);
+			}
+			else
+			{
+				_playedDie = false;
+				simon->_simonDeath = false;
+				simon = new Simon(posStageToReset.x, posStageToReset.y);
+				LoadStage(_stageReset);
+				camera->viewport = posCamera;
+				_stageNow = _stageReset;
+				if (_queenMedusa->_hasGetUp)
+					_queenMedusa->hp = 20;
+				_lifes--;
+				if (_lifes <= 0)
+				{
+					sceneState = ESceneState::Menu_Scene;
+				}
+				else
+				{
+					SoundManager::GetInst()->RemoveAllBGM();
+					SoundManager::GetInst()->PlayBGSound(EBGSound::EStage1Sound);
+				}
+			}
+		}
+#pragma endregion Simon Death Reponse
 	//#pragma endregion Chuyen canh, dich chuyen camera
 	//		//------Thao tac khi simon chet-------
 	//#pragma region 
@@ -430,14 +477,23 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	//	}
 	//#pragma endregion Camera Update Binh thuong
 	//Background
+if (simon->GetUsingCross())
+{
+	_score += qGameObject->RemoveAllObjectInCamera(camera->viewport);
+	simon->SetUsingCross(false);
+}
+
 	d3ddv->StretchRect(
 		Background,			// from 
 		NULL,				// which portion?
 		G_BackBuffer,		// to 
 		NULL,				// which portion?
 		D3DTEXF_NONE);
+
 	simon->Update(deltaTime);
-	
+	_score += simon->point;
+	simon->point = 0;
+
 	qGameObject->GetTreeObject(camera->viewport.x, camera->viewport.y);
 	qGameObject->GetObjecttInVP();
 	qGameObject->SetObjectActiveInVP(simon->posX, simon->posY);
@@ -445,20 +501,29 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 	qGameObject->Update(deltaTime);
 
 	simon->Collision(*(qGameObject->_listObjectInVP), deltaTime);
-	//simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
+
 	qGameObject->Collision(deltaTime);
+	if (_queenMedusa->_hasGetUp)
+	{
+
+		_queenMedusa->Update(deltaTime, simon->getPos());
+		_listSnake = _queenMedusa->getlistSnake();
+		simon->Collision(_listSnake, deltaTime);
+		_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);
+	}
+	else
+		_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts);
 
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 	bg->Draw(camera);
 
 	qGameObject->Draw(camera);
-
 	openDoor->Draw(camera, _doorDirect);
 	_gameScore->drawTable();
 	simon->Draw(camera);
+
 	G_SpriteHandler->End();
 	_gameScore->drawScore();
-
 
 }
 
@@ -517,26 +582,20 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 			camera->viewport.y -= (32 * 12); //do cao 1 stage = 32pixcel * 12 dong
 			simon->posY -= 64;
 			simon->SetDirectDoor(EDirectDoor::NoneDoor);
-			if (_stageNow >= 6)
-			{
-				_stageNow--;
-				LoadStage(_stageNow);
-			}
+
+			break;
 		}
-		break;
+
 		case DoorUp:
 		{
 			camera->viewport.y += (32 * 12); //do cao 1 stage = 32pixcel * 12 dong
 			simon->posY += 64;
 			simon->SetDirectDoor(EDirectDoor::NoneDoor);
-			if (_stageNow >= 5)
-			{
-				_stageNow++;
-				LoadStage(_stageNow);
-			}
+
+			break;
 
 		}
-		break;
+
 		case DoorLeft:
 		{
 			_stateCamera = EStateCamera::NoUpdate_Camera;
@@ -547,8 +606,10 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 			_rangeMoveCamera2 = -110;
 			_rangeMoveSimon = -60;
 			_doorDirect = -1;
+
+			break;
 		}
-		break;
+
 		case DoorRight:
 		{
 			_stateCamera = EStateCamera::NoUpdate_Camera;
@@ -559,8 +620,10 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 			_rangeMoveCamera2 = 176;
 			_rangeMoveSimon = 60;
 			_doorDirect = 1;
+
+			break;
 		}
-		break;
+
 		default:
 			break;
 		}

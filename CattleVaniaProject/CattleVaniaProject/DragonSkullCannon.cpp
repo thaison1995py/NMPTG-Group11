@@ -8,20 +8,19 @@ DragonSkullCannon::DragonSkullCannon(void) : DynamicObject()
 
 DragonSkullCannon::DragonSkullCannon(float x, float y) : DynamicObject(x, y, 0, 0, EnumID::DragonSkullCannon_ID)
 {
-	fireBall = new list<FireBall*>();
+	fireBall = new list<GameObject*>();
 	type = ObjectType::Enemy_Type;
 	point = 400;
 	hp = 4;
 }
+
 void DragonSkullCannon::Update(int dt)
 {
-	list<FireBall*>::iterator i = fireBall->begin();
+	list<GameObject*>::iterator i = fireBall->begin();
 	while (i != fireBall->end())
-	{ 
+	{
 		if (!(*i)->active)
 		{
-			if ((*i)->vX>0)
-			fireBall->push_back(new FireBall(posX, posY + 16, vfb, EnumID::FireBall_ID));
 			fireBall->erase(i++);
 		}
 		else
@@ -31,30 +30,45 @@ void DragonSkullCannon::Update(int dt)
 		}
 	}
 }
+list<GameObject*> DragonSkullCannon::getFireBall()
+{
+	return *fireBall;
+}
+void DragonSkullCannon::SetActive(float x, float y)
+{
+	if ((abs(posX - x) <= 190))
+	{
+		if (posX < x)
+		{
+			_huong = 1;
+		}
+		else
+		{
+			_huong = -1;
+		}
+		if (fireBall->size() < 1)
+		{
+			fireBall->push_back(new FireBall(posX, posY + 16, _huong, EnumID::FireBall_ID));
+		}
+		active = true;
+	}
+}
 
 void DragonSkullCannon::Draw(CCamera* camera)
 {
-	for (list<FireBall*>::iterator i = fireBall->begin(); i != fireBall->end(); i++)
+	for (list<GameObject*>::iterator i = fireBall->begin(); i != fireBall->end(); i++)
 	{
 		if ((*i)->active)
 			(*i)->Draw(camera);
 	}
 	D3DXVECTOR2 center = camera->Transform(posX, posY);
-	if (vX > 0)
+	if (_huong == 1)
 		sprite->DrawFlipX(center.x, center.y);
 	else
 		sprite->Draw(center.x, center.y);
 }
 
-void DragonSkullCannon::SetActive(float x, float y)
-{
-	if (abs(posX - x) <= 190)
-	{
-		if (posX<x)
-		fireBall->push_back(new FireBall(posX, posY + 16, 1, EnumID::FireBall_ID));
-		active = true;
-	}
-}
+
 
 DragonSkullCannon::~DragonSkullCannon(void)
 {

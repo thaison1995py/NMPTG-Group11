@@ -81,7 +81,9 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 19:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new MovingPlatform(posX, posY)));
 				break;
-
+			case 101:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new FireDie(posX, posY)));
+				break;
 				/*
 
 				case 26:
@@ -190,13 +192,13 @@ void QGameObject::GetObjecttInVP()
 		auto obj = _listObjectGame->find(*i);
 		if (obj != _listObjectGame->end())
 		{
-			/*auto obj1 = std::find(_listObjectInVP->begin(), _listObjectInVP->end(), obj->second);
+			auto obj1 = std::find(_listObjectInVP->begin(), _listObjectInVP->end(), obj->second);
 			if (obj1 == _listObjectInVP->end())
-			{*/
+			{
 				_listObjectInVP->push_back(obj->second);
 				/*_listObjectGame->erase(*i);
 				_listObjectGame->insert(pair<>);*/
-			//}
+			}
 		}
 	}
 }
@@ -209,6 +211,7 @@ void QGameObject::SetObjectActiveInVP(float x, float y)
 		if (!obj->active)
 			obj->SetActive(x, y);*/
 		//if (!(*i)->active)
+		if ((*i)->type != Item_Type)
 			(*i)->SetActive(x, y);
 	}
 }

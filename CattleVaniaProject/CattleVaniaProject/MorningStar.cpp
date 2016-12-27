@@ -107,12 +107,14 @@ void MorningStar::updateLevel()
 
 void MorningStar::Collision(list<GameObject*> &obj, int dt)
 {
-	list<GameObject*>::reverse_iterator _itBegin;
-	for (_itBegin = obj.rbegin(); _itBegin != obj.rend(); _itBegin++)
+	//list<GameObject*>::reverse_iterator _itBegin;
+	//for (_itBegin = obj.rbegin(); _itBegin != obj.rend(); _itBegin++)
+	list<GameObject*>::iterator _itBegin;
+	for (_itBegin = obj.begin(); _itBegin != obj.end(); _itBegin++)
 	{
 		GameObject* other = (*_itBegin);
-		if (other->type == ObjectType::Item_Type
-			|| other->id == EnumID::MagicalCrystal_ID || other->id == EnumID::StairDownLeft_ID
+		if (
+			other->id == EnumID::MagicalCrystal_ID || other->id == EnumID::StairDownLeft_ID
 			|| other->id == EnumID::StairDownRight_ID || other->id == EnumID::StairUpLeft_ID
 			|| other->id == EnumID::StairUpRight_ID || other->id == EnumID::MovingPlatform_ID
 			|| other->id == EnumID::DoorDown_ID || other->id == EnumID::DoorUp_ID
@@ -146,13 +148,17 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						else
 							qm->getUp();
 					}
-					else
+					else if (other->id == Fire_ID && other->type == Item_Type)
 					{
+						(*_itBegin)->SetActive();
+					}
+					else
+					{					
 						other->ReceiveDamage(damage);
 						if (other->hp <= 0)
 						{
 							point += other->point;
-							(*_itBegin) = new FireDie(other->posX, other->posY);
+							//(*_itBegin) = new FireDie(other->posX, other->posY);
 
 						}
 					}

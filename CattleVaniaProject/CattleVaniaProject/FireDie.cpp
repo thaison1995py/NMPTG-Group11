@@ -9,7 +9,7 @@ FireDie::FireDie(float x, float y) : DynamicObject(x, y, 0, -0.4f, EnumID::Fire_
 {
 	deltatime = 0;
 	type = ObjectType::Item_Type;
-	active = true;
+	active = false;
 }
 
 void FireDie::Update(int dt)

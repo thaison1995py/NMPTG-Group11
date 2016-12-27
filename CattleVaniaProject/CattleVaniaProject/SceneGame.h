@@ -54,6 +54,7 @@ protected:
 
 	//PhantomBat* _phantomBat;
 	QueenMedusa* _queenMedusa;
+	list<GameObject*> _listSnake;
 
 	GameScore* _gameScore;
 
