@@ -49,6 +49,10 @@ enum EnumID
 	Boomerang_ID,
 	Axe_ID,
 	//Item
+	DoubleShot_ID,
+	Crown_ID,
+	GoldChest_ID,
+	Food_ID,
 	LargeHeartItem_ID,
 	SmallHeartItem_ID,
 	MoneyBagRedItem_ID,
@@ -62,14 +66,14 @@ enum EnumID
 	BoomerangItem_ID,
 	AxeItem_ID,
 	MorningStarItem_ID,
-
 	MagicalCrystal_ID,
-
+	//simon
 	MorningStar_ID,
 	Simon_ID,
 	SimonDeath_ID,
-
+	//gr
 	Brick_ID,
+	BrokenBrick_ID,
 	Candle_ID,
 	LargeCandle_ID,
 	StairUpLeft_ID,

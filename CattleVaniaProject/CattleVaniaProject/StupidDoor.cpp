@@ -56,6 +56,18 @@ StupidDoor::StupidDoor(float posX_, float posY_, float yMax_, float yMin_, float
 	_yMax = yMax_ - height / 2;
 	_yMin = yMin_ + height / 2;
 	_animationRate = animationRate_;
+	if (posX == 736)
+	{
+		posY = 980;
+	}
+	if (posX == 864)
+	{
+		_yMin = 962;
+	}
+	if (posX == 992)
+	{
+		posY = 1000;
+	}
 }
 
 void StupidDoor::Update(int deltaTime_)

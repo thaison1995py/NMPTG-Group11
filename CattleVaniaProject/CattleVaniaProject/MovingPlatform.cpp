@@ -19,7 +19,8 @@ void MovingPlatform::Update(int deltaTime)
 	if (sprite == NULL || !active)
 		return;
 	posX += vX*deltaTime;
-	if (posY == 630)
+	
+	if (posY == 632)
 	{
 		if ((posX<3166) || (posX>3232))
 			vX = -vX;

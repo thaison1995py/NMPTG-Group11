@@ -28,8 +28,8 @@ void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 
-	simon = new Simon(3880, 100);//(1257, 1000);
-	camera->viewport.y = 482; //+32 * 12 * 2;
+	simon = new Simon(600, 1100);//(1257, 1000);
+	camera->viewport.y = 1250;// +32 * 12 * 2;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(100);
 
@@ -127,7 +127,7 @@ void SceneGame::LoadStage(int stage)
 		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
 			G_MinSize = 3072;
 		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
-			G_MinSize = 1536;
+			G_MinSize = 1530;
 		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
 			G_MinSize = 1556;
 		else if (simon->posY < 1148 && simon->posX < 1550)
@@ -173,9 +173,9 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 		if (simon->posY < 770 && simon->posX < 4096 && simon->posX>3105)
 			G_MinSize = 3072;
 		else if (simon->posY < 770 && simon->posX < 3074 && simon->posX>1585)
-			G_MinSize = 1536;
+			G_MinSize = 1520;
 		else if (simon->posY < 1148 && simon->posX < 3074 && simon->posX>1585)
-			G_MinSize = 1556;
+			G_MinSize = 1520;
 		else if (simon->posY < 1148 && simon->posX < 1550)
 			G_MinSize = 16;
 

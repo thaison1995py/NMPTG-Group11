@@ -72,12 +72,15 @@
     <ClInclude Include="BlackKnight.h" />
     <ClInclude Include="Boomerang.h" />
     <ClInclude Include="Brick.h" />
+    <ClInclude Include="BrokenBrick.h" />
     <ClInclude Include="Candle.h" />
     <ClInclude Include="CAudio.h" />
     <ClInclude Include="CCamera.h" />
     <ClInclude Include="CEnum.h" />
+    <ClInclude Include="Crown.h" />
     <ClInclude Include="Dagger.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="DoubleShot.h" />
     <ClInclude Include="DragonSkullCannon.h" />
     <ClInclude Include="DynamicObject.h" />
     <ClInclude Include="EndGameScene.h" />
@@ -86,6 +89,7 @@
     <ClInclude Include="FireBomb.h" />
     <ClInclude Include="FireDie.h" />
     <ClInclude Include="Flyingblock.h" />
+    <ClInclude Include="Food.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="dsutil.h" />
     <ClInclude Include="dxutil.h" />
@@ -95,6 +99,7 @@
     <ClInclude Include="CSprite.h" />
     <ClInclude Include="CTexture.h" />
     <ClInclude Include="CText.h" />
+    <ClInclude Include="GoldChest.h" />
     <ClInclude Include="HeaderObj.h" />
     <ClInclude Include="Lake.h" />
     <ClInclude Include="LittleSnake.h" />
@@ -132,11 +137,14 @@
     <ClCompile Include="BlackKnight.cpp" />
     <ClCompile Include="Boomerang.cpp" />
     <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="BrokenBrick.cpp" />
     <ClCompile Include="Candle.cpp" />
     <ClCompile Include="CAudio.cpp" />
     <ClCompile Include="CCamera.cpp" />
+    <ClCompile Include="Crown.cpp" />
     <ClCompile Include="Dagger.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="DoubleShot.cpp" />
     <ClCompile Include="DragonSkullCannon.cpp" />
     <ClCompile Include="DynamicObject.cpp" />
     <ClCompile Include="EndGameScene.cpp" />
@@ -145,6 +153,7 @@
     <ClCompile Include="FireBomb.cpp" />
     <ClCompile Include="FireDie.cpp" />
     <ClCompile Include="Flyingblock.cpp" />
+    <ClCompile Include="Food.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="dsutil.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -153,6 +162,7 @@
     <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CText.cpp" />
+    <ClCompile Include="GoldChest.cpp" />
     <ClCompile Include="Lake.cpp" />
     <ClCompile Include="LittleSnake.cpp" />
     <ClCompile Include="LKRect.cpp" />

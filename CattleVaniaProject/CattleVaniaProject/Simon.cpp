@@ -72,7 +72,7 @@ void Simon::Update(int deltaTime)
 			++it;
 		}
 	}
-	
+
 	//return;
 	switch (_action)
 	{
@@ -357,392 +357,384 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 	for (list<GameObject*>::iterator _itBegin = obj.begin(); _itBegin != obj.end(); _itBegin++)
 	{
 		GameObject* other = (*_itBegin);
-		if (!other->active)
+
+		float moveX;
+		float moveY;
+		float normalx;
+		float normaly;
+
+		Box boxSimon = this->GetBox();
+		Box boxOther = other->GetBox();
+
+		if (AABB(boxSimon, boxOther, moveX, moveY) == true)
 		{
-			if (other->type != ObjectType::Item_Type)
-				other->SetActive(posX, posY);
-		}
-		else if ((other->id == EnumID::BlackLeopard_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::VampireBat_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::Medusa_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::Flyingblock_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::DragonSkullCannon_ID && other->sprite->GetIndex() == 0)
-			|| (other->id == EnumID::BlackKnight_ID && other->sprite->GetIndex() == 0))
-		{
-			other->SetActive(posX, posY);
-		}
-		else
-			if (other->id == EnumID::Candle_ID)
+#pragma region
+			if (other->type == ObjectType::Item_Type && other->id != EnumID::Fire_ID)
 			{
+				other->Remove();
+				switch (other->id)
+				{
+				case EnumID::AxeItem_ID:
+					_weaponID = EnumID::Axe_ID;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::WatchItem_ID:
+					_weaponID = EnumID::Watch_ID;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::BoomerangItem_ID:
+					_weaponID = EnumID::Boomerang_ID;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::DaggerItem_ID:
+					_weaponID = EnumID::Dagger_ID;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::FireBombItem_ID:
+					_weaponID = EnumID::FireBomb_ID;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::MorningStarItem_ID:
+					this->UpgradeMorningStar();
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+					break;
+				case EnumID::SmallHeartItem_ID:
+				case EnumID::LargeHeartItem_ID:
+					//cong tim
+					hearts += other->hearts;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+					break;
+				case EnumID::MoneyBagBlueItem_ID:
+				case EnumID::MoneyBagRedItem_ID:
+				case EnumID::MoneyBagItem_ID:
+				case EnumID::MoneyBagWhiteItem_ID:
+					//cong tien
+					point += other->point;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+					break;
+				case EnumID::CrossItem_ID:
+					//Xoa het enemy tren camera
+					SetUsingCross(true);
+					break;
+				case EnumID::MagicalCrystal_ID:
+					//Qua man
+					_eatMagicalCrystal = true;
+					SoundManager::GetInst()->RemoveAllBGM();
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_StageClear);
+					break;
+				case EnumID::Crown_ID:
+				case EnumID::GoldChest_ID:
+					point += 2000;
+					break;
+				case EnumID::Food_ID:
+					hp += 6;
+					break;
+				case EnumID::DoubleShot_ID:
+					damage = damage * 2;
+					break;
+				}
+#pragma endregion Lay item
 			}
 			else
 			{
-				float moveX;
-				float moveY;
-				float normalx;
-				float normaly;
-
-				Box boxSimon = this->GetBox();
-				Box boxOther = other->GetBox();
-
-				if (AABB(boxSimon, boxOther, moveX, moveY) == true)
+				switch (other->id)
 				{
 #pragma region
-					if (other->type == ObjectType::Item_Type && other->id != EnumID::Fire_ID)
+				case EnumID::Brick_ID:
+				case EnumID::BrokenBrick_ID:
+					_onMovingPlatform = false;
+					if (vY < 0 && moveY < 16)
 					{
-						other->Remove();
-						switch (other->id)
+						//Neu dang rot ma chua cham dat thi rot tiep
+						if (_action == Action::Fall)
 						{
-						case EnumID::AxeItem_ID:
-							_weaponID = EnumID::Axe_ID;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::WatchItem_ID:
-							_weaponID = EnumID::Watch_ID;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::BoomerangItem_ID:
-							_weaponID = EnumID::Boomerang_ID;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::DaggerItem_ID:
-							_weaponID = EnumID::Dagger_ID;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::FireBombItem_ID:
-							_weaponID = EnumID::FireBomb_ID;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::MorningStarItem_ID:
-							this->UpgradeMorningStar();
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-							break;
-						case EnumID::SmallHeartItem_ID:
-						case EnumID::LargeHeartItem_ID:
-							//cong tim
-							hearts += other->hearts;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-							break;
-						case EnumID::MoneyBagBlueItem_ID:
-						case EnumID::MoneyBagRedItem_ID:
-						case EnumID::MoneyBagItem_ID:
-						case EnumID::MoneyBagWhiteItem_ID:
-							//cong tien
-							point += other->point;
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-							break;
-						case EnumID::CrossItem_ID:
-							//Xoa het enemy tren camera
-							SetUsingCross(true);
-							break;
-						case EnumID::MagicalCrystal_ID:
-							//Qua man
-							_eatMagicalCrystal = true;
-							SoundManager::GetInst()->RemoveAllBGM();
-							SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_StageClear);
-							break;
-						}
-#pragma endregion Lay item
-					}
-					else
-					{
-						switch (other->id)
-						{
-#pragma region
-						case EnumID::Brick_ID:
-							_onMovingPlatform = false;
-							if (vY < 0 && moveY < 16)
+							if (moveY != 0)
 							{
-								//Neu dang rot ma chua cham dat thi rot tiep
-								if (_action == Action::Fall)
-								{
-									if (moveY != 0)
-									{
-										posY += moveY;
-										vY = 0;
-										_action = Action::Idle;
-										_onLand = true;
-										Stop();
-									}
-								}
-								else
-								{
-									if (moveY > 0)
-									{
-										posY += moveY;
-										if ((_hasJump/* && _heightJump <= 0*/))
-										{
-											_hasJump = false;
-											vY = 0;
-											vX = 0;
-											if (boxSimon.h < 60)
-												posY += 16;
-										}
-										else
-											if (!_hasJump)
-												vY = 0;
-									}
-								}
-							}
-							//Xu ly rot khoi cuc gach (new)
-							if ((!_onLand || _action != Action::Idle) && !_hasJump)
-							{
-								vY = -(SPEED_Y + 0.4f);
-							}
-							//--------------------
-							/*if (_onLand && moveX != 0 && vX != 0 && !_onStair && !_hasJump && !_onMovingPlatform)
-							{
-							posX += moveX;
-							}*/
-							if (moveX != 0 && !_onStair && vX != 0 && !_onLand)
-							{
-								if (_hasJump && ((moveX < 0 && vX < 0) || (moveX>0 && vX>0)))
-								{
-								}
-								else
-									posX += moveX;
-							}
-							break;
-#pragma endregion Va cham Gach
-							//------------------------------------------------
-#pragma region
-						case EnumID::MovingPlatform_ID:
-						{
-							float _compareHeigh = abs((other->posY + other->height / 2) - (posY - height / 2) - moveY);
-							if (vY < 0 && _compareHeigh < 5)
-							{
-								_hasJump = false;
-								vY = 0;
 								posY += moveY;
-								_onMovingPlatform = true;
-							}
-							else if (vY > 0 || _hasJump)
-								return;
-							if (_onMovingPlatform && _action == Action::Idle)
-								vX = other->vX;
-							else if (_onMovingPlatform && _hasJump && _action == Action::Run_Right)
-							{
-								vX = SPEED_X;
-								vY = -SPEED_Y;
-							}
-							else if (_onMovingPlatform && _hasJump && _action == Action::Run_Left)
-							{
-								vX = -SPEED_X;
-								vY = -SPEED_Y;
-							}
-							else if (_onMovingPlatform && !_hasJump)
-							{
-								vY = -SPEED_Y;
+								vY = 0;
+								_action = Action::Idle;
+								_onLand = true;
+								Stop();
 							}
 						}
-						break;
+						else
+						{
+							if (moveY > 0)
+							{
+								posY += moveY;
+								if ((_hasJump/* && _heightJump <= 0*/))
+								{
+									_hasJump = false;
+									vY = 0;
+									vX = 0;
+									if (boxSimon.h < 60)
+										posY += 16;
+								}
+								else
+								if (!_hasJump)
+									vY = 0;
+							}
+						}
+					}
+					//Xu ly rot khoi cuc gach (new)
+					if ((!_onLand || _action != Action::Idle) && !_hasJump)
+					{
+						vY = -(SPEED_Y + 0.4f);
+					}
+					//--------------------
+					/*if (_onLand && moveX != 0 && vX != 0 && !_onStair && !_hasJump && !_onMovingPlatform)
+					{
+					posX += moveX;
+					}*/
+					if (moveX != 0 && !_onStair && vX != 0 && !_onLand)
+					{
+						if (_hasJump && ((moveX < 0 && vX < 0) || (moveX>0 && vX>0)))
+						{
+						}
+						else
+							posX += moveX;
+					}
+					break;
+#pragma endregion Va cham Gach
+					//------------------------------------------------
+#pragma region
+				case EnumID::MovingPlatform_ID:
+				{
+												  float _compareHeigh = abs((other->posY + other->height / 2) - (posY - height / 2) - moveY);
+												  if (vY < 0 && _compareHeigh < 5)
+												  {
+													  _hasJump = false;
+													  vY = 0;
+													  posY += moveY;
+													  _onMovingPlatform = true;
+												  }
+												  else if (vY > 0 || _hasJump)
+													  return;
+												  if (_onMovingPlatform && _action == Action::Idle)
+													  vX = other->vX;
+												  else if (_onMovingPlatform && _hasJump && _action == Action::Run_Right)
+												  {
+													  vX = SPEED_X;
+													  vY = -SPEED_Y;
+												  }
+												  else if (_onMovingPlatform && _hasJump && _action == Action::Run_Left)
+												  {
+													  vX = -SPEED_X;
+													  vY = -SPEED_Y;
+												  }
+												  else if (_onMovingPlatform && !_hasJump)
+												  {
+													  vY = -SPEED_Y;
+												  }
+				}
+					break;
 
 
 #pragma endregion Va cham Movingplatform
-						//--------------------------------------
+					//--------------------------------------
 
 
 #pragma region
-						case EnumID::StairUpRight_ID:
-						{
-							if (_colStair == false)
-								_colStair = true;
-							if (!_hasStair)
-								rangeStair = posX - (other->posX - 11);
-							_stair = other;
-							if (_upStair && _onStair)
-							{
-								_kindStair = EKindStair::UpRight;
-							}
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh < 2 && _kindStair == EKindStair::DownLeft)
-							{
-								_outStair = true;
-								OutStair();
-							}
+				case EnumID::StairUpRight_ID:
+				{
+												if (_colStair == false)
+													_colStair = true;
+												if (!_hasStair)
+													rangeStair = posX - (other->posX - 11);
+												_stair = other;
+												if (_upStair && _onStair)
+												{
+													_kindStair = EKindStair::UpRight;
+												}
+												float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+												if (_compareHeigh < 2 && _kindStair == EKindStair::DownLeft)
+												{
+													_outStair = true;
+													OutStair();
+												}
 
-						}
-						break;
-						case EnumID::StairUpLeft_ID:
-						{
-							if (_colStair == false)
-								_colStair = true;
-							if (!_hasStair)
-								rangeStair = posX - (other->posX + 11);
+				}
+					break;
+				case EnumID::StairUpLeft_ID:
+				{
+											   if (_colStair == false)
+												   _colStair = true;
+											   if (!_hasStair)
+												   rangeStair = posX - (other->posX + 11);
 
-							_stair = other;
-							if (_upStair && _onStair)
-							{
-								_kindStair = EKindStair::UpLeft;
-							}
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh < 2 && _kindStair == EKindStair::DownRight)
-							{
-								_outStair = true;
-								OutStair();
-							}
-						}
-						break;
-						case EnumID::StairDownLeft_ID:
-						{
-							if (_colStair == false)
-								_colStair = true;
-							if (!_hasStair)
-								rangeStair = posX - (other->posX - 32);
+											   _stair = other;
+											   if (_upStair && _onStair)
+											   {
+												   _kindStair = EKindStair::UpLeft;
+											   }
+											   float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+											   if (_compareHeigh < 2 && _kindStair == EKindStair::DownRight)
+											   {
+												   _outStair = true;
+												   OutStair();
+											   }
+				}
+					break;
+				case EnumID::StairDownLeft_ID:
+				{
+												 if (_colStair == false)
+													 _colStair = true;
+												 if (!_hasStair)
+													 rangeStair = posX - (other->posX - 32);
 
-							_stair = other;
+												 _stair = other;
 
-							if (_downStair && _onStair)
-							{
-								_kindStair = EKindStair::DownLeft;
-							}
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh < 2 && _kindStair == EKindStair::UpRight)
-							{
-								_outStair = true;
-								OutStair();
-							}
-						}
-						break;
-						case EnumID::StairDownRight_ID:
-						{
-							if (_colStair == false)
-								_colStair = true;
-							if (!_hasStair)
-								rangeStair = posX - (other->posX + 32);
+												 if (_downStair && _onStair)
+												 {
+													 _kindStair = EKindStair::DownLeft;
+												 }
+												 float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+												 if (_compareHeigh < 2 && _kindStair == EKindStair::UpRight)
+												 {
+													 _outStair = true;
+													 OutStair();
+												 }
+				}
+					break;
+				case EnumID::StairDownRight_ID:
+				{
+												  if (_colStair == false)
+													  _colStair = true;
+												  if (!_hasStair)
+													  rangeStair = posX - (other->posX + 32);
 
-							_stair = other;
+												  _stair = other;
 
-							if (_downStair && _onStair)
-							{
-								_kindStair = EKindStair::DownRight;
-							}
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh < 2 && _kindStair == EKindStair::UpLeft)
-							{
-								_outStair = true;
-								OutStair();
-							}
-						}
-						break;
+												  if (_downStair && _onStair)
+												  {
+													  _kindStair = EKindStair::DownRight;
+												  }
+												  float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+												  if (_compareHeigh < 2 && _kindStair == EKindStair::UpLeft)
+												  {
+													  _outStair = true;
+													  OutStair();
+												  }
+				}
+					break;
 #pragma endregion Va cham cau thang
-						//------------------------------------------------
+					//------------------------------------------------
 #pragma region 
-						case EnumID::DoorDown_ID:
-						{
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh <= 3 && _downStair)
-							{
-								_colDoor = true;
-							}
-							_door = other;
+				case EnumID::DoorDown_ID:
+				{
+											float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+											if (_compareHeigh <= 3 && _downStair)
+											{
+												_colDoor = true;
+											}
+											_door = other;
 
-						}
-						break;
-						case EnumID::DoorUp_ID:
-						{
-							float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
-							if (_compareHeigh < 2 && _upStair)
-							{
-								_colDoor = true;
-							}
-							_door = other;
-						}
-						break;
-						case EnumID::DoorLeft_ID:
-						{
-							_door = other;
-							_allowPress = false;
-							_colDoor = true;
-						}
-						break;
-						case EnumID::DoorRight_ID:
-						{
-							_door = other;
-							_allowPress = false;
-							_colDoor = true;
-						}
-						break;
+				}
+					break;
+				case EnumID::DoorUp_ID:
+				{
+										  float _compareHeigh = abs((other->posY - other->height / 2) - (posY - height / 2)); //so sanh do cao Simon co bang do cao box ko
+										  if (_compareHeigh < 2 && _upStair)
+										  {
+											  _colDoor = true;
+										  }
+										  _door = other;
+				}
+					break;
+				case EnumID::DoorLeft_ID:
+				{
+											_door = other;
+											_allowPress = false;
+											_colDoor = true;
+				}
+					break;
+				case EnumID::DoorRight_ID:
+				{
+											 _door = other;
+											 _allowPress = false;
+											 _colDoor = true;
+				}
+					break;
 #pragma endregion Xu Ly Va Cham Voi Cac Loai Cong
-						//------------------------------------------------
-						case EnumID::StupidDoor_ID:
-							hp = 0;
-							break;
-						default:
-							switch (other->type)
-							{
+					//------------------------------------------------
+				case EnumID::StupidDoor_ID:
+					hp = 0;
+					break;
+				default:
+					switch (other->type)
+					{
 #pragma region
-							case ObjectType::Enemy_Type:
-								if (!bActiveHurt)
+					case ObjectType::Enemy_Type:
+						if (!bActiveHurt)
+						{
+							bActiveHurt = true;
+							_localHurtTime = GetTickCount();
+							if (hp > 0)
+							{
+								if (hp <= 3)
 								{
-									bActiveHurt = true;
-									_localHurtTime = GetTickCount();
-									if (hp > 0)
-									{
-										if (hp <= 3)
-										{
-											hp -= 1;
-										}
-										else
-											hp -= other->damage;
-									}
-									if (other->id == EnumID::LittleSnake_ID || other->id == EnumID::FireBall_ID)
-									{
-										other->Remove();
-									}
-
+									hp -= 1;
 								}
-								break;
+								else
+									hp -= other->damage;
 							}
-							break;
-#pragma endregion Va cham Enemy 
+							if (other->id == EnumID::LittleSnake_ID || other->id == EnumID::FireBall_ID)
+							{
+								other->Remove();
+							}
+
 						}
+						break;
+					}
+					break;
+#pragma endregion Va cham Enemy 
+				}
+			}
+		}
+		else
+		if (other->type != ObjectType::Item_Type && (boxSimon, boxOther, moveX, moveY) == false)
+		{
+			if (other->canMove == true)
+			{
+				boxSimon.vx -= boxOther.vx;
+				boxSimon.vy -= boxOther.vy;
+				boxOther.vx = 0;
+				boxOther.vy = 0;
+			}
+			Box broadphasebox = GetSweptBroadphaseBox(boxSimon, dt);
+			if (AABBCheck(GetSweptBroadphaseBox(boxSimon, dt), boxOther) == true)
+			{
+				float collisiontime = SweptAABB(boxSimon, boxOther, normalx, normaly, dt);
+				if (collisiontime > 0.0f && collisiontime < 1.0f)
+				{
+					ECollisionDirect colDirect = GetCollisionDirect(normalx, normaly);
+					// perform response here
+					switch (other->id)
+					{
+						//----------------------------------
+					case EnumID::Brick_ID:
+						switch (colDirect)
+						{
+						case Colls_Left:
+							posX -= (boxOther.w * collisiontime * other->width + 1);
+							break;
+						case Colls_Right:
+							posY += (boxOther.w * collisiontime * other->width + 1);
+							break;
+						case Colls_Bot:
+							posY += boxOther.h * collisiontime;
+							vY = 0;
+							break;
+						}
+						break;
+						//-----------------------------------
 					}
 				}
-				else
-					if (other->type != ObjectType::Item_Type && (boxSimon, boxOther, moveX, moveY) == false)
-					{
-						if (other->canMove == true)
-						{
-							boxSimon.vx -= boxOther.vx;
-							boxSimon.vy -= boxOther.vy;
-							boxOther.vx = 0;
-							boxOther.vy = 0;
-						}
-						Box broadphasebox = GetSweptBroadphaseBox(boxSimon, dt);
-						if (AABBCheck(GetSweptBroadphaseBox(boxSimon, dt), boxOther) == true)
-						{
-							float collisiontime = SweptAABB(boxSimon, boxOther, normalx, normaly, dt);
-							if (collisiontime > 0.0f && collisiontime < 1.0f)
-							{
-								ECollisionDirect colDirect = GetCollisionDirect(normalx, normaly);
-								// perform response here
-								switch (other->id)
-								{
-									//----------------------------------
-								case EnumID::Brick_ID:
-									switch (colDirect)
-									{
-									case Colls_Left:
-										posX -= (boxOther.w * collisiontime * other->width + 1);
-										break;
-									case Colls_Right:
-										posY += (boxOther.w * collisiontime * other->width + 1);
-										break;
-									case Colls_Bot:
-										posY += boxOther.h * collisiontime;
-										vY = 0;
-										break;
-									}
-									break;
-									//-----------------------------------
-								}
-							}
-						}
-					}
 			}
+		}
 	}
 }
+
 
 void Simon::Draw(CCamera* camera)
 {
@@ -751,7 +743,7 @@ void Simon::Draw(CCamera* camera)
 	{
 		hp = 0;
 	}
-	
+
 	if (death)
 		return;
 	D3DXVECTOR2 center = camera->Transform(posX, posY);
@@ -779,7 +771,7 @@ void Simon::Draw(CCamera* camera)
 				if ((*i)->active)
 					(*i)->Draw(camera);
 			}
-			if (vX > 0 || _vLast>0)
+			if (vX > 0 || _vLast > 0)
 			{
 				if (_action == Action::Fight)
 				{
@@ -795,12 +787,12 @@ void Simon::Draw(CCamera* camera)
 						}
 					}
 					else
-						if (!_hasSit)
-							_simonFightingSprite->DrawFlipX(center.x, center.y);
-						else
-						{
-							_simonFightingSittingSprite->DrawFlipX(center.x, center.y);
-						}
+					if (!_hasSit)
+						_simonFightingSprite->DrawFlipX(center.x, center.y);
+					else
+					{
+						_simonFightingSittingSprite->DrawFlipX(center.x, center.y);
+					}
 					return;
 				}
 				if (_action == Action::IntoCastle)
@@ -837,12 +829,12 @@ void Simon::Draw(CCamera* camera)
 						}
 					}
 					else
-						if (!_hasSit)
-							_simonFightingSprite->Draw(center.x, center.y);
-						else
-						{
-							_simonFightingSittingSprite->Draw(center.x, center.y);
-						}
+					if (!_hasSit)
+						_simonFightingSprite->Draw(center.x, center.y);
+					else
+					{
+						_simonFightingSittingSprite->Draw(center.x, center.y);
+					}
 					return;
 				}
 				if (_action == Action::IntoCastle)
@@ -1277,14 +1269,14 @@ void Simon::OnFight(int t)
 	if (_hasSit)
 		_simonFightingSittingSprite->Update(t);
 	else
-		if (_onStair)
-		{
-			if (_kindStair == EKindStair::DownLeft || _kindStair == EKindStair::DownRight)
-				_simonFightingDownStairSprite->Update(t);
-			else _simonFightingUpStairSprite->Update(t);
-		}
-		else
-			_simonFightingSprite->Update(t);
+	if (_onStair)
+	{
+		if (_kindStair == EKindStair::DownLeft || _kindStair == EKindStair::DownRight)
+			_simonFightingDownStairSprite->Update(t);
+		else _simonFightingUpStairSprite->Update(t);
+	}
+	else
+		_simonFightingSprite->Update(t);
 
 	if (_usingWeapon && _hasWeapon)
 	{
@@ -1329,19 +1321,19 @@ void Simon::OnFight(int t)
 		}
 	}
 	else
-		if (!_hasSit && _simonFightingSprite->GetIndex() >= 8)
-		{
-			_action = Action::Idle;
-			_simonFightingSprite->Reset();
-			_morningStar->reset();
-		}
-		else
-			if (_hasSit && _simonFightingSittingSprite->GetIndex() >= 18)
-			{
-				_action = Action::Sit;
-				_simonFightingSittingSprite->Reset();
-				_morningStar->reset();
-			}
+	if (!_hasSit && _simonFightingSprite->GetIndex() >= 8)
+	{
+		_action = Action::Idle;
+		_simonFightingSprite->Reset();
+		_morningStar->reset();
+	}
+	else
+	if (_hasSit && _simonFightingSittingSprite->GetIndex() >= 18)
+	{
+		_action = Action::Sit;
+		_simonFightingSittingSprite->Reset();
+		_morningStar->reset();
+	}
 }
 
 Simon::~Simon(void)

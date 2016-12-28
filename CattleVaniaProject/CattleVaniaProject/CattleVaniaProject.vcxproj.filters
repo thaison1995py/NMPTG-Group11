@@ -244,6 +244,21 @@
     <ClInclude Include="Flyingblock.h">
       <Filter>GameObject\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="Crown.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleShot.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="GoldChest.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BrokenBrick.h">
+      <Filter>GameObject\Ground</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -410,6 +425,21 @@
     </ClCompile>
     <ClCompile Include="Flyingblock.cpp">
       <Filter>GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Crown.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleShot.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="GoldChest.cpp">
+      <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BrokenBrick.cpp">
+      <Filter>GameObject\Ground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

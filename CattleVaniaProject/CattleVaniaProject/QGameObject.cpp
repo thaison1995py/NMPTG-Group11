@@ -28,6 +28,15 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 0:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new Brick(posX, posY, width, height)));
 				break;
+			case 100:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new BrokenBrick(posX, posY)));
+				break;
+			case 106:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new Crown(posX, posY)));
+				break;
+			case 107:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new GoldChest(posX, posY)));
+				break;
 			case 1:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new Stair(posX, posY, width + 32, height, EnumID::StairUpLeft_ID)));
 				break;
@@ -58,8 +67,8 @@ QGameObject::QGameObject(string fileName, string _fileName)
 				break;
 				break;
 			case 18:
-				srand(time(0));
-				_listObjectGame->insert(pair<int, GameObject*>(id, new StupidDoor(posX, posY, 1040, 900 + (rand() % 5) * 8, 0.01* (1 + rand() % 3), 0.015* (1 + rand() % 3))));
+				srand(time(0));									  //ymax ymin   vUp    vDown 
+				_listObjectGame->insert(pair<int, GameObject*>(id, new StupidDoor(posX, posY, 1040, 910, 0.09, 0.1)));
 				break;
 			case 20:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new Door(posX, posY, width, height, EnumID::DoorLeft_ID)));
@@ -213,6 +222,15 @@ void QGameObject::SetObjectActiveInVP(float x, float y)
 		//if (!(*i)->active)
 		if ((*i)->type != Item_Type)
 			(*i)->SetActive(x, y);
+		else if ((*i)->type == Item_Type)
+		{
+			if ((*i)->id == Crown_ID || (*i)->id == GoldChest_ID)
+			{
+				(*i)->SetActive(x, y);
+			}
+		}
+		
+			
 	}
 }
 

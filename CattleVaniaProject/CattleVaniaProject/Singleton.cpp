@@ -27,6 +27,7 @@ Singleton::Singleton()
 	medusa = new CTexture("Resources/enemy/6.png", 2, 1, 2);
 	dragonSkullCannon = new CTexture("Resources/enemy/8.png", 1, 1, 1);
 
+	brokenbrick = new CTexture("Resources/ground/100.png", 1, 1, 1);
 	candle = new CTexture("Resources/ground/1.png", 2, 1, 2);
 	movingPlatform = new CTexture("Resources/ground/9.png", 1, 1, 1);
 	openDoor = new CTexture("Resources/ground/Gate1.png", 4, 1, 4);
@@ -38,6 +39,10 @@ Singleton::Singleton()
 	boomerang = new CTexture("Resources/weapon/4.png", 3, 1, 3);
 	axe = new CTexture("Resources/weapon/3.png", 4, 1, 4);
 
+	crown = new CTexture("Resources/item/106.png", 1, 1, 1);
+	doubleshot = new CTexture("Resources/item/102.png", 1, 1, 1);
+	goldchest = new CTexture("Resources/item/107.png", 1, 1, 1);
+	food = new CTexture("Resources/item/104.png", 1, 1, 1);
 	largeHeartItem = new CTexture("Resources/item/1.png", 1, 1, 1);
 	smallHeartItem = new CTexture("Resources/item/0.png", 1, 1, 1);
 	moneyBagItem = new CTexture("Resources/item/2.png", 3, 1, 3);
@@ -96,6 +101,8 @@ CTexture* Singleton::getTexture(EnumID id)
 
 	case EnumID::Candle_ID:
 		return candle;
+	case EnumID::BrokenBrick_ID:
+		return brokenbrick;
 	case EnumID::MovingPlatform_ID:
 		return movingPlatform;
 	case EnumID::StupidDoor_ID:
@@ -111,7 +118,15 @@ CTexture* Singleton::getTexture(EnumID id)
 		return boomerang;
 	case EnumID::Axe_ID:
 		return axe;
-
+	
+	case EnumID::Food_ID:
+		return food;
+	case EnumID::GoldChest_ID:
+		return goldchest;
+	case EnumID::Crown_ID:
+		return crown;
+	case EnumID::DoubleShot_ID:
+		return doubleshot;
 	case EnumID::LargeHeartItem_ID:
 		return largeHeartItem;
 	case EnumID::SmallHeartItem_ID:

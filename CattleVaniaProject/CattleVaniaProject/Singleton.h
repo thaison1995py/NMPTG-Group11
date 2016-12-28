@@ -20,6 +20,7 @@ private:
 	CTexture* monkeyevil;
 	CTexture* blackraven;
 	//ground
+	CTexture *brokenbrick;
 	CTexture* candle;
 	CTexture* movingPlatform;
 	CTexture* openDoor;
@@ -32,6 +33,10 @@ private:
 	CTexture* boomerang;
 	CTexture* axe;
 	//item
+	CTexture *goldchest;
+	CTexture *crown;
+	CTexture *doubleshot;
+	CTexture *food;
 	CTexture* largeHeartItem;
 	CTexture* smallHeartItem;
 	CTexture* moneyBagItem;

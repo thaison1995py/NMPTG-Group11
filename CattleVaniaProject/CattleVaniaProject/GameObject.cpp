@@ -103,6 +103,21 @@ void GameObject::CreateSprite()
 	case EnumID::QueenMedusa_ID:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 4, 50);
 		break;
+	case EnumID::BrokenBrick_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
+		break;
+	case EnumID::Food_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
+		break;
+	case EnumID::Crown_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
+		break;
+	case EnumID::GoldChest_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
+		break;
+	case EnumID::DoubleShot_ID:
+		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 0, 1, 50);
+		break;
 	default:
 		sprite = new CSprite(Singleton::getInstance()->getTexture(id), 100);
 		break;
