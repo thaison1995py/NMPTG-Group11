@@ -11,7 +11,6 @@ public:
 	Medusa(float _x, float _y);
 	void MoveSinPath(int deltaTime);
 	void Update(int deltaTime);
-	void Draw(CCamera*);
 	void Collision(list<GameObject*> obj, int dt);
 	~Medusa(void);
 };

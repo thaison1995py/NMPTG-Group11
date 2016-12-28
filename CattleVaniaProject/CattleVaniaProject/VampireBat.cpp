@@ -29,22 +29,6 @@ void VampireBat::Move(int deltaTime)
 
 }
 
-void VampireBat::Draw(CCamera* camera)
-{
-	if (sprite == NULL || !active)
-		return;
-	/*if (posX + width / 2 <= camera->viewport.x || posX - width / 2 >= camera->viewport.x + G_ScreenWidth)
-	{
-	active = false;
-	return;
-	}*/
-	D3DXVECTOR2 center = camera->Transform(posX, posY);
-	if (vX > 0)
-		sprite->DrawFlipX(center.x, center.y);
-	else
-		sprite->Draw(center.x, center.y);
-}
-
 void VampireBat::Update(int deltaTime)
 {
 	if (getUp)

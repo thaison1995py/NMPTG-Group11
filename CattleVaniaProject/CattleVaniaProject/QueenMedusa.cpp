@@ -20,7 +20,7 @@ void QueenMedusa::_initialize()
 	_vLittleSnake = new list<GameObject*>();
 	_deltaPhi = 0;
 	_posY0 = posY;
-	active = true;
+	active = false;
 	type = ObjectType::None_Type;
 	_hasGetUp = false;
 	hp = 20;

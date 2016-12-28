@@ -7,7 +7,7 @@
 class CCamera
 {
 public:
-	D3DXVECTOR2 viewport;		//Thiết lập tọa độ của camera	
+	D3DXVECTOR2 viewport;		//Thiết lập tọa độ của camera		
 	int _maxSize, _minSize;
 
 	CCamera();

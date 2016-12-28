@@ -13,7 +13,6 @@ public:
 	VampireBat(float x, float y);
 	void Move(int deltaTime);
 	void Update(int deltaTime);
-	void Draw(CCamera* camera);
 	void SetActive(float x, float y);
 	void Collision(list<GameObject*> obj, int dt);
 	~VampireBat(void);
