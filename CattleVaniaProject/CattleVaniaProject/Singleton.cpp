@@ -30,7 +30,7 @@ Singleton::Singleton()
 	brokenbrick = new CTexture("Resources/ground/100.png", 1, 1, 1);
 	candle = new CTexture("Resources/ground/1.png", 2, 1, 2);
 	movingPlatform = new CTexture("Resources/ground/9.png", 1, 1, 1);
-	openDoor = new CTexture("Resources/ground/Gate1.png", 4, 1, 4);
+	openDoor = new CTexture("Resources/ground/Gate1.png", 3, 1, 3);
 	stupidDoor = new CTexture("Resources/ground/7_3.png", 2, 1, 2);
 
 	morningStar = new CTexture("Resources/morningstar.png", 3, 3, 9);

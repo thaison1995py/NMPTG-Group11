@@ -148,7 +148,12 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						else
 							qm->getUp();
 					}
+
 					else if (other->id == Fire_ID && other->type == Item_Type)
+					{
+						(*_itBegin)->SetActive();
+					}
+					else if (other->id == Food_ID || other->id == DoubleShot_ID)
 					{
 						(*_itBegin)->SetActive();
 					}
@@ -158,7 +163,6 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						if (other->hp <= 0)
 						{
 							point += other->point;
-							//(*_itBegin) = new FireDie(other->posX, other->posY);
 
 						}
 					}

@@ -25,6 +25,11 @@ void DynamicObject::Draw(CCamera* camera)
 {
 	if (sprite == NULL || !active)
 		return;
+	/*if (posX + width / 2 < camera->viewport.x || posX - width / 2 > camera->viewport.x + G_ScreenWidth)
+	{
+		active = false;
+		return;
+	}*/
 	D3DXVECTOR2 center = camera->Transform(posX, posY);
 	if (vX > 0)
 		sprite->DrawFlipX(center.x, center.y);

@@ -27,14 +27,14 @@ void MovingPlatform::Update(int deltaTime)
 		posY += vY*deltaTime;
 		sprite->Update(deltaTime);
 	}
-	if ((posX >= 2047) && (posX <= 2240) && (posY == 1016))
+	if ((posY == 1017))
 	{
 		if ((posX<2080) || (posX>2208))
 			vX = -vX;
 		posY += vY*deltaTime;
 		sprite->Update(deltaTime);
 	}
-	if ((posX >= 2272) && (posX <= 2496) && (posY == 1016))
+	if (posY == 1016)
 	{
 		if ((posX<2334) || (posX>2464))
 			vX = -vX;

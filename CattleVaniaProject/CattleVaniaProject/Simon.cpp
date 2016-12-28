@@ -430,7 +430,8 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 					hp += 6;
 					break;
 				case EnumID::DoubleShot_ID:
-					damage = damage * 2;
+					point += 200;
+					//damage = damage * 10;
 					break;
 				}
 #pragma endregion Lay item

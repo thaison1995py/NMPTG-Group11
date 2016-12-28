@@ -17,7 +17,7 @@ void BlackKnight::Update(int deltaTime)
 	
 	if (sprite == NULL || !active)
 		return;
-	posX += vX*deltaTime;
+	posX += vX*16;
 	if (posY==288)
 	{
 		if ((posX<3670) || (posX>3880))
@@ -48,13 +48,13 @@ void BlackKnight::Update(int deltaTime)
 			vX = -vX;
 		sprite->Update(deltaTime);
 	}
-	if ((posY == 1056))
+	if ((posY == 1056) && ((posX>2800) && (posX<3020)))
 	{
 		if ((posX<2834) || (posX>2990))
 			vX = -vX;
 		sprite->Update(deltaTime);
 	}
-	if ((posY == 1056))
+	if ((posY == 1056)&&((posX>2477)&&(posX<2710)))
 	{
 		if ((posX<2512) || (posX>2672))
 			vX = -vX;

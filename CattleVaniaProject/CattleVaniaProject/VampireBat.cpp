@@ -61,7 +61,7 @@ void VampireBat::SetActive(float x, float y)
 	active = true;
 	smx = x;
 	smy = y;
-	if (abs(posX - x) <= 150 && abs(posY - y) <= 150)
+	if (abs(posX - x) <= 150 && abs(posY - y) <= 120)
 	{
 
 		getUp = true;

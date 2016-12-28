@@ -34,6 +34,12 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 106:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new Crown(posX, posY)));
 				break;
+			case 104:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new Food(posX, posY)));
+				break;
+			case 102:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new DoubleShot(posX, posY)));
+				break;
 			case 107:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new GoldChest(posX, posY)));
 				break;
@@ -61,13 +67,16 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 13:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new DragonSkullCannon(posX, posY)));
 				break;
+			case 14:
+				_listObjectGame->insert(pair<int, GameObject*>(id, new Flyingblock(posX, posY)));
+				break;
 			case 15:
 				_queenMedusa = new QueenMedusa(posX, posY, EnumID::QueenMedusa_ID);
 				_listObjectGame->insert(pair<int, GameObject*>(id, _queenMedusa));
 				break;
 				break;
 			case 18:
-				srand(time(0));									  //ymax ymin   vUp    vDown 
+				srand(time(0));									                            //ymax ymin  vUp  vDown 
 				_listObjectGame->insert(pair<int, GameObject*>(id, new StupidDoor(posX, posY, 1040, 910, 0.09, 0.1)));
 				break;
 			case 20:

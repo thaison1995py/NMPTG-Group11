@@ -28,8 +28,8 @@ void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 
-	simon = new Simon(600, 1100);//(1257, 1000);
-	camera->viewport.y = 1250;// +32 * 12 * 2;
+	simon = new Simon(3650, 800);//(1257, 1000);
+	camera->viewport.y = 482 +32 * 12;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(100);
 
@@ -244,7 +244,6 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 		{
 			if (_beginMoveCamera)
 			{
-				//qGameObject->RemoveAllObject();
 				MoveCamera(_rangeMoveCamera);
 			}
 			if (_moveCameraHaft)
@@ -633,8 +632,6 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 
 void SceneGame::MoveCamera(int &_moveRange)
 {
-	//if(_rangeMoveCamera == 0)
-	//	_rangeMoveCamera = _moveRange;
 	if (_beginMoveCamera)
 	{
 		if (_rangeMoveCamera == 0 && !_moveCameraHaft)

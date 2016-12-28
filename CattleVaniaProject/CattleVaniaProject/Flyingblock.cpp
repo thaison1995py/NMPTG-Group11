@@ -5,7 +5,7 @@ Flyingblock::Flyingblock(void) : DynamicObject()
 {
 }
 
-Flyingblock::Flyingblock(float x, float y) : DynamicObject(x, y, 0.09f, 0, EnumID::Flyingblock_ID)
+Flyingblock::Flyingblock(float x, float y) : DynamicObject(x, y, 0.2f, 0, EnumID::Flyingblock_ID)
 {
 	type = ObjectType::Enemy_Type;
 	point = 300;
@@ -23,11 +23,11 @@ void Flyingblock::Update(int deltaTime)
 	if (posY > (smy-16)) vY = -0.3;
 	if (posX>smx)
 	{
-		vX = -0.09;
+		vX = -0.3;
 	}
 	else
 	{
-		vX = 0.09;
+		vX = 0.3;
 	}
 	posX += vX*deltaTime;
 	posY += vY*deltaTime;
