@@ -1,5 +1,5 @@
 #ifndef _MAGICALCRYSTAL_H_
-#define _MAGICALCRYsTAL_H_
+#define _MAGICALCRYSTAL_H_
 
 #include "DynamicObject.h"
 #include "CEnum.h"

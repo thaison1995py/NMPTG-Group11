@@ -69,7 +69,7 @@ void CSprite::Update(int ellapseTime)
 {
 	_timeLocal += ellapseTime;
 
-	if (1.3*_timeLocal >= _timeAni)
+	if (_timeLocal >= _timeAni)
 	{
 		_timeLocal = 0;
 		this->Next();

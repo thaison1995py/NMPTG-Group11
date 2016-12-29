@@ -8,8 +8,10 @@ MagicalCrystal::MagicalCrystal(void) : DynamicObject()
 
 MagicalCrystal::MagicalCrystal(float x, float y) : DynamicObject(x, y, 0, -0.3f, EnumID::MagicalCrystal_ID)
 {
-	active = true;
+	active = false;
 	type = ObjectType::Item_Type;
+	damage = 0;
+
 }
 
 void MagicalCrystal::Collision(list<GameObject*> obj, int dt)

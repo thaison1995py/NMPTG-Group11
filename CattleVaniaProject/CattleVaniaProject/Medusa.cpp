@@ -6,6 +6,7 @@ Medusa::Medusa(void) : DynamicObject()
 Medusa::Medusa(float _x, float _y) : DynamicObject(_x, _y, 0.3f, 0, EnumID::Medusa_ID)
 {
 	type = ObjectType::Enemy_Type;
+	hp = 2;
 	point = 300;
 }
 

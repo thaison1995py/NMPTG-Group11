@@ -28,10 +28,12 @@ void SceneGame::LoadLevel(int level)
 {
 	bg = new QBackground(level);
 
-	simon = new Simon(3650, 100);//(1257, 1000);
-	camera->viewport.y = 482;// +32 * 12;
+	simon = new Simon(3880, 100);//(1257, 1000);
+	camera->viewport.y = 482;// +32 * 12 * 3;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(100);
+	SoundManager::GetInst()->RemoveAllBGM();
+	SoundManager::GetInst()->PlayBGSound(EBGSound::EStage1Sound);
 
 	////ResetLevel();
 
@@ -100,13 +102,13 @@ void SceneGame::LoadStage(int stage)
 
 
 	openDoor = new OpenDoor(688, 3088);
-	if (simon->posX > 2820 && simon->posX<3460)
+	if (simon->posX > 2820 && simon->posX < 3460)
 	{
 		posDoor.x = 3088;
 		posDoor.y = 688;
 		openDoor->SetPos(posDoor.x, posDoor.y);
 	}
-	else 	if (simon->posX< 1995 && simon->posX > 1220)
+	else 	if (simon->posX < 1995 && simon->posX > 1220)
 	{
 		posDoor.x = 1560;
 		posDoor.y = 1008;
@@ -140,19 +142,19 @@ void SceneGame::LoadStage(int stage)
 		}
 		camera->SetSizeMap(G_MaxSize, G_MinSize);
 
-	qGameObject->LoadTree();
+		qGameObject->LoadTree();
 
 }
 
 void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 {
-	if (simon->posX > 2820 && simon->posX<3460)
+	if (simon->posX > 2820 && simon->posX < 3460)
 	{
 		posDoor.x = 3088;
 		posDoor.y = 688;
 		openDoor->SetPos(posDoor.x, posDoor.y);
 	}
-	else 	if (simon->posX< 1995 && simon->posX > 1220)
+	else 	if (simon->posX < 1995 && simon->posX > 1220)
 	{
 		posDoor.x = 1560;
 		posDoor.y = 1008;
@@ -185,54 +187,54 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 			G_MaxSize = 512;
 		}
 		camera->SetSizeMap(G_MaxSize, G_MinSize);
-	//#pragma region
-	//
-	//	if(_levelNow == 0)
-	//	{
-	//		_levelNow++;
-	//		_stageNow++;
-	//		LoadResources(G_Device);
-	//		/*if(introScene->_loadOK)
-	//		{
-	//			_levelNow++;
-	//			_stageNow++;
-	//			LoadResources(G_Device);
-	//		}
-	//		else 
-	//		{
-	//			introScene->Update(deltaTime);
-	//			G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
-	//			introScene->Draw(camera);
-	//			G_SpriteHandler->End();
-	//		}*/
-	//	}
-	//	else if(_levelNow > 0)
-	//	{
-	//			_levelNow++;
-	//			_stageNow ++;
-	//			LoadResources(G_Device);
-	//			//simon->_action = Action::Idle;
-	//			simon->_colCastleGate = false;
-	//			_loadLevel = true;
-	//		////--------Xu ly di vao cong thanh----------
-	//		//if(simon->_colCastleGate && simon->_action == Action::IntoCastle && !_loadLevel)
-	//		//{
-	//		//	_levelNow++;
-	//		//	_stageNow ++;
-	//		//	LoadResources(G_Device);
-	//		//	//simon->_action = Action::Idle;
-	//		//	simon->_colCastleGate = false;
-	//		//	simon->sprite->SelectIndex(0);
-	//		//	_loadLevel = true;
-	//		//}
-	//
-	//		if(_stateCamera == EStateCamera::Update_Camera)
-	//		{
-	//			camera->UpdateCamera(simon->posX);
-	//			ChangeCamera(simon->GetDirectDoor());
-	//		}
-	//		else
-	//			//-------------Di chuyen camera, chuyen canh ------------
+		//#pragma region
+		//
+		//	if(_levelNow == 0)
+		//	{
+		//		_levelNow++;
+		//		_stageNow++;
+		//		LoadResources(G_Device);
+		//		/*if(introScene->_loadOK)
+		//		{
+		//			_levelNow++;
+		//			_stageNow++;
+		//			LoadResources(G_Device);
+		//		}
+		//		else 
+		//		{
+		//			introScene->Update(deltaTime);
+		//			G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+		//			introScene->Draw(camera);
+		//			G_SpriteHandler->End();
+		//		}*/
+		//	}
+		//	else if(_levelNow > 0)
+		//	{
+		//			_levelNow++;
+		//			_stageNow ++;
+		//			LoadResources(G_Device);
+		//			//simon->_action = Action::Idle;
+		//			simon->_colCastleGate = false;
+		//			_loadLevel = true;
+		//		////--------Xu ly di vao cong thanh----------
+		//		//if(simon->_colCastleGate && simon->_action == Action::IntoCastle && !_loadLevel)
+		//		//{
+		//		//	_levelNow++;
+		//		//	_stageNow ++;
+		//		//	LoadResources(G_Device);
+		//		//	//simon->_action = Action::Idle;
+		//		//	simon->_colCastleGate = false;
+		//		//	simon->sprite->SelectIndex(0);
+		//		//	_loadLevel = true;
+		//		//}
+		//
+		//		if(_stateCamera == EStateCamera::Update_Camera)
+		//		{
+		//			camera->UpdateCamera(simon->posX);
+		//			ChangeCamera(simon->GetDirectDoor());
+		//		}
+		//		else
+		//			//-------------Di chuyen camera, chuyen canh ------------
 		if (_stateCamera == EStateCamera::Update_Camera)
 		{
 			camera->UpdateCamera(simon->posX);
@@ -312,217 +314,270 @@ void SceneGame::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int deltaTime)
 			}
 		}
 #pragma endregion Simon Death Reponse
-	//#pragma endregion Chuyen canh, dich chuyen camera
-	//		//------Thao tac khi simon chet-------
-	//#pragma region 
-	//		if(simon->GetHPSimon() <= 0 && !simon->_simonDeath)
-	//		{
-	//			_timeToReset = 100;
-	//			simon->_simonDeath = true;
-	//		}
-	//		if(simon->_simonDeath)
-	//		{
-	//			if(_timeToReset > 0)
-	//			{
-	//				if(!_playedDie)
-	//				{
-	//					SoundManager::GetInst()->RemoveAllBGM();
-	//					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_LifeLost);
-	//					_playedDie = true;
-	//				}
-	//				simon->SimonDeath(_timeToReset);
-	//			}
-	//			else
-	//			{
-	//				_playedDie = false;
-	//				simon->_simonDeath = false;
-	//				simon = new Simon(posStageToReset.x, posStageToReset.y);
-	//				LoadStage(_stageReset);
-	//				camera->viewport = posCamera;
-	//				_stageNow = _stageReset;
-	//				_lifes--;
-	//				if(_lifes <= 0)
-	//				{
-	//					sceneState = ESceneState::Menu_Scene;
-	//				}
-	//				else
-	//				{
-	//					if(_stageNow <= 4)
-	//					{
-	//						SoundManager::GetInst()->RemoveAllBGM();
-	//						SoundManager::GetInst()->PlayBGSound(EBGSound::EStage1Sound);
-	//					}
-	//					else if(_stageNow >= 5)
-	//					{
-	//						SoundManager::GetInst()->RemoveAllBGM();
-	//						SoundManager::GetInst()->PlayBGSound(EBGSound::EStage2Sound);
-	//					}
-	//				}
-	//			}
-	//		}
-	//#pragma endregion Simon Death Reponse
-	//		//-------Giet boss, qua man-------------
-	//#pragma region
-	//		if(simon->_eatMagicalCrystal)
-	//		{
-	//			if(simon->GetHPSimon() < 40)
-	//			{
-	//				simon->hp++;
-	//			}
-	//			else if(_gameScore->getTimer() > 0)
-	//			{
-	//				_gameScore->SetTimer(-1000);
-	//				_score += 50;
-	//				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreTimer);
-	//			}
-	//			else if(simon->hearts > 0)
-	//			{
-	//				simon->hearts--;				
-	//				_score += 100;
-	//				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreWeaponCount);
-	//			}
-	//			else if(_levelNow == 2)
-	//			{
-	//				_levelNow++;
-	//				_stageNow++;
-	//				LoadResources(G_Device);
-	//				simon->_eatMagicalCrystal = false;
-	//			}
-	//			else if(_levelNow == 3)
-	//			{
-	//				simon->_eatMagicalCrystal = false;
-	//				sceneState = ESceneState::EndGame_Scene;
-	//			}
-	//		}
-	//#pragma endregion Giet Boss, qua level
-	//		//--------------Over time-------------------
-	//		if(_gameScore->getTimer() <= 0)
-	//			sceneState = ESceneState::Menu_Scene;
-	//		//------------------------------
-	//		if(stateGame == EState::None_State)
-	//		{
-	//			if(simon->GetUsingWatch())
-	//			{
-	//				qGameObject->PauseUpdate();
-	//				simon->SetUsingWatch(false);
-	//			}
-	//			qGameObject->Update(deltaTime);
-	//			bg->GetTreeObject(camera->viewport.x, camera->viewport.y);
-	//			simon->Update(deltaTime);
-	//			_score += simon->point;
-	//			simon->point = 0;		
-	//			if(_stageNow == 4)
-	//			{
-	//				/*_phantomBat->Update(deltaTime,simon->getPos());
-	//				if(_phantomBat->type == ObjectType::Enemy_Type)
-	//				{
-	//					camera->SetSizeMap(G_MaxSize, G_MinSize);
-	//				}*/
-	//				/*_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _phantomBat->hp);	*/	
-	//			}
-	//			else if(_stageNow == 10)
-	//			{
-	//				_queenMedusa->Update(deltaTime,simon->getPos());		
-	//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);		
-	//				/*if(_phantomBat->type == ObjectType::Enemy_Type)
-	//				{
-	//					camera->SetSizeMap(G_MaxSize, G_MinSize);
-	//				}*/
-	//			}
-	//			else 
-	//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts);		
-	//
-	//
-	//			simon->Collision(*(qGameObject->_staticObject), deltaTime);
-	//			simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
-	//			if(simon->GetUsingCross())
-	//			{
-	//				_score += qGameObject->RemoveAllObjectInCamera(camera->viewport);
-	//				simon->SetUsingCross(false);
-	//
-	//				// Background
-	//				d3ddv->StretchRect(
-	//					BackgroundWhite,			// from 
-	//					NULL,				// which portion?
-	//					G_BackBuffer,		// to 
-	//					NULL,				// which portion?
-	//					D3DTEXF_NONE);
-	//			}
-	//			else
-	//			{			
-	//				// Background
-	//				d3ddv->StretchRect(
-	//					Background,			// from 
-	//					NULL,				// which portion?
-	//					G_BackBuffer,		// to 
-	//					NULL,				// which portion?
-	//					D3DTEXF_NONE);
-	//			}
-	//			qGameObject->Collision(deltaTime);
-	//		}
-	//
-	//		G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
-	//
-	//		bg->Draw(camera);
-	//		qGameObject->Draw(camera);
-	//		openDoor->Draw(camera, _doorDirect);
-	//
-	//		_gameScore->drawTable();
-	//
-	//		simon->Draw(camera);
-	//
-	//		G_SpriteHandler->End();
-	//		_gameScore->drawScore();
-	//	}
-	//#pragma endregion Camera Update Binh thuong
-	//Background
-if (simon->GetUsingCross())
-{
-	_score += qGameObject->RemoveAllObjectInCamera(camera->viewport);
-	simon->SetUsingCross(false);
-}
+		//-------Giet boss, qua man-------------
+#pragma region
+		if (simon->_eatMagicalCrystal)
+		{
+			if (simon->GetHPSimon() < 40)
+			{
+				simon->hp++;
+			}
+			else if (_gameScore->getTimer() > 0)
+			{
+				_gameScore->SetTimer(-1000);
+				_score += 50;
+				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreTimer);
+			}
+			else if (simon->hearts > 0)
+			{
+				simon->hearts--;
+				_score += 100;
+				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreWeaponCount);
+			}
+			else if (_levelNow == 2)
+			{
+				_levelNow++;
+				_stageNow++;
+				LoadResources(G_Device);
+				simon->_eatMagicalCrystal = false;
+			}
+			else if (_levelNow == 3)
+			{
+				simon->_eatMagicalCrystal = false;
+				sceneState = ESceneState::EndGame_Scene;
+			}
+		}
+#pragma endregion Giet Boss, qua level
+		//--------------Over time-------------------
+		if (_gameScore->getTimer() <= 0)
+			sceneState = ESceneState::Menu_Scene;
+		//#pragma endregion Chuyen canh, dich chuyen camera
+		//		//------Thao tac khi simon chet-------
+		//#pragma region 
+		//		if(simon->GetHPSimon() <= 0 && !simon->_simonDeath)
+		//		{
+		//			_timeToReset = 100;
+		//			simon->_simonDeath = true;
+		//		}
+		//		if(simon->_simonDeath)
+		//		{
+		//			if(_timeToReset > 0)
+		//			{
+		//				if(!_playedDie)
+		//				{
+		//					SoundManager::GetInst()->RemoveAllBGM();
+		//					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_LifeLost);
+		//					_playedDie = true;
+		//				}
+		//				simon->SimonDeath(_timeToReset);
+		//			}
+		//			else
+		//			{
+		//				_playedDie = false;
+		//				simon->_simonDeath = false;
+		//				simon = new Simon(posStageToReset.x, posStageToReset.y);
+		//				LoadStage(_stageReset);
+		//				camera->viewport = posCamera;
+		//				_stageNow = _stageReset;
+		//				_lifes--;
+		//				if(_lifes <= 0)
+		//				{
+		//					sceneState = ESceneState::Menu_Scene;
+		//				}
+		//				else
+		//				{
+		//					if(_stageNow <= 4)
+		//					{
+		//						SoundManager::GetInst()->RemoveAllBGM();
+		//						SoundManager::GetInst()->PlayBGSound(EBGSound::EStage1Sound);
+		//					}
+		//					else if(_stageNow >= 5)
+		//					{
+		//						SoundManager::GetInst()->RemoveAllBGM();
+		//						SoundManager::GetInst()->PlayBGSound(EBGSound::EStage2Sound);
+		//					}
+		//				}
+		//			}
+		//		}
+		//#pragma endregion Simon Death Reponse
+		//		//-------Giet boss, qua man-------------
+		//#pragma region
+		//		if(simon->_eatMagicalCrystal)
+		//		{
+		//			if(simon->GetHPSimon() < 40)
+		//			{
+		//				simon->hp++;
+		//			}
+		//			else if(_gameScore->getTimer() > 0)
+		//			{
+		//				_gameScore->SetTimer(-1000);
+		//				_score += 50;
+		//				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreTimer);
+		//			}
+		//			else if(simon->hearts > 0)
+		//			{
+		//				simon->hearts--;				
+		//				_score += 100;
+		//				SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_GetScoreWeaponCount);
+		//			}
+		//			else if(_levelNow == 2)
+		//			{
+		//				_levelNow++;
+		//				_stageNow++;
+		//				LoadResources(G_Device);
+		//				simon->_eatMagicalCrystal = false;
+		//			}
+		//			else if(_levelNow == 3)
+		//			{
+		//				simon->_eatMagicalCrystal = false;
+		//				sceneState = ESceneState::EndGame_Scene;
+		//			}
+		//		}
+		//#pragma endregion Giet Boss, qua level
+		//		//--------------Over time-------------------
+		//		if(_gameScore->getTimer() <= 0)
+		//			sceneState = ESceneState::Menu_Scene;
+		//		//------------------------------
+		//		if(stateGame == EState::None_State)
+		//		{
+		//			if(simon->GetUsingWatch())
+		//			{
+		//				qGameObject->PauseUpdate();
+		//				simon->SetUsingWatch(false);
+		//			}
+		//			qGameObject->Update(deltaTime);
+		//			bg->GetTreeObject(camera->viewport.x, camera->viewport.y);
+		//			simon->Update(deltaTime);
+		//			_score += simon->point;
+		//			simon->point = 0;		
+		//			if(_stageNow == 4)
+		//			{
+		//				/*_phantomBat->Update(deltaTime,simon->getPos());
+		//				if(_phantomBat->type == ObjectType::Enemy_Type)
+		//				{
+		//					camera->SetSizeMap(G_MaxSize, G_MinSize);
+		//				}*/
+		//				/*_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _phantomBat->hp);	*/	
+		//			}
+		//			else if(_stageNow == 10)
+		//			{
+		//				_queenMedusa->Update(deltaTime,simon->getPos());		
+		//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);		
+		//				/*if(_phantomBat->type == ObjectType::Enemy_Type)
+		//				{
+		//					camera->SetSizeMap(G_MaxSize, G_MinSize);
+		//				}*/
+		//			}
+		//			else 
+		//				_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1)/2), _lifes, simon->_weaponID, simon->hearts);		
+		//
+		//
+		//			simon->Collision(*(qGameObject->_staticObject), deltaTime);
+		//			simon->Collision(*(qGameObject->_dynamicObject), deltaTime);
+		//			if(simon->GetUsingCross())
+		//			{
+		//				_score += qGameObject->RemoveAllObjectInCamera(camera->viewport);
+		//				simon->SetUsingCross(false);
+		//
+		//				// Background
+		//				d3ddv->StretchRect(
+		//					BackgroundWhite,			// from 
+		//					NULL,				// which portion?
+		//					G_BackBuffer,		// to 
+		//					NULL,				// which portion?
+		//					D3DTEXF_NONE);
+		//			}
+		//			else
+		//			{			
+		//				// Background
+		//				d3ddv->StretchRect(
+		//					Background,			// from 
+		//					NULL,				// which portion?
+		//					G_BackBuffer,		// to 
+		//					NULL,				// which portion?
+		//					D3DTEXF_NONE);
+		//			}
+		//			qGameObject->Collision(deltaTime);
+		//		}
+		//
+		//		G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+		//
+		//		bg->Draw(camera);
+		//		qGameObject->Draw(camera);
+		//		openDoor->Draw(camera, _doorDirect);
+		//
+		//		_gameScore->drawTable();
+		//
+		//		simon->Draw(camera);
+		//
+		//		G_SpriteHandler->End();
+		//		_gameScore->drawScore();
+		//	}
+		//#pragma endregion Camera Update Binh thuong
+		//Background
+		
 
-	d3ddv->StretchRect(
-		Background,			// from 
-		NULL,				// which portion?
-		G_BackBuffer,		// to 
-		NULL,				// which portion?
-		D3DTEXF_NONE);
+		simon->Update(deltaTime);
+		_score += simon->point;
+		simon->point = 0;
 
-	simon->Update(deltaTime);
-	_score += simon->point;
-	simon->point = 0;
+		qGameObject->GetTreeObject(camera->viewport.x, camera->viewport.y);
+		qGameObject->GetObjecttInVP();
+		qGameObject->SetObjectActiveInVP(simon->posX, simon->posY);
 
-	qGameObject->GetTreeObject(camera->viewport.x, camera->viewport.y);
-	qGameObject->GetObjecttInVP();
-	qGameObject->SetObjectActiveInVP(simon->posX, simon->posY);
+		qGameObject->Update(deltaTime);
 
-	qGameObject->Update(deltaTime);
+		simon->Collision(*(qGameObject->_listObjectInVP), deltaTime);
 
-	simon->Collision(*(qGameObject->_listObjectInVP), deltaTime);
+		qGameObject->Collision(deltaTime);
+		if (_queenMedusa->_hasGetUp)
+		{
 
-	qGameObject->Collision(deltaTime);
-	if (_queenMedusa->_hasGetUp)
-	{
+			_queenMedusa->Update(deltaTime, simon->getPos());
+			_listSnake = _queenMedusa->getlistSnake();
+			simon->Collision(_listSnake, deltaTime);
+			_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);
+		}
+		else
+			_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts);
+		if (_queenMedusa->death && !qGameObject->getMagicalCrystal()->active)
+		{
+			qGameObject->getMagicalCrystal()->SetActive(simon->posX, simon->posY);
+			//qGameObject->getMagicalCrystal()->death = false;
+		}
+		if (simon->GetUsingCross())
+		{
+			_score += qGameObject->RemoveAllObjectInCamera(camera->viewport);
+			simon->SetUsingCross(false);
+			d3ddv->StretchRect(
+				BackgroundWhite,			// from 
+				NULL,				// which portion?
+				G_BackBuffer,		// to 
+				NULL,				// which portion?
+				D3DTEXF_NONE);
 
-		_queenMedusa->Update(deltaTime, simon->getPos());
-		_listSnake = _queenMedusa->getlistSnake();
-		simon->Collision(_listSnake, deltaTime);
-		_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts, _queenMedusa->hp);
-	}
-	else
-		_gameScore->updateScore(_stageNow, _score, deltaTime, (int)((simon->hp + 1) / 2), _lifes, simon->_weaponID, simon->hearts);
+		}
 
-	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
-	bg->Draw(camera);
+		else
+		{
+			d3ddv->StretchRect(
+				Background,			// from 
+				NULL,				// which portion?
+				G_BackBuffer,		// to 
+				NULL,				// which portion?
+				D3DTEXF_NONE);
 
-	qGameObject->Draw(camera);
-	openDoor->Draw(camera, _doorDirect);
-	_gameScore->drawTable();
-	simon->Draw(camera);
+		}
+		G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+		bg->Draw(camera);
 
-	G_SpriteHandler->End();
-	_gameScore->drawScore();
+		qGameObject->Draw(camera);
+		openDoor->Draw(camera, _doorDirect);
+		_gameScore->drawTable();
+		simon->Draw(camera);
+
+		G_SpriteHandler->End();
+		_gameScore->drawScore();
 
 }
 
@@ -601,9 +656,9 @@ void SceneGame::ChangeCamera(EDirectDoor _directDoor)
 			_beginMoveCamera = true;
 			_moveCameraHaft = false;
 			_moveCameraDone = false;
-			_rangeMoveCamera = -182;
-			_rangeMoveCamera2 = -110;
-			_rangeMoveSimon = -60;
+			_rangeMoveCamera = -280;
+			_rangeMoveCamera2 = -220;
+			_rangeMoveSimon = -128;
 			_doorDirect = -1;
 
 			break;
@@ -642,13 +697,13 @@ void SceneGame::MoveCamera(int &_moveRange)
 		}
 		if (_rangeMoveCamera > 0)
 		{
-			_rangeMoveCamera -= 2;
-			camera->viewport.x += 2;
+			_rangeMoveCamera -= 4;
+			camera->viewport.x += 4;
 		}
 		else
 		{
-			_rangeMoveCamera += 2;
-			camera->viewport.x -= 2;
+			_rangeMoveCamera += 4;
+			camera->viewport.x -= 4;
 		}
 	}
 	else if (_moveCameraHaft)
@@ -658,8 +713,8 @@ void SceneGame::MoveCamera(int &_moveRange)
 			_moveCameraHaft = false;
 			_beginMoveCamera = false;
 			_moveCameraDone = true;
-	
-		
+
+
 			_stateCamera = EStateCamera::Update_Camera;
 			simon->SetDirectDoor(EDirectDoor::NoneDoor);
 			openDoor->ResetDoor();
@@ -673,13 +728,13 @@ void SceneGame::MoveCamera(int &_moveRange)
 		}
 		if (_rangeMoveCamera2 > 0)
 		{
-			_rangeMoveCamera2 -= 2;
-			camera->viewport.x += 2;
+			_rangeMoveCamera2 -= 4;
+			camera->viewport.x += 4;
 		}
 		else
 		{
-			_rangeMoveCamera2 += 2;
-			camera->viewport.x -= 2;
+			_rangeMoveCamera2 += 4;
+			camera->viewport.x -= 4;
 		}
 	}
 

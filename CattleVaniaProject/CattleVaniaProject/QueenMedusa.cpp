@@ -183,15 +183,17 @@ void QueenMedusa::ReceiveDamage(int damagePoint)
 {
 	if (!IsHurt())
 	{
+		if (hp > 0)
+		{
+			hp -= damagePoint;
+		}
+			
 		if (hp <= 0)
-			return;
-		hp -= damagePoint;
-		if (hp == 0)
 			death = true;
 		bActiveHurt = true;
 		_localHurtTime = GetTickCount();
 
-		if (hp == 0)
+		if (hp <=0)
 			this->setDead();
 	}
 }

@@ -21,14 +21,17 @@ void Flyingblock::Update(int deltaTime)
 	if ((posY>(smy - 16)) && (posY < smy)) vY = 0;
 	
 	if (posY > (smy-16)) vY = -0.3;
-	if (posX>smx)
+	if (abs(smx - posX)<16)
+		vX = 0;
+	else if (posX>smx)
 	{
-		vX = -0.3;
+		vX = -0.2;
 	}
 	else
 	{
-		vX = 0.3;
+		vX = 0.2;
 	}
+	
 	posX += vX*deltaTime;
 	posY += vY*deltaTime;
 	sprite->Update(deltaTime);

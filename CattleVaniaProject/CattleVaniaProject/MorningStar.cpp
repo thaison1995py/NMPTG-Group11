@@ -103,6 +103,8 @@ void MorningStar::updateVx(float vx_)
 void MorningStar::updateLevel()
 {
 	this->_morningStarSprite->updateLevel();
+	if (damage < 3)
+		damage += 1;
 }
 
 void MorningStar::Collision(list<GameObject*> &obj, int dt)
@@ -163,6 +165,7 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						{
 
 							other->ReceiveDamage(damage);
+
 							if (other->hp <= 0)
 							{
 								point += other->point;

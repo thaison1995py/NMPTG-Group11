@@ -23,5 +23,6 @@
 #include "GoldChest.h"
 #include "Crown.h"
 #include "DoubleShot.h"
+#include "MagicalCrystal.h"
 
 #endif

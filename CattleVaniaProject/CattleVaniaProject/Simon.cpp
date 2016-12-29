@@ -371,71 +371,81 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 #pragma region
 			if (other->type == ObjectType::Item_Type && other->id != EnumID::Fire_ID)
 			{
-				other->Remove();
-				switch (other->id)
+				if (other->active == true)
 				{
-				case EnumID::AxeItem_ID:
-					_weaponID = EnumID::Axe_ID;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::WatchItem_ID:
-					_weaponID = EnumID::Watch_ID;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::BoomerangItem_ID:
-					_weaponID = EnumID::Boomerang_ID;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::DaggerItem_ID:
-					_weaponID = EnumID::Dagger_ID;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::FireBombItem_ID:
-					_weaponID = EnumID::FireBomb_ID;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::MorningStarItem_ID:
-					this->UpgradeMorningStar();
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
-					break;
-				case EnumID::SmallHeartItem_ID:
-				case EnumID::LargeHeartItem_ID:
-					//cong tim
-					hearts += other->hearts;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-					break;
-				case EnumID::MoneyBagBlueItem_ID:
-				case EnumID::MoneyBagRedItem_ID:
-				case EnumID::MoneyBagItem_ID:
-				case EnumID::MoneyBagWhiteItem_ID:
-					//cong tien
-					point += other->point;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-					break;
-				case EnumID::CrossItem_ID:
-					//Xoa het enemy tren camera
-					SetUsingCross(true);
-					break;
-				case EnumID::MagicalCrystal_ID:
-					//Qua man
-					_eatMagicalCrystal = true;
-					SoundManager::GetInst()->RemoveAllBGM();
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_StageClear);
-					break;
-				case EnumID::Crown_ID:
-				case EnumID::GoldChest_ID:
-					point += 2000;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-					break;
-				case EnumID::Food_ID:
-					hp += 6;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-					break;
-				case EnumID::DoubleShot_ID:
-					point += 200;
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
-					//damage = damage * 10;
-					break;
+					other->Remove();
+					switch (other->id)
+					{
+					case EnumID::AxeItem_ID:
+						_weaponID = EnumID::Axe_ID;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::WatchItem_ID:
+						_weaponID = EnumID::Watch_ID;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::BoomerangItem_ID:
+						_weaponID = EnumID::Boomerang_ID;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::DaggerItem_ID:
+						_weaponID = EnumID::Dagger_ID;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::FireBombItem_ID:
+						_weaponID = EnumID::FireBomb_ID;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::MorningStarItem_ID:
+						this->UpgradeMorningStar();
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectWeapon);
+						break;
+					case EnumID::SmallHeartItem_ID:
+					case EnumID::LargeHeartItem_ID:
+						//cong tim
+						hearts += other->hearts;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+						break;
+					case EnumID::MoneyBagBlueItem_ID:
+					case EnumID::MoneyBagRedItem_ID:
+					case EnumID::MoneyBagItem_ID:
+					case EnumID::MoneyBagWhiteItem_ID:
+						//cong tien
+						point += other->point;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+						break;
+					case EnumID::CrossItem_ID:
+						//Xoa het enemy tren camera
+						SetUsingCross(true);
+						break;
+					case EnumID::MagicalCrystal_ID:
+						//Qua manif (other->active)
+						_eatMagicalCrystal = true;
+					
+						SoundManager::GetInst()->RemoveAllBGM();
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_StageClear);
+						break;
+					case EnumID::Crown_ID:
+					case EnumID::GoldChest_ID:
+						point += 2000;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+						break;
+					case EnumID::Food_ID:
+						if (hp < 40)
+						{
+							if (hp >= 32)
+								hp = 40;
+							else
+								hp += 8;
+						}
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+						break;
+					case EnumID::DoubleShot_ID:
+
+						this->_morningStar->damage +=1;
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
+						break;
+					}
 				}
 #pragma endregion Lay item
 			}
@@ -989,6 +999,7 @@ bool Simon::IsHurt()
 		_bHurt = !_bHurt;
 	}
 	return result;
+	
 }
 
 void Simon::UpStair()

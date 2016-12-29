@@ -14,6 +14,7 @@
 #include <time.h>
 #include <random>
 #include "QueenMedusa.h"
+#include "MagicalCrystal.h"
 #include "GameObject.h"
 #include "QNode.h"
 #include <string>
@@ -33,6 +34,7 @@ class QGameObject
 protected:
 	/*PhantomBat* _phantomBat;*/
 	QueenMedusa* _queenMedusa;
+	MagicalCrystal* _magicalCrystal;
 	QNode *tree;
 	map<int, QNode*> *nodeOfTree;
 	list<int> *myObject;
@@ -65,6 +67,7 @@ public:
 	int RemoveAllObjectInCamera(D3DXVECTOR2);
 	void RemoveAllObject();
 	QueenMedusa* getQueenMedusa();
+	MagicalCrystal* getMagicalCrystal();
 	//PhantomBat* getPhantomBat();
 	void PauseUpdate();
 };

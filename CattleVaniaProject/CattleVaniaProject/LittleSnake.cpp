@@ -41,7 +41,16 @@ void LittleSnake::Collision(list<GameObject*> obj, int dt)
 		}
 	}
 }
-
+void LittleSnake::Update(int deltatime)
+{
+	if (sprite == NULL || !active)
+		return;
+	posX += vX*deltatime;
+	if (posX <= width / 2 + 2 || posX >= 4096 - (width / 2 - 2))
+		vX = -vX;
+	posY += vY*deltatime;
+	sprite->Update(deltatime);
+}
 LittleSnake::~LittleSnake(void)
 {
 }

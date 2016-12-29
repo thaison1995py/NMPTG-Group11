@@ -1,11 +1,11 @@
 #include "BrokenBrick.h"
 
 
-BrokenBrick::BrokenBrick(void) : DynamicObject()
+BrokenBrick::BrokenBrick(void) : GameObject()
 {
 }
 
-BrokenBrick::BrokenBrick(float x, float y) : DynamicObject(x, y, 0.09f, 0, EnumID::BrokenBrick_ID)
+BrokenBrick::BrokenBrick(float x, float y) : GameObject(x, y,EnumID::BrokenBrick_ID)
 {
 	type = ObjectType::None_Type;
 	hp = 1;
@@ -13,6 +13,9 @@ BrokenBrick::BrokenBrick(float x, float y) : DynamicObject(x, y, 0.09f, 0, EnumI
 	active = true;
 }
 BrokenBrick::~BrokenBrick(void)
+{
+}
+void BrokenBrick::Update(int del)
 {
 }
 void BrokenBrick::SetActive(float x, float y)

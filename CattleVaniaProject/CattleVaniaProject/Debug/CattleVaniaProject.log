@@ -1,0 +1,78 @@
+﻿Build started 12/29/2016 4:48:40 PM.
+     1>Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SceneGame.cpp
+         SceneGame.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(240): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(298): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(524): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(530): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(538): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
+         Debug\BlackKnight.obj
+         Debug\Boomerang.obj
+         Debug\Brick.obj
+         Debug\BrokenBrick.obj
+         Debug\Candle.obj
+         Debug\CAudio.obj
+         Debug\CCamera.obj
+         Debug\Crown.obj
+         Debug\Dagger.obj
+         Debug\Door.obj
+         Debug\DoubleShot.obj
+         Debug\DragonSkullCannon.obj
+         Debug\DynamicObject.obj
+         Debug\EndGameScene.obj
+         Debug\FallingCastle.obj
+         Debug\FireBall.obj
+         Debug\FireBomb.obj
+         Debug\FireDie.obj
+         Debug\Flyingblock.obj
+         Debug\Food.obj
+         Debug\Game.obj
+         Debug\dsutil.obj
+         Debug\GameObject.obj
+         Debug\GameScore.obj
+         Debug\Global.obj
+         Debug\CSprite.obj
+         Debug\CTexture.obj
+         Debug\CText.obj
+         Debug\GoldChest.obj
+         Debug\Lake.obj
+         Debug\LittleSnake.obj
+         Debug\LKRect.obj
+         Debug\MagicalCrystal.obj
+         Debug\main.obj
+         Debug\Medusa.obj
+         Debug\MorningStar.obj
+         Debug\MorningStarSprite.obj
+         Debug\MovingPlatform.obj
+         Debug\OpenDoor.obj
+         Debug\PhantomBat.obj
+         Debug\QBackground.obj
+         Debug\QGameObject.obj
+         Debug\QNode.obj
+         Debug\QueenMedusa.obj
+         Debug\Scene.obj
+         Debug\SceneGame.obj
+         Debug\SceneMain.obj
+         Debug\SceneMenu.obj
+         Debug\Simon.obj
+         Debug\Singleton.obj
+         Debug\Skeleton.obj
+         Debug\SoundManager.obj
+         Debug\SpikeTrap.obj
+         Debug\Stair.obj
+         Debug\StupidDoor.obj
+         Debug\Tile.obj
+         Debug\Utils.obj
+         Debug\VampireBat.obj
+         Debug\Weapon.obj
+         CattleVaniaProject.vcxproj -> C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.exe
+     1>Done Building Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.94

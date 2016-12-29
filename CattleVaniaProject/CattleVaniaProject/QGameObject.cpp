@@ -102,6 +102,10 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 101:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new FireDie(posX, posY)));
 				break;
+			case 105:
+				_magicalCrystal = new MagicalCrystal(posX, posY);
+				_listObjectGame->insert(pair<int, GameObject*>(id, _magicalCrystal));
+				break;
 				/*
 
 				case 26:
@@ -252,21 +256,10 @@ int QGameObject::RemoveAllObjectInCamera(D3DXVECTOR2 viewport)
 		GameObject* other = (*it);
 		if (other->type == ObjectType::Enemy_Type)
 		{
-			switch (other->id)
-			{
-			case EnumID::PhantomBat_ID:
-			case EnumID::QueenMedusa_ID:
-				if (other->sprite->GetIndex() != 0)
-				{
-					other->point -= 4;
-					++it;
-				}
-				break;
-			default:
+			
 				score += other->point;
-				_listObjectInVP->erase(it++);
-				break;
-			}
+				(*it)->Remove();
+				_listObjectInVP->erase(it++);						
 		}
 		else ++it;
 	}
@@ -397,6 +390,10 @@ void QGameObject::Collision(int dt)
 QueenMedusa* QGameObject::getQueenMedusa()
 {
 	return _queenMedusa;
+}
+MagicalCrystal* QGameObject::getMagicalCrystal()
+{
+	return _magicalCrystal;
 }
 
 //PhantomBat* QGameObject::getPhantomBat()

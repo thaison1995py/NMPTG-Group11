@@ -172,10 +172,14 @@ void GameObject::Remove()
 
 void GameObject::ReceiveDamage(int damagePoint)
 {
-	if (hp <= 0)
+	if (hp <= damagePoint)
+	{
+		death = true;
 		return;
+	}
+
 	hp -= damagePoint;
-	if (hp == 0)
+	if (hp <= 0)
 		death = true;
 }
 

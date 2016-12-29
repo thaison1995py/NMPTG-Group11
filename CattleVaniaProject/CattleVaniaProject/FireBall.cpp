@@ -1,6 +1,6 @@
 #include "FireBall.h"
 
-#define SPEED_X 0.3f
+#define SPEED_X 0.5f
 
 FireBall::FireBall(void) : DynamicObject()
 {
@@ -8,6 +8,8 @@ FireBall::FireBall(void) : DynamicObject()
 
 FireBall::FireBall(float x, float y, float _huong, EnumID id) : DynamicObject(x, y, 0, 0, id)
 {
+	type = Enemy_Type;
+
 	if (_huong > 0)
 		vX = SPEED_X;
 	else
@@ -15,7 +17,7 @@ FireBall::FireBall(float x, float y, float _huong, EnumID id) : DynamicObject(x,
 		vX = -SPEED_X;
 	}
 	active = true;
-	_timeSpawn = 10;
+	_timeSpawn = 100;
 }
 
 void FireBall::Update(int dt)

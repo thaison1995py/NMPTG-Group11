@@ -142,10 +142,12 @@ void DynamicObject::ReceiveDamage(int damagePoint)
 {
 	if (!IsHurt())
 	{
+		if (hp > 0)
+		{
+			hp -= damagePoint;
+		}
+
 		if (hp <= 0)
-			return;
-		hp -= damagePoint;
-		if (hp == 0)
 			death = true;
 		bActiveHurt = true;
 		_localHurtTime = GetTickCount();

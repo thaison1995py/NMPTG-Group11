@@ -226,9 +226,6 @@
     <ClInclude Include="QNode.h">
       <Filter>Background</Filter>
     </ClInclude>
-    <ClInclude Include="MagicalCrystal.h">
-      <Filter>GameObject\Item</Filter>
-    </ClInclude>
     <ClInclude Include="Axe.h">
       <Filter>GameObject\Weapon</Filter>
     </ClInclude>
@@ -258,6 +255,9 @@
     </ClInclude>
     <ClInclude Include="BrokenBrick.h">
       <Filter>GameObject\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicalCrystal.h">
+      <Filter>GameObject\Item</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -408,9 +408,6 @@
     <ClCompile Include="QNode.cpp">
       <Filter>Background</Filter>
     </ClCompile>
-    <ClCompile Include="MagicalCrystal.cpp">
-      <Filter>GameObject\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Axe.cpp">
       <Filter>GameObject\Weapon</Filter>
     </ClCompile>
@@ -440,6 +437,9 @@
     </ClCompile>
     <ClCompile Include="BrokenBrick.cpp">
       <Filter>GameObject\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicalCrystal.cpp">
+      <Filter>GameObject\Item</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
