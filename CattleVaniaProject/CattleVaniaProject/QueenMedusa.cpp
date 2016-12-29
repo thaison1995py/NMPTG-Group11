@@ -90,8 +90,7 @@ void QueenMedusa::_onStop(int deltaTime_)
 			_currentStopPos = 4;
 			float deltaX = posX - _simonPos->x; // deltaX between boss and simon
 			float littleSnakeVx = -deltaX / abs(deltaX)*LITTLE_SNAKE_SPEED_X;
-			/*LittleSnake* littleSnake = new LittleSnake(posX,100,littleSnakeVx,0,EnumID::LittleSnake_ID);
-			littleSnake->active = true;*/
+		
 			_vLittleSnake->push_back(new LittleSnake(posX, posY, littleSnakeVx, -0.2f, EnumID::LittleSnake_ID));
 		}
 		break;

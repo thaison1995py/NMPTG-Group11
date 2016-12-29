@@ -11,6 +11,7 @@ QGameObject::QGameObject(string fileName, string _fileName)
 
 	_listObjectGame = new std::map<int, GameObject*>();
 	_listObjectInVP = new list<GameObject*>();
+	_listDragonSkullCannon = new list<DragonSkullCannon*>();
 
 	if (map.is_open())
 	{
@@ -64,8 +65,10 @@ QGameObject::QGameObject(string fileName, string _fileName)
 			case 11:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new BlackKnight(posX, posY)));
 				break;
-			case 13:
-				_listObjectGame->insert(pair<int, GameObject*>(id, new DragonSkullCannon(posX, posY)));
+			case 13:				
+				_dragonCannon = new DragonSkullCannon(posX, posY);
+				_listDragonSkullCannon->push_back(_dragonCannon);
+				_listObjectGame->insert(pair<int, GameObject*>(id, _dragonCannon)); //new DragonSkullCannon(posX, posY)));
 				break;
 			case 14:
 				_listObjectGame->insert(pair<int, GameObject*>(id, new Flyingblock(posX, posY)));
@@ -106,17 +109,7 @@ QGameObject::QGameObject(string fileName, string _fileName)
 				_magicalCrystal = new MagicalCrystal(posX, posY);
 				_listObjectGame->insert(pair<int, GameObject*>(id, _magicalCrystal));
 				break;
-				/*
-
-				case 26:
-				G_MinSize = posX;
-				break;
-				case 27:
-				G_MaxSize = posX;
-				break;
-				default:
-				break;
-				}*/
+				
 			default:
 				break;
 			}
@@ -218,8 +211,7 @@ void QGameObject::GetObjecttInVP()
 			if (obj1 == _listObjectInVP->end())
 			{
 				_listObjectInVP->push_back(obj->second);
-				/*_listObjectGame->erase(*i);
-				_listObjectGame->insert(pair<>);*/
+			
 			}
 		}
 	}
@@ -229,10 +221,7 @@ void QGameObject::SetObjectActiveInVP(float x, float y)
 {
 	for (list<GameObject*>::iterator i = _listObjectInVP->begin(); i != _listObjectInVP->end(); i++)
 	{
-		/*GameObject* obj = (*i);
-		if (!obj->active)
-			obj->SetActive(x, y);*/
-		//if (!(*i)->active)
+		
 		if ((*i)->type != Item_Type)
 			(*i)->SetActive(x, y);
 		else if ((*i)->type == Item_Type)
@@ -267,10 +256,6 @@ int QGameObject::RemoveAllObjectInCamera(D3DXVECTOR2 viewport)
 }
 
 
-D3DXVECTOR2 QGameObject::GetPosDoor()
-{
-	return posDoor;
-}
 
 void QGameObject::Draw(CCamera *camera)
 {
@@ -303,71 +288,12 @@ void QGameObject::Update(int deltaTime)
 		}
 	}
 
-	//it = _dynamicObject->begin();
-	//while (it != _dynamicObject->end())
-	//{
-	//	/*if (!IsHurt() || (IsHurt() && (*it)->type != ObjectType::Enemy_Type))
-	//	{
-	//		if ((*it)->id == EnumID::QueenMedusa_ID)
-	//		{
-	//			if (((QueenMedusa*)*it)->GetState())
-	//			{
-	//				_dynamicObject->push_back(new MagicalCrystal((*it)->posX, (*it)->posY));
-	//				_dynamicObject->erase(it++);
-	//			}
-	//			else ++it;
-	//		}
-	//		else
-	//			if ((*it)->id == EnumID::PhantomBat_ID)
-	//			{
-	//				if (((PhantomBat*)*it)->GetState())
-	//				{
-	//					_dynamicObject->push_back(new MagicalCrystal((*it)->posX, (*it)->posY));
-	//					_dynamicObject->erase(it++);
-	//				}
-	//				else ++it;
-	//			}
-	//			else
-	//			{
-	//				if ((*it)->death)
-	//				{
-	//					_dynamicObject->erase(it++);
-	//				}
-	//				else
-	//				{
-	//					if ((*it)->active)
-	//					{
-	//						(*it)->Update(deltaTime);
-	//					}
-	//					++it;
-	//				}
-	//			}
-	//	}
-	//	else ++it;*/
-	//	if ((*it)->death)
-	//	{
-	//		_dynamicObject->erase(it++);
-	//	}
-	//	else
-	//	{
-	//		if ((*it)->active)
-	//		{
-	//			(*it)->Update(deltaTime);
-	//		}
-	//		++it;
-	//	}
-
+	
 }
 
 void QGameObject::Collision(int dt)
 {
-	/*for (list<GameObject*>::reverse_iterator i = _staticObject->rbegin(); i != _staticObject->rend(); i++)
-	{
-	if ((*i)->canMove)
-	{
-	(*i)->Collision((*_staticObject), dt);
-	}
-	}*/
+	
 
 	for (list<GameObject*>::iterator i = _listObjectInVP->begin(); i != _listObjectInVP->end(); i++)
 	{
@@ -391,15 +317,18 @@ QueenMedusa* QGameObject::getQueenMedusa()
 {
 	return _queenMedusa;
 }
+
+DragonSkullCannon* QGameObject::getDragonSkullCannon()
+{
+	return _dragonCannon;
+}
+
 MagicalCrystal* QGameObject::getMagicalCrystal()
 {
 	return _magicalCrystal;
 }
 
-//PhantomBat* QGameObject::getPhantomBat()
-//{
-//	return _phantomBat;
-//}
+
 
 void QGameObject::Initialize()
 {
@@ -427,10 +356,7 @@ void QGameObject::PauseUpdate()
 	_localHurtTime = GetTickCount();
 }
 
-//void QGameObject::RemoveAllObject()
-//{
-//	_dynamicObject->clear();
-//}
+
 QGameObject::~QGameObject(void)
 {
 }

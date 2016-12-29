@@ -19,14 +19,6 @@ using namespace std;
 #define A 20
 #define QUEEN_MEDUSA_INACTIVE_RATE 1
 
-//
-//enum ERouterType
-//{
-//	Parabol,
-//	Line,
-//	Horizontal,
-//	Vertical
-//};
 
 enum EQueenMedusaState
 {

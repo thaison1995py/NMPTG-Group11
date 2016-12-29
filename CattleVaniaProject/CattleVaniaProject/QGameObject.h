@@ -32,9 +32,11 @@ enum OBJECTTYPE
 class QGameObject
 {
 protected:
-	/*PhantomBat* _phantomBat;*/
+
 	QueenMedusa* _queenMedusa;
 	MagicalCrystal* _magicalCrystal;
+	DragonSkullCannon* _dragonCannon;
+	
 	QNode *tree;
 	map<int, QNode*> *nodeOfTree;
 	list<int> *myObject;
@@ -43,6 +45,7 @@ protected:
 
 	D3DXVECTOR2 posDoor;
 public:
+
 	DWORD _localHurtTime;
 	DWORD _deltaHurtTime;
 	bool bActiveHurt;
@@ -51,12 +54,13 @@ public:
 
 	list<GameObject*> *_listObjectInVP;
 	map<int, GameObject*> *_listObjectGame;
+	list<DragonSkullCannon*> *_listDragonSkullCannon;
 
 	QGameObject(void);
 	~QGameObject(void);
 
 	QGameObject(string, string);
-	D3DXVECTOR2 GetPosDoor();	//Lay vi tri de ve canh cua qua stage
+	
 	void LoadTree();
 	void GetTreeObject(int, int);
 	void GetObjecttInVP();
@@ -67,9 +71,10 @@ public:
 	int RemoveAllObjectInCamera(D3DXVECTOR2);
 	void RemoveAllObject();
 	QueenMedusa* getQueenMedusa();
+	DragonSkullCannon* getDragonSkullCannon();
 	MagicalCrystal* getMagicalCrystal();
-	//PhantomBat* getPhantomBat();
 	void PauseUpdate();
+	
 };
 
 #endif#ifndef _QGAMEOBJECT_H_

@@ -109,8 +109,7 @@ void MorningStar::updateLevel()
 
 void MorningStar::Collision(list<GameObject*> &obj, int dt)
 {
-	//list<GameObject*>::reverse_iterator _itBegin;
-	//for (_itBegin = obj.rbegin(); _itBegin != obj.rend(); _itBegin++)
+	
 	list<GameObject*>::iterator _itBegin;
 	for (_itBegin = obj.begin(); _itBegin != obj.end(); _itBegin++)
 	{

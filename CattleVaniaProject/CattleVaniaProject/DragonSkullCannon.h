@@ -8,6 +8,7 @@ class DragonSkullCannon : public DynamicObject
 {
 	list<GameObject*> *fireBall;
 public:
+	
 	int _huong;
 	int smx, smy;
 	DragonSkullCannon(void);

@@ -43,18 +43,17 @@ protected:
 	LPDIRECT3DSURFACE9 BackgroundWhite;
 
 	QBackground *bg;
-	QBackground *bg_2;
-	
-	Simon* simonTemp;	//Luu thong tin cua simon cu
+
 	QGameObject* qGameObject;
 	OpenDoor* openDoor;
-	//IntroGame* introScene;
-	//GameObject* intro;
+	
 	CCamera *camera;
 
-	//PhantomBat* _phantomBat;
+
 	QueenMedusa* _queenMedusa;
+	list<DragonSkullCannon*> *_listDragonSkullCannon;
 	list<GameObject*> _listSnake;
+	list<GameObject*> _listFireBall;
 
 	GameScore* _gameScore;
 
@@ -62,7 +61,6 @@ protected:
 	void MoveCamera(int &_range);
 	void LoadLevel(int level);
 	void LoadStage(int stage);
-	void ResetLevel();
 	void NextLevel();
 	void RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t);
 	void ProcessInput(int keyCode);
