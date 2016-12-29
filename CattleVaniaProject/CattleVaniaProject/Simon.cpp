@@ -425,12 +425,15 @@ void Simon::Collision(list<GameObject*> &obj, float dt)
 				case EnumID::Crown_ID:
 				case EnumID::GoldChest_ID:
 					point += 2000;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
 					break;
 				case EnumID::Food_ID:
 					hp += 6;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
 					break;
 				case EnumID::DoubleShot_ID:
 					point += 200;
+					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_CollectItem);
 					//damage = damage * 10;
 					break;
 				}

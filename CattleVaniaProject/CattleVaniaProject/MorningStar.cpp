@@ -158,15 +158,23 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						(*_itBegin)->SetActive();
 					}
 					else
-					{					
-						other->ReceiveDamage(damage);
-						if (other->hp <= 0)
+					{
+						if (other->type != Item_Type)
 						{
-							point += other->point;
 
+							other->ReceiveDamage(damage);
+							if (other->hp <= 0)
+							{
+								point += other->point;
+
+							}
 						}
 					}
-					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_HitByWeapon);
+
+					if (other->type != Item_Type)
+					{
+						SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_HitByWeapon);
+					}
 				}
 				return;
 			}
