@@ -69,9 +69,9 @@ void DynamicObject::Collision(list<GameObject*> obj, int dt)
 					vY = 0;
 					return;
 				}
-				if ((posX - width / 2 + 10) - (other->posX - other->width / 2) <= 0
+			/*	if ((posX - width / 2 + 10) - (other->posX - other->width / 2) <= 0
 					|| (posX + width / 2 - 10) - (other->posX + other->width / 2) >= 0)
-					vX = -vX;
+					vX = -vX;*/
 			}
 			else
 				if (AABB(box, boxOther, moveX, moveY) == false)
@@ -142,11 +142,17 @@ void DynamicObject::ReceiveDamage(int damagePoint)
 {
 	if (!IsHurt())
 	{
+		if (hp <= damagePoint)
+		{
+			hp = 0;
+			death = true;
+			return;
+		}
+
 		if (hp > 0)
 		{
 			hp -= damagePoint;
 		}
-
 		if (hp <= 0)
 			death = true;
 		bActiveHurt = true;

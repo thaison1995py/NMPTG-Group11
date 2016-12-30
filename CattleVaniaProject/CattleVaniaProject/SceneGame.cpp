@@ -11,7 +11,7 @@ SceneGame::SceneGame(void) : Scene(ESceneState::Game_Scene)
 	_moveCameraDone = false;
 	_beginMoveCamera = false;
 	_moveCameraHaft = false;
-	_rangeMoveCamera = 0;
+	_rangeMoveCamera = 0;	
 	camera = new CCamera();
 	bg = NULL;
 	_gameScore = NULL;
@@ -29,7 +29,7 @@ void SceneGame::LoadLevel(int level)
 	bg = new QBackground(level);
 
 	simon = new Simon(3800, 100);//(1257, 1000);
-	camera->viewport.y = 482;// +32 * 12 * 2;
+	camera->viewport.y = 482;// +32 * 12 * 3;
 	_gameScore = new GameScore(G_Device, 22, G_ScreenWidth, G_ScreenHeight);
 	_gameScore->initTimer(200);
 	SoundManager::GetInst()->RemoveAllBGM();

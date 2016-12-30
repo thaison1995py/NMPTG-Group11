@@ -11,6 +11,7 @@ public:
 	MagicalCrystal(float x, float y);
 	void Collision(list<GameObject*> obj, int dt);
 	~MagicalCrystal(void);
+	void Update(int dt);
 };
 
 #endif

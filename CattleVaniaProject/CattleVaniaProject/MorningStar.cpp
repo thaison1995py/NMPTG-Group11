@@ -141,6 +141,7 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 						if (qm->_hasGetUp)
 						{
 							other->ReceiveDamage(damage);
+							
 							if (other->hp <= 0)
 							{
 								point += other->point;

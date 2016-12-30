@@ -182,6 +182,12 @@ void QueenMedusa::ReceiveDamage(int damagePoint)
 {
 	if (!IsHurt())
 	{
+		if (hp <= damagePoint)
+		{
+			hp = 0;
+			death = true;
+			return;
+		}
 		if (hp > 0)
 		{
 			hp -= damagePoint;

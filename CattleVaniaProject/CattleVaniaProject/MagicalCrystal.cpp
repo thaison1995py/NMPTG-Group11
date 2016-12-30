@@ -13,7 +13,11 @@ MagicalCrystal::MagicalCrystal(float x, float y) : DynamicObject(x, y, 0, -0.3f,
 	damage = 0;
 
 }
-
+void MagicalCrystal::Update(int dt)
+{
+	if (active)
+		posY += vY * dt;
+}
 void MagicalCrystal::Collision(list<GameObject*> obj, int dt)
 {
 	list<GameObject*>::iterator _itBegin;
