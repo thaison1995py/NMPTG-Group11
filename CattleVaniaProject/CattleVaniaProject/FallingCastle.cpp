@@ -8,7 +8,7 @@ FallingCastle::FallingCastle(void)
 FallingCastle::FallingCastle(float posX_, float posY_, float vX_, float vY_) :DynamicObject(posX_, posY_, vX_, vY_, EnumID::FallingCastle_ID)
 {
 	_sprite = new CSprite(Singleton::getInstance()->getTexture(EnumID::FallingCastle_ID), 0, 2, 1);
-	_simonInCastleSprite = new CSprite(Singleton::getInstance()->getTexture(EnumID::SimonInCastle_ID), 0, 1, 1000 / SIMON_IN_CASTLE_RATE);
+	
 	_posX0 = posX;
 	_posY0 = posY;
 	_localTime = 0;

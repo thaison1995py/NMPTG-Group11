@@ -124,9 +124,6 @@
     <ClInclude Include="SceneMenu.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="EndGameScene.h">
-      <Filter>Game\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>Manage</Filter>
     </ClInclude>
@@ -229,9 +226,6 @@
     <ClInclude Include="Axe.h">
       <Filter>GameObject\Weapon</Filter>
     </ClInclude>
-    <ClInclude Include="FallingCastle.h">
-      <Filter>Game\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="GameScore.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -310,9 +304,6 @@
       <Filter>Background</Filter>
     </ClCompile>
     <ClCompile Include="SceneMenu.cpp">
-      <Filter>Game\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="EndGameScene.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Singleton.cpp">
@@ -410,9 +401,6 @@
     </ClCompile>
     <ClCompile Include="Axe.cpp">
       <Filter>GameObject\Weapon</Filter>
-    </ClCompile>
-    <ClCompile Include="FallingCastle.cpp">
-      <Filter>Game\Scene</Filter>
     </ClCompile>
     <ClCompile Include="GameScore.cpp">
       <Filter>Game</Filter>

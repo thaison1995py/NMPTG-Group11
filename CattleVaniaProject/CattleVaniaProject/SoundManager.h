@@ -29,7 +29,7 @@ enum ESoundEffect
 	ES_OpenDoor,
 	ES_HolyWater,
 	ES_StageClear,
-	ES_FallingCastle,
+
 	ES_GetScoreTimer,
 	ES_GetScoreWeaponCount,
 	ES_StopTimer,

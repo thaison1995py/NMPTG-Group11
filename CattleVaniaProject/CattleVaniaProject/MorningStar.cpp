@@ -120,7 +120,7 @@ void MorningStar::Collision(list<GameObject*> &obj, int dt)
 			|| other->id == EnumID::StairUpRight_ID || other->id == EnumID::MovingPlatform_ID
 			|| other->id == EnumID::DoorDown_ID || other->id == EnumID::DoorUp_ID
 			|| other->id == EnumID::DoorLeft_ID || other->id == EnumID::DoorRight_ID
-			|| other->id == EnumID::CastleGate_ID || other->id == EnumID::StupidDoor_ID)
+			|| other->id == EnumID::StupidDoor_ID)
 		{
 		}
 		else

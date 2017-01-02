@@ -39,7 +39,7 @@ SoundManager::SoundManager()
 	getScoreTimer = _audio->LoadSound("Sounds\\sound\\getscoretimer.wav");
 	getScoreWeaponCount = _audio->LoadSound("Sounds\\sound\\getscoreweapon.wav");
 	stopTimer = _audio->LoadSound("Sounds\\sound\\stoptimer.wav");
-	fallInLake = _audio->LoadSound("Sounds\\sound\\fallingdownwatersurface.wav");
+
 }
 
 SoundManager::~SoundManager()
@@ -143,8 +143,6 @@ void SoundManager::PlaySoundEffect(ESoundEffect id)
 	case ESoundEffect::ES_StageClear:
 		stageClear->Play();
 		break;
-	case ESoundEffect::ES_FallingCastle:
-		fallCastle->Play();
 		break;
 	case ESoundEffect::ES_GetScoreTimer:
 		getScoreTimer->Play();

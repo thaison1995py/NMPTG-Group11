@@ -10,7 +10,7 @@ enum Action
 	Fight,
 	Sit,
 	Fall,
-	IntoCastle
+
 };
 
 static enum ESceneState
@@ -81,7 +81,6 @@ enum EnumID
 	StairDownLeft_ID,
 	StairDownRight_ID,
 
-	CastleGate_ID,
 	DoorLeft_ID,
 	DoorRight_ID,
 	DoorUp_ID,
@@ -120,8 +119,8 @@ enum EnumID
 	HP_ID,
 	GameScore_ID,
 
-	FallingCastle_ID,
-	SimonInCastle_ID
+
+
 
 
 };

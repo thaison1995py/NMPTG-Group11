@@ -88,8 +88,6 @@
     <ClInclude Include="DoubleShot.h" />
     <ClInclude Include="DragonSkullCannon.h" />
     <ClInclude Include="DynamicObject.h" />
-    <ClInclude Include="EndGameScene.h" />
-    <ClInclude Include="FallingCastle.h" />
     <ClInclude Include="FireBall.h" />
     <ClInclude Include="FireBomb.h" />
     <ClInclude Include="FireDie.h" />
@@ -152,8 +150,6 @@
     <ClCompile Include="DoubleShot.cpp" />
     <ClCompile Include="DragonSkullCannon.cpp" />
     <ClCompile Include="DynamicObject.cpp" />
-    <ClCompile Include="EndGameScene.cpp" />
-    <ClCompile Include="FallingCastle.cpp" />
     <ClCompile Include="FireBall.cpp" />
     <ClCompile Include="FireBomb.cpp" />
     <ClCompile Include="FireDie.cpp" />

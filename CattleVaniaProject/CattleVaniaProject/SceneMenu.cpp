@@ -8,10 +8,9 @@ void SceneMenu::_initialize()
 {
 	_localTime = 0;
 	_currentSelection = 0;
-	_menuOption = (char**)malloc(3 * sizeof(char*));
+	_menuOption = (char**)malloc(2 * sizeof(char*));
 	_menuOption[0] = "PLAY";
-	_menuOption[1] = "CONTINUE";
-	_menuOption[2] = "EXIT";
+	_menuOption[1] = "EXIT";
 }
 
 void SceneMenu::_draw()
@@ -20,18 +19,11 @@ void SceneMenu::_draw()
 	{
 	case 0:
 		_bigFont->renderAnimation(_menuOption[0], 220, 252, 15);
-		_smallFont->render(_menuOption[1], 215, 293);
-		_smallFont->render(_menuOption[2], 243, 320);
+		_smallFont->render(_menuOption[1], 230, 293);
 		break;
 	case 1:
 		_smallFont->render(_menuOption[0], 240, 267);
-		_bigFont->renderAnimation(_menuOption[1], 180, 285, 15);
-		_smallFont->render(_menuOption[2], 243, 320);
-		break;
-	case 2:
-		_smallFont->render(_menuOption[0], 240, 267);
-		_smallFont->render(_menuOption[1], 215, 293);
-		_bigFont->renderAnimation(_menuOption[2], 230, 315, 15);
+		_bigFont->renderAnimation(_menuOption[1], 230, 300, 15);
 		break;
 	default:
 		break;
@@ -46,9 +38,6 @@ void SceneMenu::_openOption()
 		sceneState = ESceneState::Game_Scene;
 		break;
 	case 1:
-		sceneState = ESceneState::Game_Scene;
-		break;
-	case 2:
 		PostMessage(G_hWnd, WM_QUIT, 0, 0);
 		break;
 	default:
@@ -79,7 +68,7 @@ void SceneMenu::OnKeyDown(int KeyCode)
 	case DIK_UP:
 		_currentSelection = (_currentSelection - 1) % MENU_MAX_OPTION;
 		if (_currentSelection<0)
-			_currentSelection += 3;
+			_currentSelection += 2;
 		SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_Select);
 		break;
 	case DIK_DOWN:

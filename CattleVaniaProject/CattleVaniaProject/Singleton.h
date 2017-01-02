@@ -66,8 +66,7 @@ private:
 	CTexture* gameScore;
 	CTexture* hp;
 
-	CTexture* fallingCastle;
-	CTexture* simonInCastle;
+
 
 	static Singleton *single;
 	Singleton();

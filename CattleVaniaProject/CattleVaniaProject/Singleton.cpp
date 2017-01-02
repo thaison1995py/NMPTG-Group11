@@ -74,8 +74,8 @@ Singleton::Singleton()
 	gameScore = new CTexture("Resources/blackboard.png", 1, 1, 1);
 	hp = new CTexture("Resources/heal.png", 3, 1, 3);
 
-	fallingCastle = new CTexture("Resources/FallingCastle.png", 3, 1, 3);
-	simonInCastle = new CTexture("Resources/SimonInCastle.png", 2, 1, 2);
+
+	
 
 }
 
@@ -182,9 +182,7 @@ CTexture* Singleton::getTexture(EnumID id)
 	case EnumID::HP_ID:
 		return hp;
 
-	case EnumID::FallingCastle_ID:
-		return fallingCastle;
-	case EnumID::SimonInCastle_ID:
-		return simonInCastle;
+
+
 	}
 }

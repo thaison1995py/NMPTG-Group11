@@ -43,17 +43,17 @@ void Weapon::Update(int dt)
 }
 void Weapon::Collision(list<GameObject*> &obj, int dt)
 {
-	list<GameObject*>::reverse_iterator _itBegin;
-	for (_itBegin = obj.rbegin(); _itBegin != obj.rend(); _itBegin++)
+	list<GameObject*>::iterator _itBegin;
+	for (_itBegin = obj.begin(); _itBegin != obj.end(); _itBegin++)
 	{
 		GameObject* other = (*_itBegin);
-		if (other->type == ObjectType::Item_Type
-			|| other->id == EnumID::MagicalCrystal_ID || other->id == EnumID::StairDownLeft_ID
+		if (
+			other->id == EnumID::MagicalCrystal_ID || other->id == EnumID::StairDownLeft_ID
 			|| other->id == EnumID::StairDownRight_ID || other->id == EnumID::StairUpLeft_ID
 			|| other->id == EnumID::StairUpRight_ID || other->id == EnumID::MovingPlatform_ID
 			|| other->id == EnumID::DoorDown_ID || other->id == EnumID::DoorUp_ID
 			|| other->id == EnumID::DoorLeft_ID || other->id == EnumID::DoorRight_ID
-			|| other->id == EnumID::CastleGate_ID || other->id == EnumID::StupidDoor_ID)
+			|| other->id == EnumID::StupidDoor_ID)
 		{
 		}
 		else
@@ -74,6 +74,7 @@ void Weapon::Collision(list<GameObject*> &obj, int dt)
 						if (qm->_hasGetUp)
 						{
 							other->ReceiveDamage(damage);
+
 							if (other->hp <= 0)
 							{
 								point += other->point;
@@ -82,14 +83,27 @@ void Weapon::Collision(list<GameObject*> &obj, int dt)
 						else
 							qm->getUp();
 					}
-					
+
+					else if (other->id == Fire_ID && other->type == Item_Type)
+					{
+						(*_itBegin)->SetActive();
+					}
+					else if (other->id == Food_ID || other->id == DoubleShot_ID)
+					{
+						(*_itBegin)->SetActive();
+					}
 					else
 					{
-						other->ReceiveDamage(damage);
-						if (other->hp <= 0)
+						if (other->type != Item_Type)
 						{
-							point += other->point;
-							(*_itBegin) = new FireDie(other->posX, other->posY);
+
+							other->ReceiveDamage(damage);
+
+							if (other->hp <= 0)
+							{
+								point += other->point;
+
+							}
 						}
 					}
 					SoundManager::GetInst()->PlaySoundEffect(ESoundEffect::ES_HitByWeapon);

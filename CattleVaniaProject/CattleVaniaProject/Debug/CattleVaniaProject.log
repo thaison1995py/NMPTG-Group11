@@ -1,17 +1,19 @@
-﻿Build started 12/30/2016 10:53:32 AM.
-     1>Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/2/2017 11:42:04 PM.
+     1>Project "E:\NMPTG\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SceneGame.cpp
-         SceneGame.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FallingCastle.cpp
+         FallingCastle.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(144): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(202): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(264): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(270): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(280): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\scenegame.cpp(289): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(21): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(22): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(25): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(26): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(29): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(30): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(33): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\fallingcastle.cpp(34): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\NMPTG\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\NMPTG\trunk\CattleVaniaProject\Debug\CattleVaniaProject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\NMPTG\trunk\CattleVaniaProject\Debug\CattleVaniaProject.lib" /MACHINE:X86 Debug\Axe.obj
          Debug\BlackKnight.obj
          Debug\Boomerang.obj
          Debug\Brick.obj
@@ -71,9 +73,9 @@
          Debug\Utils.obj
          Debug\VampireBat.obj
          Debug\Weapon.obj
-         CattleVaniaProject.vcxproj -> C:\Users\thais_000\Desktop\CattleVaniaProject\Debug\CattleVaniaProject.exe
-     1>Done Building Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
+         CattleVaniaProject.vcxproj -> E:\NMPTG\trunk\CattleVaniaProject\Debug\CattleVaniaProject.exe
+     1>Done Building Project "E:\NMPTG\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.98
+Time Elapsed 00:00:02.04

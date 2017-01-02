@@ -60,11 +60,9 @@ public:
 	int _timeSpawn;	//
 	//---Gate & Door-------
 	GameObject* _door;
-	int rangeGate;			//khoang cach simon den Castle Gate
-	bool _colCastleGate;
+
 	bool _colDoor;
-	void OnGateCastle();
-	void UpdateGateCastle(int dt);
+
 	EDirectDoor _directDoor;
 	void SetDirectDoor(EDirectDoor _direct);
 	EDirectDoor GetDirectDoor();

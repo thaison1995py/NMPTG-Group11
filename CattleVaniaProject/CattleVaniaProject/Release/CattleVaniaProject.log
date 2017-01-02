@@ -1,7 +1,118 @@
-﻿Build started 12/30/2016 10:33:01 AM.
-     1>Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/2/2017 11:49:12 PM.
+     1>Project "E:\NMPTG\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt QueenMedusa.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Axe.cpp BlackKnight.cpp Boomerang.cpp Brick.cpp BrokenBrick.cpp Candle.cpp Crown.cpp Dagger.cpp Door.cpp DoubleShot.cpp DragonSkullCannon.cpp DynamicObject.cpp FireBall.cpp FireBomb.cpp FireDie.cpp Flyingblock.cpp Food.cpp GameObject.cpp GameScore.cpp GoldChest.cpp Lake.cpp LittleSnake.cpp MagicalCrystal.cpp Medusa.cpp MorningStar.cpp MovingPlatform.cpp OpenDoor.cpp PhantomBat.cpp QBackground.cpp QGameObject.cpp QueenMedusa.cpp Scene.cpp SceneGame.cpp SceneMain.cpp SceneMenu.cpp Simon.cpp Singleton.cpp SoundManager.cpp SpikeTrap.cpp Stair.cpp StupidDoor.cpp VampireBat.cpp Weapon.cpp main.cpp
+         Axe.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>Axe.cpp(26): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Axe.cpp(27): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Axe.cpp(30): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Axe.cpp(49): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         BlackKnight.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Boomerang.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Brick.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         BrokenBrick.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Candle.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Crown.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Dagger.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Door.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         DoubleShot.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         DragonSkullCannon.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>DragonSkullCannon.cpp(51): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>DragonSkullCannon.cpp(64): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>DragonSkullCannon.cpp(66): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>DragonSkullCannon.cpp(68): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         DynamicObject.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>DynamicObject.cpp(33): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>DynamicObject.cpp(35): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>DynamicObject.cpp(37): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>DynamicObject.cpp(118): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         FireBall.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         FireBomb.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>FireBomb.cpp(47): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>FireBomb.cpp(145): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         FireDie.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>FireDie.cpp(30): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Flyingblock.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>Flyingblock.cpp(19): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Flyingblock.cpp(23): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Flyingblock.cpp(28): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Flyingblock.cpp(32): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Flyingblock.cpp(44): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Flyingblock.cpp(45): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Food.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         GameObject.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>GameObject.cpp(141): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameObject.cpp(142): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>GameObject.cpp(190): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         GameScore.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         GoldChest.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Compiling...
+         Lake.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         LittleSnake.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         MagicalCrystal.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>MagicalCrystal.cpp(32): warning C4101: 'normalx' : unreferenced local variable
+     1>MagicalCrystal.cpp(33): warning C4101: 'normaly' : unreferenced local variable
+         Medusa.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>Medusa.cpp(40): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Medusa.cpp(42): warning C4305: '=' : truncation from 'double' to 'float'
+         MorningStar.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>MorningStar.cpp(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>MorningStar.cpp(26): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>MorningStar.cpp(29): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>MorningStar.cpp(34): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>MorningStar.cpp(53): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>MorningStar.cpp(54): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         MovingPlatform.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         OpenDoor.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>OpenDoor.cpp(104): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>OpenDoor.cpp(107): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>OpenDoor.cpp(111): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         PhantomBat.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>PhantomBat.cpp(301): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>PhantomBat.cpp(307): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(308): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(309): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(311): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(312): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(313): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(316): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>PhantomBat.cpp(320): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         QBackground.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>QBackground.cpp(61): warning C4101: '_obj' : unreferenced local variable
+     1>QBackground.cpp(87): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         QGameObject.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>QGameObject.cpp(82): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>QGameObject.cpp(83): warning C4305: 'argument' : truncation from 'double' to 'float'
          QueenMedusa.cpp
          C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>QueenMedusa.cpp(285): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
@@ -13,8 +124,95 @@
      1>QueenMedusa.cpp(302): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
      1>QueenMedusa.cpp(303): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
      1>QueenMedusa.cpp(304): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         Scene.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         SceneGame.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>SceneGame.cpp(144): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>SceneGame.cpp(202): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>SceneGame.cpp(264): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>SceneGame.cpp(270): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>SceneGame.cpp(280): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>SceneGame.cpp(289): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         SceneMain.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\SceneMain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         SceneMenu.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\SceneMain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Simon.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>Simon.cpp(16): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Simon.cpp(129): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>Simon.cpp(130): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>Simon.cpp(152): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>Simon.cpp(153): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>Simon.cpp(177): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>Simon.cpp(178): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>Simon.cpp(199): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>Simon.cpp(200): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>Simon.cpp(298): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Simon.cpp(300): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Simon.cpp(311): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(319): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(526): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(546): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(566): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(587): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(332): warning C4101: 'normalx' : unreferenced local variable
+     1>Simon.cpp(333): warning C4101: 'normaly' : unreferenced local variable
+     1>Simon.cpp(692): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Simon.cpp(695): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(726): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(729): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(734): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(737): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(744): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(750): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(753): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(764): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(767): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(772): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(775): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(782): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(788): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(791): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Simon.cpp(858): warning C4305: '=' : truncation from 'double' to 'float'
+     1>Simon.cpp(1220): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Singleton.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         SoundManager.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>SoundManager.cpp(167): warning C4018: '<' : signed/unsigned mismatch
+     1>SoundManager.cpp(180): warning C4018: '<' : signed/unsigned mismatch
+         SpikeTrap.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Stair.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+         Compiling...
+         StupidDoor.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>StupidDoor.cpp(23): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>StupidDoor.cpp(25): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>StupidDoor.cpp(76): warning C4018: '>=' : signed/unsigned mismatch
+     1>StupidDoor.cpp(100): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>StupidDoor.cpp(104): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>StupidDoor.cpp(115): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>StupidDoor.cpp(116): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         VampireBat.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>VampireBat.cpp(62): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>VampireBat.cpp(63): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Weapon.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>Weapon.cpp(29): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Weapon.cpp(31): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>Weapon.cpp(33): warning C4244: 'argument' : conversion from 'FLOAT' to 'int', possible loss of data
+         main.cpp
+         C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\SceneMain.h(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\thais_000\Desktop\CattleVaniaProject\Release\CattleVaniaProject.exe" /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Release\CattleVaniaProject.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\thais_000\Desktop\CattleVaniaProject\Release\CattleVaniaProject.lib" /MACHINE:X86 /SAFESEH Release\Axe.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\NMPTG\trunk\CattleVaniaProject\Release\CattleVaniaProject.exe" /NOLOGO d3d9.lib d3dx9.lib dsound.lib dxguid.lib dxerr.lib winmm.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\NMPTG\trunk\CattleVaniaProject\Release\CattleVaniaProject.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\NMPTG\trunk\CattleVaniaProject\Release\CattleVaniaProject.lib" /MACHINE:X86 /SAFESEH Release\Axe.obj
          Release\BlackKnight.obj
          Release\Boomerang.obj
          Release\Brick.obj
@@ -28,8 +226,6 @@
          Release\DoubleShot.obj
          Release\DragonSkullCannon.obj
          Release\DynamicObject.obj
-         Release\EndGameScene.obj
-         Release\FallingCastle.obj
          Release\FireBall.obj
          Release\FireBomb.obj
          Release\FireDie.obj
@@ -75,12 +271,12 @@
          Release\VampireBat.obj
          Release\Weapon.obj
          Generating code
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\singleton.cpp(190): warning C4715: 'Singleton::getTexture' : not all control paths return a value
-     1>c:\users\thais_000\desktop\cattlevaniaproject\cattlevaniaproject\game.cpp(59): warning C4715: 'CGame::InitWindow' : not all control paths return a value
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\singleton.cpp(188): warning C4715: 'Singleton::getTexture' : not all control paths return a value
+     1>e:\nmptg\trunk\cattlevaniaproject\cattlevaniaproject\game.cpp(59): warning C4715: 'CGame::InitWindow' : not all control paths return a value
          Finished generating code
-         CattleVaniaProject.vcxproj -> C:\Users\thais_000\Desktop\CattleVaniaProject\Release\CattleVaniaProject.exe
-     1>Done Building Project "C:\Users\thais_000\Desktop\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
+         CattleVaniaProject.vcxproj -> E:\NMPTG\trunk\CattleVaniaProject\Release\CattleVaniaProject.exe
+     1>Done Building Project "E:\NMPTG\trunk\CattleVaniaProject\CattleVaniaProject\CattleVaniaProject.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.83
+Time Elapsed 00:00:39.74
